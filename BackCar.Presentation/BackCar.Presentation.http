@@ -1,0 +1,6 @@
+@BackCar.Presentation_HostAddress = http://localhost:5120
+
+GET {{BackCar.Presentation_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
