@@ -1,7 +1,24 @@
 
 
+using BackCar.Application.Interfaces;
+using BackCar.Infrastructure;
+using BackCar.Infrastructure.Services;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
+//Para la BD:
+builder.Services.AddScoped<IRolService, RolService>();
+// Configurar DbContext con la cadena de conexión de MySQL
+// Configuración del resto de servicios de la aplicación
+builder.Services.AddControllers();  // Registra los controladores (API)
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
+    ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("DefaultConnection")))
+);  // Configura la conexión a la base de datos
+ // Asegúrate de tener la versión correcta de MySQL
+
+//Más BD, LOL y algo de APP:
 
 
 
@@ -12,6 +29,14 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+
+//Prueba para BD:
+// Configurar la tubería de solicitud y respuesta
+app.UseHttpsRedirection();
+app.UseAuthorization();
+app.MapControllers();  // Mapea los controladores a las rutas
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -48,3 +73,4 @@ internal record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary
 {
     public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
 }
+

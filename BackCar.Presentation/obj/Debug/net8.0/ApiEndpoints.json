@@ -1,7 +1,27 @@
 [
   {
+    "ContainingType": "BackCar.API.Controllers.RolController",
+    "Method": "GetRoles",
+    "RelativePath": "api/Rol",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[BackCar._Domain.Entities.Rol, BackCar. Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "Program\u002B\u003C\u003Ec__DisplayClass0_0",
-    "Method": "\u003C\u003CMain\u003E$\u003Eb__0",
+    "Method": "\u003C\u003CMain\u003E$\u003Eb__1",
     "RelativePath": "weatherforecast",
     "HttpMethod": "GET",
     "IsController": false,

@@ -15,3 +15,19 @@ D:\source\repos\BackCar\BackCar.Application\obj\Debug\net8.0\BackCar.Application
 D:\source\repos\BackCar\BackCar.Application\obj\Debug\net8.0\refint\BackCar.Application.dll
 D:\source\repos\BackCar\BackCar.Application\obj\Debug\net8.0\BackCar.Application.pdb
 D:\source\repos\BackCar\BackCar.Application\obj\Debug\net8.0\ref\BackCar.Application.dll
+C:\Users\Alex\source\repos\CarManageBack\BackCar.Application\bin\Debug\net8.0\BackCar.Application.deps.json
+C:\Users\Alex\source\repos\CarManageBack\BackCar.Application\bin\Debug\net8.0\BackCar.Application.dll
+C:\Users\Alex\source\repos\CarManageBack\BackCar.Application\bin\Debug\net8.0\BackCar.Application.pdb
+C:\Users\Alex\source\repos\CarManageBack\BackCar.Application\bin\Debug\net8.0\BackCar. Domain.dll
+C:\Users\Alex\source\repos\CarManageBack\BackCar.Application\bin\Debug\net8.0\BackCar. Domain.pdb
+C:\Users\Alex\source\repos\CarManageBack\BackCar.Application\obj\Debug\net8.0\BackCar.Application.csproj.AssemblyReference.cache
+C:\Users\Alex\source\repos\CarManageBack\BackCar.Application\obj\Debug\net8.0\BackCar.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alex\source\repos\CarManageBack\BackCar.Application\obj\Debug\net8.0\BackCar.Application.AssemblyInfoInputs.cache
+C:\Users\Alex\source\repos\CarManageBack\BackCar.Application\obj\Debug\net8.0\BackCar.Application.AssemblyInfo.cs
+C:\Users\Alex\source\repos\CarManageBack\BackCar.Application\obj\Debug\net8.0\BackCar.Application.csproj.CoreCompileInputs.cache
+C:\Users\Alex\source\repos\CarManageBack\BackCar.Application\obj\Debug\net8.0\BackCar.Application.sourcelink.json
+C:\Users\Alex\source\repos\CarManageBack\BackCar.Application\obj\Debug\net8.0\BackCar..5B2E34DD.Up2Date
+C:\Users\Alex\source\repos\CarManageBack\BackCar.Application\obj\Debug\net8.0\BackCar.Application.dll
+C:\Users\Alex\source\repos\CarManageBack\BackCar.Application\obj\Debug\net8.0\refint\BackCar.Application.dll
+C:\Users\Alex\source\repos\CarManageBack\BackCar.Application\obj\Debug\net8.0\BackCar.Application.pdb
+C:\Users\Alex\source\repos\CarManageBack\BackCar.Application\obj\Debug\net8.0\ref\BackCar.Application.dll

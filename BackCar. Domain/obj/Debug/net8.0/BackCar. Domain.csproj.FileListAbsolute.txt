@@ -9,3 +9,16 @@ D:\source\repos\BackCar\BackCar. Domain\obj\Debug\net8.0\BackCar. Domain.dll
 D:\source\repos\BackCar\BackCar. Domain\obj\Debug\net8.0\refint\BackCar. Domain.dll
 D:\source\repos\BackCar\BackCar. Domain\obj\Debug\net8.0\BackCar. Domain.pdb
 D:\source\repos\BackCar\BackCar. Domain\obj\Debug\net8.0\ref\BackCar. Domain.dll
+C:\Users\Alex\source\repos\CarManageBack\BackCar. Domain\bin\Debug\net8.0\BackCar. Domain.deps.json
+C:\Users\Alex\source\repos\CarManageBack\BackCar. Domain\bin\Debug\net8.0\BackCar. Domain.dll
+C:\Users\Alex\source\repos\CarManageBack\BackCar. Domain\bin\Debug\net8.0\BackCar. Domain.pdb
+C:\Users\Alex\source\repos\CarManageBack\BackCar. Domain\obj\Debug\net8.0\BackCar. Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alex\source\repos\CarManageBack\BackCar. Domain\obj\Debug\net8.0\BackCar. Domain.AssemblyInfoInputs.cache
+C:\Users\Alex\source\repos\CarManageBack\BackCar. Domain\obj\Debug\net8.0\BackCar. Domain.AssemblyInfo.cs
+C:\Users\Alex\source\repos\CarManageBack\BackCar. Domain\obj\Debug\net8.0\BackCar. Domain.csproj.CoreCompileInputs.cache
+C:\Users\Alex\source\repos\CarManageBack\BackCar. Domain\obj\Debug\net8.0\BackCar. Domain.sourcelink.json
+C:\Users\Alex\source\repos\CarManageBack\BackCar. Domain\obj\Debug\net8.0\BackCar. Domain.dll
+C:\Users\Alex\source\repos\CarManageBack\BackCar. Domain\obj\Debug\net8.0\refint\BackCar. Domain.dll
+C:\Users\Alex\source\repos\CarManageBack\BackCar. Domain\obj\Debug\net8.0\BackCar. Domain.pdb
+C:\Users\Alex\source\repos\CarManageBack\BackCar. Domain\obj\Debug\net8.0\ref\BackCar. Domain.dll
+C:\Users\Alex\source\repos\CarManageBack\BackCar. Domain\obj\Debug\net8.0\BackCar. Domain.csproj.AssemblyReference.cache
