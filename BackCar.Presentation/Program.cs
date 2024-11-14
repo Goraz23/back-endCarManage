@@ -9,6 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 //Para la BD:
 builder.Services.AddScoped<IRolService, RolService>();
+builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 // Configurar DbContext con la cadena de conexión de MySQL
 // Configuración del resto de servicios de la aplicación
 builder.Services.AddControllers();  // Registra los controladores (API)
