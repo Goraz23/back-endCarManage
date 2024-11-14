@@ -10,5 +10,11 @@ namespace BackCar.Application.Interfaces
     public interface IRolService
     {
         Task<List<Rol>> ObtenerTodosLosRolesAsync();
+        //Método Post:
+        Task CrearRolAsync(Rol nuevoRol);
+
+        Task<bool> EliminarRolAsync(int id);
+
+        Task<bool> ActualizarRolAsync(int id, Rol rolActualizado);  // Nuevo método
     }
 }
