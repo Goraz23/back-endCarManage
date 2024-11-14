@@ -1,5 +1,3 @@
-
-
 using BackCar.Application.Interfaces;
 using BackCar.Infrastructure;
 using BackCar.Infrastructure.Services;
@@ -16,7 +14,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
     ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("DefaultConnection")))
 );  // Configura la conexión a la base de datos
- // Asegúrate de tener la versión correcta de MySQL
+    // Asegúrate de tener la versión correcta de MySQL
 
 //Más BD, LOL y algo de APP:
 
@@ -73,4 +71,3 @@ internal record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary
 {
     public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
 }
-

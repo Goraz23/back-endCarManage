@@ -22,3 +22,16 @@ C:\Users\Alex\source\repos\CarManageBack\BackCar. Domain\obj\Debug\net8.0\refint
 C:\Users\Alex\source\repos\CarManageBack\BackCar. Domain\obj\Debug\net8.0\BackCar. Domain.pdb
 C:\Users\Alex\source\repos\CarManageBack\BackCar. Domain\obj\Debug\net8.0\ref\BackCar. Domain.dll
 C:\Users\Alex\source\repos\CarManageBack\BackCar. Domain\obj\Debug\net8.0\BackCar. Domain.csproj.AssemblyReference.cache
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\Backend\BackCar. Domain\bin\Debug\net8.0\BackCar. Domain.deps.json
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\Backend\BackCar. Domain\bin\Debug\net8.0\BackCar. Domain.dll
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\Backend\BackCar. Domain\bin\Debug\net8.0\BackCar. Domain.pdb
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\Backend\BackCar. Domain\obj\Debug\net8.0\BackCar. Domain.csproj.AssemblyReference.cache
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\Backend\BackCar. Domain\obj\Debug\net8.0\BackCar. Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\Backend\BackCar. Domain\obj\Debug\net8.0\BackCar. Domain.AssemblyInfoInputs.cache
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\Backend\BackCar. Domain\obj\Debug\net8.0\BackCar. Domain.AssemblyInfo.cs
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\Backend\BackCar. Domain\obj\Debug\net8.0\BackCar. Domain.csproj.CoreCompileInputs.cache
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\Backend\BackCar. Domain\obj\Debug\net8.0\BackCar. Domain.sourcelink.json
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\Backend\BackCar. Domain\obj\Debug\net8.0\BackCar. Domain.dll
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\Backend\BackCar. Domain\obj\Debug\net8.0\refint\BackCar. Domain.dll
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\Backend\BackCar. Domain\obj\Debug\net8.0\BackCar. Domain.pdb
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\Backend\BackCar. Domain\obj\Debug\net8.0\ref\BackCar. Domain.dll

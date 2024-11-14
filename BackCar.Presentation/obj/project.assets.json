@@ -4776,23 +4776,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Alex\\.nuget\\packages\\": {},
+    "C:\\Users\\Diego Aleman\\.nuget\\packages\\": {},
+    "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alex\\source\\repos\\CarManageBack\\BackCar.Presentation\\BackCar.Presentation.csproj",
+      "projectUniqueName": "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\Backend\\BackCar.Presentation\\BackCar.Presentation.csproj",
       "projectName": "BackCar.Presentation",
-      "projectPath": "C:\\Users\\Alex\\source\\repos\\CarManageBack\\BackCar.Presentation\\BackCar.Presentation.csproj",
-      "packagesPath": "C:\\Users\\Alex\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alex\\source\\repos\\CarManageBack\\BackCar.Presentation\\obj\\",
+      "projectPath": "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\Backend\\BackCar.Presentation\\BackCar.Presentation.csproj",
+      "packagesPath": "C:\\Users\\Diego Aleman\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\Backend\\BackCar.Presentation\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages",
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Alex\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Diego Aleman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 24.1.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4801,17 +4804,18 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\DevExpress 24.1\\Components\\System\\Components\\Packages": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Alex\\source\\repos\\CarManageBack\\BackCar.Application\\BackCar.Application.csproj": {
-              "projectPath": "C:\\Users\\Alex\\source\\repos\\CarManageBack\\BackCar.Application\\BackCar.Application.csproj"
+            "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\Backend\\BackCar.Application\\BackCar.Application.csproj": {
+              "projectPath": "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\Backend\\BackCar.Application\\BackCar.Application.csproj"
             },
-            "C:\\Users\\Alex\\source\\repos\\CarManageBack\\BackCar.Infrastructure\\BackCar.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Alex\\source\\repos\\CarManageBack\\BackCar.Infrastructure\\BackCar.Infrastructure.csproj"
+            "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\Backend\\BackCar.Infrastructure\\BackCar.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\Backend\\BackCar.Infrastructure\\BackCar.Infrastructure.csproj"
             }
           }
         }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BackCar. Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4d6a1016564a96cc8d031da5c46d2b822b3f0d8d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3659e809c6bc35a921f7606ab88d7c333c2c2054")]
 [assembly: System.Reflection.AssemblyProductAttribute("BackCar. Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BackCar. Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
