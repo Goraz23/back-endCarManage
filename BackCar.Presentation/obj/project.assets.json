@@ -5623,25 +5623,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Diego Aleman\\.nuget\\packages\\": {},
-    "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages": {},
+    "C:\\Users\\tony1\\.nuget\\packages\\": {},
+    "D:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\Backend\\BackCar.Presentation\\BackCar.Presentation.csproj",
+      "projectUniqueName": "C:\\Users\\tony1\\OneDrive\\Documentos\\back-endCarManage\\BackCar.Presentation\\BackCar.Presentation.csproj",
       "projectName": "BackCar.Presentation",
-      "projectPath": "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\Backend\\BackCar.Presentation\\BackCar.Presentation.csproj",
-      "packagesPath": "C:\\Users\\Diego Aleman\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\Backend\\BackCar.Presentation\\obj\\",
+      "projectPath": "C:\\Users\\tony1\\OneDrive\\Documentos\\back-endCarManage\\BackCar.Presentation\\BackCar.Presentation.csproj",
+      "packagesPath": "C:\\Users\\tony1\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\tony1\\OneDrive\\Documentos\\back-endCarManage\\BackCar.Presentation\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages",
+        "D:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages",
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Diego Aleman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\tony1\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 24.1.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -5651,18 +5651,19 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\DevExpress 24.1\\Components\\System\\Components\\Packages": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "D:\\Program Files\\DevExpress 24.1\\Components\\System\\Components\\Packages": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\Backend\\BackCar.Application\\BackCar.Application.csproj": {
-              "projectPath": "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\Backend\\BackCar.Application\\BackCar.Application.csproj"
+            "C:\\Users\\tony1\\OneDrive\\Documentos\\back-endCarManage\\BackCar.Application\\BackCar.Application.csproj": {
+              "projectPath": "C:\\Users\\tony1\\OneDrive\\Documentos\\back-endCarManage\\BackCar.Application\\BackCar.Application.csproj"
             },
-            "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\Backend\\BackCar.Infrastructure\\BackCar.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\Backend\\BackCar.Infrastructure\\BackCar.Infrastructure.csproj"
+            "C:\\Users\\tony1\\OneDrive\\Documentos\\back-endCarManage\\BackCar.Infrastructure\\BackCar.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\tony1\\OneDrive\\Documentos\\back-endCarManage\\BackCar.Infrastructure\\BackCar.Infrastructure.csproj"
             }
           }
         }
@@ -5734,7 +5735,7 @@
       "code": "NU1902",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "El paquete \"Azure.Identity\" 1.10.3 tiene una vulnerabilidad de gravedad moderada conocida, https://github.com/advisories/GHSA-m5vv-6r4h-3vj9",
+      "message": "Package 'Azure.Identity' 1.10.3 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-m5vv-6r4h-3vj9",
       "libraryId": "Azure.Identity",
       "targetGraphs": [
         "net8.0"
@@ -5744,7 +5745,7 @@
       "code": "NU1902",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "El paquete \"Azure.Identity\" 1.10.3 tiene una vulnerabilidad de gravedad moderada conocida, https://github.com/advisories/GHSA-wvxc-855f-jvrv",
+      "message": "Package 'Azure.Identity' 1.10.3 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-wvxc-855f-jvrv",
       "libraryId": "Azure.Identity",
       "targetGraphs": [
         "net8.0"
@@ -5754,7 +5755,7 @@
       "code": "NU1902",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "El paquete \"Microsoft.Identity.Client\" 4.56.0 tiene una vulnerabilidad de gravedad moderada conocida, https://github.com/advisories/GHSA-m5vv-6r4h-3vj9",
+      "message": "Package 'Microsoft.Identity.Client' 4.56.0 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-m5vv-6r4h-3vj9",
       "libraryId": "Microsoft.Identity.Client",
       "targetGraphs": [
         "net8.0"
@@ -5764,7 +5765,7 @@
       "code": "NU1901",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "El paquete \"Microsoft.Identity.Client\" 4.56.0 tiene una vulnerabilidad de gravedad baja conocida, https://github.com/advisories/GHSA-x674-v45j-fwxw",
+      "message": "Package 'Microsoft.Identity.Client' 4.56.0 has a known low severity vulnerability, https://github.com/advisories/GHSA-x674-v45j-fwxw",
       "libraryId": "Microsoft.Identity.Client",
       "targetGraphs": [
         "net8.0"
