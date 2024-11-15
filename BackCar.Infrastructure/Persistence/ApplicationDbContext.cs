@@ -17,6 +17,7 @@ namespace BackCar.Infrastructure // Usa el espacio de nombres adecuado
         public DbSet<Cliente> Clientes { get; set; } // Nuevo DbSet para Cliente
         public DbSet<Seguro> Seguros { get; set; } // Nuevo DbSet para Seguro
         public DbSet<RegistroEstadoVehiculo> RegistroEstadoVehiculos { get; set; }
+        public DbSet<Incidente> Incidentes { get; set; }
 
     }
 }

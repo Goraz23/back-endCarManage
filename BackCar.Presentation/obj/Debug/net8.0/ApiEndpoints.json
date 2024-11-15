@@ -166,6 +166,115 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "BackCar.Presentation.Controllers.IncidenteController",
+    "Method": "GetIncidentes",
+    "RelativePath": "api/Incidente",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[BackCar._Domain.Entities.Incidente, BackCar. Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BackCar.Presentation.Controllers.IncidenteController",
+    "Method": "CreateIncidente",
+    "RelativePath": "api/Incidente",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "incidenteDto",
+        "Type": "BackCar.Application.DTOs.IncidenteDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BackCar._Domain.Entities.Incidente",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BackCar.Presentation.Controllers.IncidenteController",
+    "Method": "GetIncidente",
+    "RelativePath": "api/Incidente/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BackCar._Domain.Entities.Incidente",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BackCar.Presentation.Controllers.IncidenteController",
+    "Method": "UpdateIncidente",
+    "RelativePath": "api/Incidente/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "incidenteDto",
+        "Type": "BackCar.Application.DTOs.IncidenteDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackCar.Presentation.Controllers.IncidenteController",
+    "Method": "DeleteIncidente",
+    "RelativePath": "api/Incidente/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "BackCar.Presentation.Controllers.RegistroEstadoVehiculoController",
     "Method": "GetAll",
     "RelativePath": "api/RegistroEstadoVehiculo",

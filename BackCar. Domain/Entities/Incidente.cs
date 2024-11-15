@@ -15,12 +15,15 @@ namespace BackCar._Domain.Entities
         public int Id_Incidente { get; set; }
 
         public DateTime FechaIncidente { get; set; }
+
         public string Descripcion { get; set; }
+
         public bool AplicoSeguro { get; set; }
 
-        // Relaciones
         [ForeignKey("ContratoRenta")]
         public int Id_ContratoRenta { get; set; }
-        public ContratoRenta ContratoRenta { get; set; }
+
+        public ContratoRenta ContratoRenta { get; set; }  // Propiedad de navegación
     }
+
 }
