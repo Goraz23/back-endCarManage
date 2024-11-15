@@ -239,6 +239,89 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "BackCar.Presentation.Controllers.SeguroController",
+    "Method": "GetSeguros",
+    "RelativePath": "api/Seguro",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[BackCar._Domain.Entities.Seguro, BackCar. Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BackCar.Presentation.Controllers.SeguroController",
+    "Method": "CreateSeguro",
+    "RelativePath": "api/Seguro",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "seguro",
+        "Type": "BackCar._Domain.Entities.Seguro",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BackCar._Domain.Entities.Seguro",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BackCar.Presentation.Controllers.SeguroController",
+    "Method": "UpdateSeguro",
+    "RelativePath": "api/Seguro/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "seguro",
+        "Type": "BackCar._Domain.Entities.Seguro",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackCar.Presentation.Controllers.SeguroController",
+    "Method": "DeleteSeguro",
+    "RelativePath": "api/Seguro/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "BackCar.Presentation.Controllers.UsuarioController",
     "Method": "GetUsuarios",
     "RelativePath": "api/Usuario",

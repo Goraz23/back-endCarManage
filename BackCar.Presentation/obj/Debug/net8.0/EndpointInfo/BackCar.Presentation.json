@@ -452,6 +452,153 @@
         }
       }
     },
+    "/api/Seguro": {
+      "get": {
+        "tags": [
+          "Seguro"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Seguro"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Seguro"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Seguro"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Seguro"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Seguro"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Seguro"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Seguro"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Seguro"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Seguro"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Seguro"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Seguro/{id}": {
+      "put": {
+        "tags": [
+          "Seguro"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Seguro"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Seguro"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Seguro"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Seguro"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Usuario": {
       "get": {
         "tags": [
@@ -648,6 +795,36 @@
           "nombre": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Seguro": {
+        "type": "object",
+        "properties": {
+          "id_Seguro": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tipoSeguro": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaInicio": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "fechaVencimiento": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "autorContratado": {
+            "type": "string",
+            "nullable": true
+          },
+          "monto": {
+            "type": "number",
+            "format": "double"
           }
         },
         "additionalProperties": false

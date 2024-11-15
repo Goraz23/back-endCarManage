@@ -10,6 +10,7 @@ builder.Services.AddScoped<IRolService, RolService>();
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 builder.Services.AddScoped<ICategoriaService, CategoriaService>();
 builder.Services.AddScoped<IClienteService, ClienteService>();
+builder.Services.AddScoped<ISeguroService, SeguroService>();
 
 
 // Configurar DbContext con la cadena de conexión de MySQL
