@@ -36,5 +36,9 @@ namespace BackCar._Domain.Entities
         [ForeignKey("Categoria")]
         public int Categoria_Id { get; set; }
         public Categoria Categoria { get; set; }
+
+        // Nuevo Campo
+        public bool IsAutomatico { get; set; }
+
     }
 }
