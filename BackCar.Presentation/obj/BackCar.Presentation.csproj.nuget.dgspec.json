@@ -315,6 +315,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "DevExpress.Xpo": {
+              "target": "Package",
+              "version": "[24.1.6, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.10, )"
