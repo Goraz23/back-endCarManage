@@ -322,6 +322,153 @@
         }
       }
     },
+    "/api/RegistroEstadoVehiculo": {
+      "get": {
+        "tags": [
+          "RegistroEstadoVehiculo"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RegistroEstadoVehiculo"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RegistroEstadoVehiculo"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RegistroEstadoVehiculo"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "RegistroEstadoVehiculo"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistroEstadoVehiculoDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistroEstadoVehiculoDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistroEstadoVehiculoDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegistroEstadoVehiculo"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegistroEstadoVehiculo"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegistroEstadoVehiculo"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/RegistroEstadoVehiculo/{id}": {
+      "put": {
+        "tags": [
+          "RegistroEstadoVehiculo"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistroEstadoVehiculoDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistroEstadoVehiculoDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistroEstadoVehiculoDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "RegistroEstadoVehiculo"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Rol": {
       "get": {
         "tags": [
@@ -644,17 +791,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Usuario"
+                "$ref": "#/components/schemas/UsuarioDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Usuario"
+                "$ref": "#/components/schemas/UsuarioDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Usuario"
+                "$ref": "#/components/schemas/UsuarioDto"
               }
             }
           }
@@ -703,17 +850,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Usuario"
+                "$ref": "#/components/schemas/UsuarioDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Usuario"
+                "$ref": "#/components/schemas/UsuarioDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Usuario"
+                "$ref": "#/components/schemas/UsuarioDto"
               }
             }
           }
@@ -781,6 +928,107 @@
           "correo": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ContratoRenta": {
+        "type": "object",
+        "properties": {
+          "id_ContratoRenta": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fechaInicio": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "fechaDevolucion": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "costoSubTotal": {
+            "type": "number",
+            "format": "double"
+          },
+          "costoTotal": {
+            "type": "number",
+            "format": "double"
+          },
+          "fechaCreacion": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "clientes_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cliente": {
+            "$ref": "#/components/schemas/Usuario"
+          },
+          "vehiculos_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "vehiculo": {
+            "$ref": "#/components/schemas/Vehiculo"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RegistroEstadoVehiculo": {
+        "type": "object",
+        "properties": {
+          "id_RegistroEstadoVehiculo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "kilometrajeInicial": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "kilometrajeFinal": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "detallesRetorno": {
+            "type": "string",
+            "nullable": true
+          },
+          "aplicanCargos": {
+            "type": "boolean"
+          },
+          "id_ContratoRenta": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "contratoRenta": {
+            "$ref": "#/components/schemas/ContratoRenta"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RegistroEstadoVehiculoDto": {
+        "type": "object",
+        "properties": {
+          "kilometrajeInicial": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "kilometrajeFinal": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "detallesRetorno": {
+            "type": "string",
+            "nullable": true
+          },
+          "aplicanCargos": {
+            "type": "boolean"
+          },
+          "id_ContratoRenta": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -862,6 +1110,109 @@
           },
           "rol": {
             "$ref": "#/components/schemas/Rol"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UsuarioDto": {
+        "type": "object",
+        "properties": {
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "correo": {
+            "type": "string",
+            "nullable": true
+          },
+          "contrasenia": {
+            "type": "string",
+            "nullable": true
+          },
+          "telefono": {
+            "type": "string",
+            "nullable": true
+          },
+          "roles_Usuarios_id": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Vehiculo": {
+        "type": "object",
+        "properties": {
+          "id_Vehiculo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "marca": {
+            "type": "string",
+            "nullable": true
+          },
+          "modelo": {
+            "type": "string",
+            "nullable": true
+          },
+          "anio": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "imagen": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "placa": {
+            "type": "string",
+            "nullable": true
+          },
+          "kilometraje": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fechaUltimoMantenimiento": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "fechaRegistro": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "costoTemporadaAlta": {
+            "type": "number",
+            "format": "double"
+          },
+          "costoTemporadaBaja": {
+            "type": "number",
+            "format": "double"
+          },
+          "isRentado": {
+            "type": "boolean"
+          },
+          "isMantenimiento": {
+            "type": "boolean"
+          },
+          "usuarios_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "usuario": {
+            "$ref": "#/components/schemas/Usuario"
+          },
+          "categoria_Id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "categoria": {
+            "$ref": "#/components/schemas/Categoria"
+          },
+          "isAutomatico": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
