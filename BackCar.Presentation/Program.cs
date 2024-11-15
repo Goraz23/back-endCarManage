@@ -9,6 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<IRolService, RolService>();
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 builder.Services.AddScoped<ICategoriaService, CategoriaService>();
+builder.Services.AddScoped<IClienteService, ClienteService>();
+
 
 // Configurar DbContext con la cadena de conexión de MySQL
 // Configuración del resto de servicios de la aplicación

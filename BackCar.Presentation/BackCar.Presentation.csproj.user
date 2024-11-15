@@ -12,5 +12,8 @@
     <Compile Update="Controllers\CategoriaController.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Controllers\ClienteController.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

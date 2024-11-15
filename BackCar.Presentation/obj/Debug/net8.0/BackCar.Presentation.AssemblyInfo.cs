@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BackCar.Presentation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+afa9ff0207e05b6c3a47a1522d632fa6aa9a3154")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+056b758c251e59aba7caeb17fcf79182a51a9f9f")]
 [assembly: System.Reflection.AssemblyProductAttribute("BackCar.Presentation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BackCar.Presentation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
