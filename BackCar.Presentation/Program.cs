@@ -9,6 +9,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<IRolService, RolService>();
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 builder.Services.AddScoped<ICategoriaService, CategoriaService>();
+builder.Services.AddScoped<IVehiculoService, VehiculoService>();
+builder.Services.AddScoped<IMantenimientoService, MantenimientoService>();
+builder.Services.AddScoped<IContratoRentaService, ContratoRentaService>();
 builder.Services.AddScoped<IClienteService, ClienteService>();
 builder.Services.AddScoped<ISeguroService, SeguroService>();
 builder.Services.AddScoped<IRegistroEstadoVehiculoService, RegistroEstadoVehiculoService>();
@@ -16,16 +19,16 @@ builder.Services.AddScoped<IIncidenteService, IncidenteService>();
 
 
 
-// Configurar DbContext con la cadena de conexión de MySQL
-// Configuración del resto de servicios de la aplicación
+// Configurar DbContext con la cadena de conexiï¿½n de MySQL
+// Configuraciï¿½n del resto de servicios de la aplicaciï¿½n
 builder.Services.AddControllers();  // Registra los controladores (API)
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
     ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("DefaultConnection")))
-);  // Configura la conexión a la base de datos
-    // Asegúrate de tener la versión correcta de MySQL
+);  // Configura la conexiï¿½n a la base de datos
+    // Asegï¿½rate de tener la versiï¿½n correcta de MySQL
 
-//Más BD, LOL y algo de APP:
+//Mï¿½s BD, LOL y algo de APP:
 
 
 
@@ -39,7 +42,7 @@ var app = builder.Build();
 
 
 //Prueba para BD:
-// Configurar la tubería de solicitud y respuesta
+// Configurar la tuberï¿½a de solicitud y respuesta
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();  // Mapea los controladores a las rutas

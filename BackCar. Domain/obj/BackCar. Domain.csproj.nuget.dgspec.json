@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\Backend\\BackCar. Domain\\BackCar. Domain.csproj": {}
+    "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\BACKENDCAR\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\Backend\\BackCar. Domain\\BackCar. Domain.csproj": {
+    "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\BACKENDCAR\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\Backend\\BackCar. Domain\\BackCar. Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\BACKENDCAR\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj",
         "projectName": "BackCar. Domain",
-        "projectPath": "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\Backend\\BackCar. Domain\\BackCar. Domain.csproj",
+        "projectPath": "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\BACKENDCAR\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj",
         "packagesPath": "C:\\Users\\Diego Aleman\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\Backend\\BackCar. Domain\\obj\\",
+        "outputPath": "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\BACKENDCAR\\back-endCarManage\\BackCar. Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages",

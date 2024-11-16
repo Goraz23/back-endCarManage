@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hoGA0g+vSoA=",
+  "dgSpecHash": "UC3OKTdjCQQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\Backend\\BackCar. Domain\\BackCar. Domain.csproj",
+  "projectFilePath": "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\BACKENDCAR\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Diego Aleman\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.2\\microsoft.entityframeworkcore.8.0.2.nupkg.sha512",
     "C:\\Users\\Diego Aleman\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.2\\microsoft.entityframeworkcore.abstractions.8.0.2.nupkg.sha512",
@@ -25,7 +25,7 @@
       "code": "NU1903",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "El paquete \"Microsoft.Extensions.Caching.Memory\" 8.0.0 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-qj66-m88j-hmgj",
+      "message": "Package 'Microsoft.Extensions.Caching.Memory' 8.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-qj66-m88j-hmgj",
       "libraryId": "Microsoft.Extensions.Caching.Memory",
       "targetGraphs": [
         "net8.0"

@@ -166,6 +166,105 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "BackCar.Presentation.Controllers.ContratoRentaController",
+    "Method": "GetContratos",
+    "RelativePath": "api/ContratoRenta",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[BackCar.Application.DTOs.ContratoRentaDTO, BackCar.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BackCar.Presentation.Controllers.ContratoRentaController",
+    "Method": "Create",
+    "RelativePath": "api/ContratoRenta",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nuevoContrato",
+        "Type": "BackCar.Application.DTOs.ContratoRentaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackCar.Presentation.Controllers.ContratoRentaController",
+    "Method": "GetContrato",
+    "RelativePath": "api/ContratoRenta/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BackCar.Application.DTOs.ContratoRentaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BackCar.Presentation.Controllers.ContratoRentaController",
+    "Method": "Delete",
+    "RelativePath": "api/ContratoRenta/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackCar.Presentation.Controllers.ContratoRentaController",
+    "Method": "Update",
+    "RelativePath": "api/ContratoRenta/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "contratoActualizado",
+        "Type": "BackCar.Application.DTOs.ContratoRentaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "BackCar.Presentation.Controllers.IncidenteController",
     "Method": "GetIncidentes",
     "RelativePath": "api/Incidente",
@@ -269,6 +368,105 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackCar.Presentation.Controllers.MantenimientoController",
+    "Method": "GetMantenimientos",
+    "RelativePath": "api/Mantenimiento",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[BackCar.Application.DTOs.MantenimientoDTO, BackCar.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BackCar.Presentation.Controllers.MantenimientoController",
+    "Method": "Create",
+    "RelativePath": "api/Mantenimiento",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nuevoMantenimiento",
+        "Type": "BackCar.Application.DTOs.MantenimientoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackCar.Presentation.Controllers.MantenimientoController",
+    "Method": "GetMantenimiento",
+    "RelativePath": "api/Mantenimiento/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BackCar.Application.DTOs.MantenimientoDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BackCar.Presentation.Controllers.MantenimientoController",
+    "Method": "Delete",
+    "RelativePath": "api/Mantenimiento/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackCar.Presentation.Controllers.MantenimientoController",
+    "Method": "Update",
+    "RelativePath": "api/Mantenimiento/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "mantenimientoActualizado",
+        "Type": "BackCar.Application.DTOs.MantenimientoDTO",
         "IsRequired": true
       }
     ],
@@ -584,6 +782,105 @@
     "ContainingType": "BackCar.Presentation.Controllers.UsuarioController",
     "Method": "DeleteUsuario",
     "RelativePath": "api/Usuario/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackCar.Presentation.Controllers.VehiculoController",
+    "Method": "GetVehiculos",
+    "RelativePath": "api/Vehiculo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[BackCar.Application.DTOs.VehiculoDTO, BackCar.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BackCar.Presentation.Controllers.VehiculoController",
+    "Method": "Create",
+    "RelativePath": "api/Vehiculo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nuevoVehiculoDTO",
+        "Type": "BackCar.Application.DTOs.VehiculoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackCar.Presentation.Controllers.VehiculoController",
+    "Method": "GetVehiculoById",
+    "RelativePath": "api/Vehiculo/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BackCar.Application.DTOs.VehiculoDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BackCar.Presentation.Controllers.VehiculoController",
+    "Method": "Update",
+    "RelativePath": "api/Vehiculo/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "vehiculoActualizadoDTO",
+        "Type": "BackCar.Application.DTOs.VehiculoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackCar.Presentation.Controllers.VehiculoController",
+    "Method": "Delete",
+    "RelativePath": "api/Vehiculo/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
