@@ -9,9 +9,18 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<IRolService, RolService>();
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 builder.Services.AddScoped<ICategoriaService, CategoriaService>();
+<<<<<<< HEAD
 builder.Services.AddScoped<IVehiculoService, VehiculoService>();
 builder.Services.AddScoped<IMantenimientoService, MantenimientoService>();
 builder.Services.AddScoped<IContratoRentaService, ContratoRentaService>();
+=======
+builder.Services.AddScoped<IClienteService, ClienteService>();
+builder.Services.AddScoped<ISeguroService, SeguroService>();
+builder.Services.AddScoped<IRegistroEstadoVehiculoService, RegistroEstadoVehiculoService>();
+builder.Services.AddScoped<IIncidenteService, IncidenteService>();
+
+
+>>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
 
 // Configurar DbContext con la cadena de conexión de MySQL
 // Configuración del resto de servicios de la aplicación

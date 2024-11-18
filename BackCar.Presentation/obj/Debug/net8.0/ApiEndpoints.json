@@ -83,16 +83,26 @@
     "ReturnTypes": []
   },
   {
+<<<<<<< HEAD
     "ContainingType": "BackCar.Presentation.Controllers.ContratoRentaController",
     "Method": "GetContratos",
     "RelativePath": "api/ContratoRenta",
+=======
+    "ContainingType": "BackCar.Presentation.Controllers.ClienteController",
+    "Method": "GetClientes",
+    "RelativePath": "api/Cliente",
+>>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": [
       {
+<<<<<<< HEAD
         "Type": "System.Collections.Generic.List\u00601[[BackCar.Application.DTOs.ContratoRentaDTO, BackCar.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+=======
+        "Type": "System.Collections.Generic.List\u00601[[BackCar._Domain.Entities.Cliente, BackCar. Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+>>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -103,14 +113,21 @@
     ]
   },
   {
+<<<<<<< HEAD
     "ContainingType": "BackCar.Presentation.Controllers.ContratoRentaController",
     "Method": "Create",
     "RelativePath": "api/ContratoRenta",
+=======
+    "ContainingType": "BackCar.Presentation.Controllers.ClienteController",
+    "Method": "CreateCliente",
+    "RelativePath": "api/Cliente",
+>>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
+<<<<<<< HEAD
         "Name": "nuevoContrato",
         "Type": "BackCar.Application.DTOs.ContratoRentaDTO",
         "IsRequired": true
@@ -123,6 +140,30 @@
     "Method": "GetContrato",
     "RelativePath": "api/ContratoRenta/{id}",
     "HttpMethod": "GET",
+=======
+        "Name": "cliente",
+        "Type": "BackCar._Domain.Entities.Cliente",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BackCar._Domain.Entities.Cliente",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BackCar.Presentation.Controllers.ClienteController",
+    "Method": "UpdateCliente",
+    "RelativePath": "api/Cliente/{id}",
+    "HttpMethod": "PUT",
+>>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -130,6 +171,7 @@
         "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
+<<<<<<< HEAD
       }
     ],
     "ReturnTypes": [
@@ -148,6 +190,21 @@
     "ContainingType": "BackCar.Presentation.Controllers.ContratoRentaController",
     "Method": "Delete",
     "RelativePath": "api/ContratoRenta/{id}",
+=======
+      },
+      {
+        "Name": "cliente",
+        "Type": "BackCar._Domain.Entities.Cliente",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackCar.Presentation.Controllers.ClienteController",
+    "Method": "DeleteCliente",
+    "RelativePath": "api/Cliente/{id}",
+>>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -161,9 +218,87 @@
     "ReturnTypes": []
   },
   {
+<<<<<<< HEAD
     "ContainingType": "BackCar.Presentation.Controllers.ContratoRentaController",
     "Method": "Update",
     "RelativePath": "api/ContratoRenta/{id}",
+=======
+    "ContainingType": "BackCar.Presentation.Controllers.IncidenteController",
+    "Method": "GetIncidentes",
+    "RelativePath": "api/Incidente",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[BackCar._Domain.Entities.Incidente, BackCar. Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BackCar.Presentation.Controllers.IncidenteController",
+    "Method": "CreateIncidente",
+    "RelativePath": "api/Incidente",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "incidenteDto",
+        "Type": "BackCar.Application.DTOs.IncidenteDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BackCar._Domain.Entities.Incidente",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BackCar.Presentation.Controllers.IncidenteController",
+    "Method": "GetIncidente",
+    "RelativePath": "api/Incidente/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BackCar._Domain.Entities.Incidente",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BackCar.Presentation.Controllers.IncidenteController",
+    "Method": "UpdateIncidente",
+    "RelativePath": "api/Incidente/{id}",
+>>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -174,14 +309,20 @@
         "IsRequired": true
       },
       {
+<<<<<<< HEAD
         "Name": "contratoActualizado",
         "Type": "BackCar.Application.DTOs.ContratoRentaDTO",
+=======
+        "Name": "incidenteDto",
+        "Type": "BackCar.Application.DTOs.IncidenteDto",
+>>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
+<<<<<<< HEAD
     "ContainingType": "BackCar.Presentation.Controllers.MantenimientoController",
     "Method": "GetMantenimientos",
     "RelativePath": "api/Mantenimiento",
@@ -247,6 +388,11 @@
     "ContainingType": "BackCar.Presentation.Controllers.MantenimientoController",
     "Method": "Delete",
     "RelativePath": "api/Mantenimiento/{id}",
+=======
+    "ContainingType": "BackCar.Presentation.Controllers.IncidenteController",
+    "Method": "DeleteIncidente",
+    "RelativePath": "api/Incidente/{id}",
+>>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -260,9 +406,61 @@
     "ReturnTypes": []
   },
   {
+<<<<<<< HEAD
     "ContainingType": "BackCar.Presentation.Controllers.MantenimientoController",
     "Method": "Update",
     "RelativePath": "api/Mantenimiento/{id}",
+=======
+    "ContainingType": "BackCar.Presentation.Controllers.RegistroEstadoVehiculoController",
+    "Method": "GetAll",
+    "RelativePath": "api/RegistroEstadoVehiculo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[BackCar._Domain.Entities.RegistroEstadoVehiculo, BackCar. Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BackCar.Presentation.Controllers.RegistroEstadoVehiculoController",
+    "Method": "Create",
+    "RelativePath": "api/RegistroEstadoVehiculo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registroDto",
+        "Type": "BackCar.Application.DTOs.RegistroEstadoVehiculoDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BackCar._Domain.Entities.RegistroEstadoVehiculo",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BackCar.Presentation.Controllers.RegistroEstadoVehiculoController",
+    "Method": "Update",
+    "RelativePath": "api/RegistroEstadoVehiculo/{id}",
+>>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -273,8 +471,29 @@
         "IsRequired": true
       },
       {
+<<<<<<< HEAD
         "Name": "mantenimientoActualizado",
         "Type": "BackCar.Application.DTOs.MantenimientoDTO",
+=======
+        "Name": "registroDto",
+        "Type": "BackCar.Application.DTOs.RegistroEstadoVehiculoDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackCar.Presentation.Controllers.RegistroEstadoVehiculoController",
+    "Method": "Delete",
+    "RelativePath": "api/RegistroEstadoVehiculo/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+>>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
         "IsRequired": true
       }
     ],
@@ -354,6 +573,89 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "BackCar.Presentation.Controllers.SeguroController",
+    "Method": "GetSeguros",
+    "RelativePath": "api/Seguro",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[BackCar._Domain.Entities.Seguro, BackCar. Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BackCar.Presentation.Controllers.SeguroController",
+    "Method": "CreateSeguro",
+    "RelativePath": "api/Seguro",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "seguro",
+        "Type": "BackCar._Domain.Entities.Seguro",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BackCar._Domain.Entities.Seguro",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BackCar.Presentation.Controllers.SeguroController",
+    "Method": "UpdateSeguro",
+    "RelativePath": "api/Seguro/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "seguro",
+        "Type": "BackCar._Domain.Entities.Seguro",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackCar.Presentation.Controllers.SeguroController",
+    "Method": "DeleteSeguro",
+    "RelativePath": "api/Seguro/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "BackCar.Presentation.Controllers.UsuarioController",
     "Method": "GetUsuarios",
     "RelativePath": "api/Usuario",
@@ -382,8 +684,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "usuario",
-        "Type": "BackCar._Domain.Entities.Usuario",
+        "Name": "usuarioDto",
+        "Type": "BackCar.Application.DTOs.UsuarioDto",
         "IsRequired": true
       }
     ],
@@ -413,8 +715,8 @@
         "IsRequired": true
       },
       {
-        "Name": "usuario",
-        "Type": "BackCar._Domain.Entities.Usuario",
+        "Name": "usuarioDto",
+        "Type": "BackCar.Application.DTOs.UsuarioDto",
         "IsRequired": true
       }
     ],

@@ -12,5 +12,17 @@
     <Compile Update="Controllers\CategoriaController.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Controllers\ClienteController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controllers\IncidenteController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controllers\RegistroEstadoVehiculoController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controllers\SeguroController.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
