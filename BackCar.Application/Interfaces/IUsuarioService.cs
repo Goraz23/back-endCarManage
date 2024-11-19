@@ -1,4 +1,5 @@
 ﻿using BackCar._Domain.Entities;
+using BackCar.Application.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,5 +15,8 @@ namespace BackCar.Application.Interfaces
 
         Task<Usuario> UpdateUsuarioAsync(int id, Usuario usuario);  // Agregar este método
         Task<bool> DeleteUsuarioAsync(int id);
+
+        Task<LoginResponseDto> LoginAsync(LoginDto loginDto);
+
     }
 }

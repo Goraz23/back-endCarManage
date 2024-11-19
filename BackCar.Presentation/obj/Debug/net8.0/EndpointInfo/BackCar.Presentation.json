@@ -175,17 +175,10 @@
         }
       }
     },
-<<<<<<< HEAD
-    "/api/ContratoRenta": {
-      "get": {
-        "tags": [
-          "ContratoRenta"
-=======
     "/api/Cliente": {
       "get": {
         "tags": [
           "Cliente"
->>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
         ],
         "responses": {
           "200": {
@@ -195,11 +188,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-<<<<<<< HEAD
-                    "$ref": "#/components/schemas/ContratoRentaDTO"
-=======
                     "$ref": "#/components/schemas/Cliente"
->>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
                   }
                 }
               },
@@ -207,11 +196,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-<<<<<<< HEAD
-                    "$ref": "#/components/schemas/ContratoRentaDTO"
-=======
                     "$ref": "#/components/schemas/Cliente"
->>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
                   }
                 }
               },
@@ -219,11 +204,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-<<<<<<< HEAD
-                    "$ref": "#/components/schemas/ContratoRentaDTO"
-=======
                     "$ref": "#/components/schemas/Cliente"
->>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
                   }
                 }
               }
@@ -233,48 +214,29 @@
       },
       "post": {
         "tags": [
-<<<<<<< HEAD
-          "ContratoRenta"
-=======
           "Cliente"
->>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-<<<<<<< HEAD
-                "$ref": "#/components/schemas/ContratoRentaDTO"
-=======
                 "$ref": "#/components/schemas/Cliente"
->>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
               }
             },
             "text/json": {
               "schema": {
-<<<<<<< HEAD
-                "$ref": "#/components/schemas/ContratoRentaDTO"
-=======
                 "$ref": "#/components/schemas/Cliente"
->>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
               }
             },
             "application/*+json": {
               "schema": {
-<<<<<<< HEAD
-                "$ref": "#/components/schemas/ContratoRentaDTO"
-=======
                 "$ref": "#/components/schemas/Cliente"
->>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
               }
             }
           }
         },
         "responses": {
           "200": {
-<<<<<<< HEAD
-            "description": "OK"
-=======
             "description": "OK",
             "content": {
               "text/plain": {
@@ -293,22 +255,14 @@
                 }
               }
             }
->>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
           }
         }
       }
     },
-<<<<<<< HEAD
-    "/api/ContratoRenta/{id}": {
-      "get": {
-        "tags": [
-          "ContratoRenta"
-=======
     "/api/Cliente/{id}": {
       "put": {
         "tags": [
           "Cliente"
->>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
         ],
         "parameters": [
           {
@@ -321,7 +275,136 @@
             }
           }
         ],
-<<<<<<< HEAD
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Cliente"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Cliente"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Cliente"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Cliente"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ContratoRenta": {
+      "get": {
+        "tags": [
+          "ContratoRenta"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ContratoRentaDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ContratoRentaDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ContratoRentaDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ContratoRenta"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ContratoRentaDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ContratoRentaDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ContratoRentaDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ContratoRenta/{id}": {
+      "get": {
+        "tags": [
+          "ContratoRenta"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK",
@@ -343,40 +426,11 @@
               }
             }
           }
-=======
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Cliente"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Cliente"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Cliente"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
->>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
         }
       },
       "delete": {
         "tags": [
-<<<<<<< HEAD
           "ContratoRenta"
-=======
-          "Cliente"
->>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
         ],
         "parameters": [
           {
@@ -394,7 +448,6 @@
             "description": "OK"
           }
         }
-<<<<<<< HEAD
       },
       "put": {
         "tags": [
@@ -430,6 +483,191 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Incidente": {
+      "get": {
+        "tags": [
+          "Incidente"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Incidente"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Incidente"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Incidente"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Incidente"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IncidenteDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IncidenteDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/IncidenteDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Incidente"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Incidente"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Incidente"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Incidente/{id}": {
+      "get": {
+        "tags": [
+          "Incidente"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Incidente"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Incidente"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Incidente"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Incidente"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IncidenteDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IncidenteDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/IncidenteDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Incidente"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -441,14 +679,6 @@
       "get": {
         "tags": [
           "Mantenimiento"
-=======
-      }
-    },
-    "/api/Incidente": {
-      "get": {
-        "tags": [
-          "Incidente"
->>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
         ],
         "responses": {
           "200": {
@@ -458,11 +688,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-<<<<<<< HEAD
                     "$ref": "#/components/schemas/MantenimientoDTO"
-=======
-                    "$ref": "#/components/schemas/Incidente"
->>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
                   }
                 }
               },
@@ -470,11 +696,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-<<<<<<< HEAD
                     "$ref": "#/components/schemas/MantenimientoDTO"
-=======
-                    "$ref": "#/components/schemas/Incidente"
->>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
                   }
                 }
               },
@@ -482,11 +704,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-<<<<<<< HEAD
                     "$ref": "#/components/schemas/MantenimientoDTO"
-=======
-                    "$ref": "#/components/schemas/Incidente"
->>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
                   }
                 }
               }
@@ -496,82 +714,38 @@
       },
       "post": {
         "tags": [
-<<<<<<< HEAD
           "Mantenimiento"
-=======
-          "Incidente"
->>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-<<<<<<< HEAD
                 "$ref": "#/components/schemas/MantenimientoDTO"
-=======
-                "$ref": "#/components/schemas/IncidenteDto"
->>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
               }
             },
             "text/json": {
               "schema": {
-<<<<<<< HEAD
                 "$ref": "#/components/schemas/MantenimientoDTO"
-=======
-                "$ref": "#/components/schemas/IncidenteDto"
->>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
               }
             },
             "application/*+json": {
               "schema": {
-<<<<<<< HEAD
                 "$ref": "#/components/schemas/MantenimientoDTO"
-=======
-                "$ref": "#/components/schemas/IncidenteDto"
->>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
               }
             }
           }
         },
         "responses": {
           "200": {
-<<<<<<< HEAD
             "description": "OK"
-=======
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/Incidente"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Incidente"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Incidente"
-                }
-              }
-            }
->>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
           }
         }
       }
     },
-<<<<<<< HEAD
     "/api/Mantenimiento/{id}": {
       "get": {
         "tags": [
           "Mantenimiento"
-=======
-    "/api/Incidente/{id}": {
-      "get": {
-        "tags": [
-          "Incidente"
->>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
         ],
         "parameters": [
           {
@@ -590,36 +764,23 @@
             "content": {
               "text/plain": {
                 "schema": {
-<<<<<<< HEAD
                   "$ref": "#/components/schemas/MantenimientoDTO"
-=======
-                  "$ref": "#/components/schemas/Incidente"
->>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
                 }
               },
               "application/json": {
                 "schema": {
-<<<<<<< HEAD
                   "$ref": "#/components/schemas/MantenimientoDTO"
-=======
-                  "$ref": "#/components/schemas/Incidente"
->>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
                 }
               },
               "text/json": {
                 "schema": {
-<<<<<<< HEAD
                   "$ref": "#/components/schemas/MantenimientoDTO"
-=======
-                  "$ref": "#/components/schemas/Incidente"
->>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
                 }
               }
             }
           }
         }
       },
-<<<<<<< HEAD
       "delete": {
         "tags": [
           "Mantenimiento"
@@ -644,11 +805,6 @@
       "put": {
         "tags": [
           "Mantenimiento"
-=======
-      "put": {
-        "tags": [
-          "Incidente"
->>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
         ],
         "parameters": [
           {
@@ -665,56 +821,21 @@
           "content": {
             "application/json": {
               "schema": {
-<<<<<<< HEAD
                 "$ref": "#/components/schemas/MantenimientoDTO"
-=======
-                "$ref": "#/components/schemas/IncidenteDto"
->>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
               }
             },
             "text/json": {
               "schema": {
-<<<<<<< HEAD
                 "$ref": "#/components/schemas/MantenimientoDTO"
-=======
-                "$ref": "#/components/schemas/IncidenteDto"
->>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
               }
             },
             "application/*+json": {
               "schema": {
-<<<<<<< HEAD
                 "$ref": "#/components/schemas/MantenimientoDTO"
-=======
-                "$ref": "#/components/schemas/IncidenteDto"
->>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
               }
             }
           }
         },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-<<<<<<< HEAD
-=======
-      },
-      "delete": {
-        "tags": [
-          "Incidente"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -867,7 +988,6 @@
             "description": "OK"
           }
         }
->>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
       }
     },
     "/api/Rol": {
@@ -1294,6 +1414,54 @@
         }
       }
     },
+    "/api/Usuario/login": {
+      "post": {
+        "tags": [
+          "Usuario"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponseDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponseDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponseDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/Vehiculo": {
       "get": {
         "tags": [
@@ -1479,9 +1647,6 @@
         },
         "additionalProperties": false
       },
-<<<<<<< HEAD
-      "ContratoRentaDTO": {
-=======
       "Cliente": {
         "type": "object",
         "properties": {
@@ -1505,7 +1670,6 @@
         "additionalProperties": false
       },
       "ContratoRenta": {
->>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
         "type": "object",
         "properties": {
           "id_ContratoRenta": {
@@ -1536,11 +1700,6 @@
             "type": "integer",
             "format": "int32"
           },
-<<<<<<< HEAD
-          "vehiculos_id": {
-            "type": "integer",
-            "format": "int32"
-=======
           "cliente": {
             "$ref": "#/components/schemas/Usuario"
           },
@@ -1550,37 +1709,48 @@
           },
           "vehiculo": {
             "$ref": "#/components/schemas/Vehiculo"
->>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
           }
         },
         "additionalProperties": false
       },
-<<<<<<< HEAD
-      "MantenimientoDTO": {
+      "ContratoRentaDTO": {
         "type": "object",
         "properties": {
-          "id_Mantenimiento": {
+          "id_ContratoRenta": {
             "type": "integer",
             "format": "int32"
           },
-          "fecha": {
+          "fechaInicio": {
             "type": "string",
             "format": "date-time"
           },
-          "tipo": {
+          "fechaDevolucion": {
             "type": "string",
-            "nullable": true
+            "format": "date-time"
           },
-          "costo": {
+          "costoSubTotal": {
             "type": "number",
             "format": "double"
           },
-          "detalles": {
-            "type": "string",
-            "nullable": true
+          "costoTotal": {
+            "type": "number",
+            "format": "double"
           },
-          "vehiculo_id": {
-=======
+          "fechaCreacion": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "clientes_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "vehiculos_id": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
       "Incidente": {
         "type": "object",
         "properties": {
@@ -1624,6 +1794,68 @@
             "type": "boolean"
           },
           "id_ContratoRenta": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginDto": {
+        "type": "object",
+        "properties": {
+          "correo": {
+            "type": "string",
+            "nullable": true
+          },
+          "contrasenia": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginResponseDto": {
+        "type": "object",
+        "properties": {
+          "token": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "rol": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MantenimientoDTO": {
+        "type": "object",
+        "properties": {
+          "id_Mantenimiento": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fecha": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "tipo": {
+            "type": "string",
+            "nullable": true
+          },
+          "costo": {
+            "type": "number",
+            "format": "double"
+          },
+          "detalles": {
+            "type": "string",
+            "nullable": true
+          },
+          "vehiculo_id": {
             "type": "integer",
             "format": "int32"
           }
@@ -1681,7 +1913,6 @@
             "type": "boolean"
           },
           "id_ContratoRenta": {
->>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
             "type": "integer",
             "format": "int32"
           }
@@ -1769,9 +2000,6 @@
         },
         "additionalProperties": false
       },
-<<<<<<< HEAD
-      "VehiculoDTO": {
-=======
       "UsuarioDto": {
         "type": "object",
         "properties": {
@@ -1799,7 +2027,6 @@
         "additionalProperties": false
       },
       "Vehiculo": {
->>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
         "type": "object",
         "properties": {
           "id_Vehiculo": {
@@ -1838,13 +2065,10 @@
             "type": "string",
             "format": "date-time"
           },
-<<<<<<< HEAD
-=======
           "fechaRegistro": {
             "type": "string",
             "format": "date-time"
           },
->>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
           "costoTemporadaAlta": {
             "type": "number",
             "format": "double"
@@ -1859,21 +2083,10 @@
           "isMantenimiento": {
             "type": "boolean"
           },
-<<<<<<< HEAD
-          "isAutomatico": {
-            "type": "boolean"
-          },
-=======
->>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
           "usuarios_id": {
             "type": "integer",
             "format": "int32"
           },
-<<<<<<< HEAD
-          "categoria_Id": {
-            "type": "integer",
-            "format": "int32"
-=======
           "usuario": {
             "$ref": "#/components/schemas/Usuario"
           },
@@ -1886,7 +2099,73 @@
           },
           "isAutomatico": {
             "type": "boolean"
->>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
+          }
+        },
+        "additionalProperties": false
+      },
+      "VehiculoDTO": {
+        "type": "object",
+        "properties": {
+          "id_Vehiculo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "marca": {
+            "type": "string",
+            "nullable": true
+          },
+          "modelo": {
+            "type": "string",
+            "nullable": true
+          },
+          "anio": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "imagen": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "placa": {
+            "type": "string",
+            "nullable": true
+          },
+          "kilometraje": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fechaUltimoMantenimiento": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "costoTemporadaAlta": {
+            "type": "number",
+            "format": "double"
+          },
+          "costoTemporadaBaja": {
+            "type": "number",
+            "format": "double"
+          },
+          "isRentado": {
+            "type": "boolean"
+          },
+          "isMantenimiento": {
+            "type": "boolean"
+          },
+          "isAutomatico": {
+            "type": "boolean"
+          },
+          "usuarios_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "categoria_Id": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false

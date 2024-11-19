@@ -1,21 +1,29 @@
 ﻿using BackCar._Domain.Entities;
 using BackCar.Application.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using BCrypt.Net;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BackCar.Application.Utils;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using BackCar.Application.DTOs;
 
 namespace BackCar.Infrastructure.Services
 {
     public class UsuarioService : IUsuarioService
     {
         private readonly ApplicationDbContext _context;
+        private readonly JwtService _jwtService;
 
-        public UsuarioService(ApplicationDbContext context)
+        public UsuarioService(ApplicationDbContext context, JwtService jwtService)
         {
             _context = context;
+            _jwtService = jwtService;
         }
 
         public async Task<List<Usuario>> ObtenerTodosLosUsuariosAsync()
@@ -36,10 +44,13 @@ namespace BackCar.Infrastructure.Services
                 }
             }
 
+            // Hashear contraseña antes de guardar
+            usuario.Contrasenia = PasswordHasher.HashPassword(usuario.Contrasenia);
+
             // Añadir usuario
             await _context.Usuarios.AddAsync(usuario);
             await _context.SaveChangesAsync();
-            return usuario; // Devolver el usuario creado
+            return usuario;
         }
 
         //Método UPDATE:
@@ -88,5 +99,25 @@ namespace BackCar.Infrastructure.Services
 
             return true;  // Devolvemos true indicando que el usuario fue eliminado
         }
+
+        public async Task<LoginResponseDto> LoginAsync(LoginDto loginDto)
+        {
+            var usuario = await _context.Usuarios
+                .FirstOrDefaultAsync(u => u.Correo == loginDto.Correo);
+
+            if (usuario == null ||
+                !PasswordHasher.VerifyPassword(loginDto.Contrasenia, usuario.Contrasenia))
+            {
+                throw new UnauthorizedAccessException("Credenciales inválidas");
+            }
+
+            return new LoginResponseDto
+            {
+                Token = _jwtService.GenerateToken(usuario),
+                Nombre = usuario.Nombre,
+                Rol = usuario.Roles_Usuarios_id == 1 ? "Admin" : "Socio"
+            };
+        }
+
     }
 }

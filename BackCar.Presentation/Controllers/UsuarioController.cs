@@ -7,6 +7,7 @@ using BackCar.Application.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using BackCar.Infrastructure;
 using BackCar.Application.DTOs;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BackCar.Presentation.Controllers
 {
@@ -21,6 +22,7 @@ namespace BackCar.Presentation.Controllers
         {
             _usuarioService = usuarioService;
             context = _context;
+
         }
 
         [HttpGet]
@@ -111,5 +113,21 @@ namespace BackCar.Presentation.Controllers
 
             return NoContent();  // Si el usuario fue eliminado correctamente
         }
+
+        [AllowAnonymous]
+        [HttpPost("login")]
+        public async Task<ActionResult<LoginResponseDto>> Login([FromBody] LoginDto loginDto)
+        {
+            try
+            {
+                var loginResponse = await _usuarioService.LoginAsync(loginDto);
+                return Ok(loginResponse);
+            }
+            catch (UnauthorizedAccessException)
+            {
+                return Unauthorized("Credenciales inválidas");
+            }
+        }
+
     }
 }

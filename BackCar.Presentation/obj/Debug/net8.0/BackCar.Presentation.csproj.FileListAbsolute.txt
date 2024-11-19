@@ -515,6 +515,7 @@ C:\Users\tony1\OneDrive\Documentos\back-endCarManage\BackCar.Presentation\bin\De
 C:\Users\tony1\OneDrive\Documentos\back-endCarManage\BackCar.Presentation\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\tony1\OneDrive\Documentos\back-endCarManage\BackCar.Presentation\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\tony1\OneDrive\Documentos\back-endCarManage\BackCar.Presentation\bin\Debug\net8.0\Azure.Identity.dll
+C:\Users\tony1\OneDrive\Documentos\back-endCarManage\BackCar.Presentation\bin\Debug\net8.0\BCrypt.Net-Next.dll
 C:\Users\tony1\OneDrive\Documentos\back-endCarManage\BackCar.Presentation\bin\Debug\net8.0\DevExpress.Data.v24.1.dll
 C:\Users\tony1\OneDrive\Documentos\back-endCarManage\BackCar.Presentation\bin\Debug\net8.0\DevExpress.Xpo.v24.1.dll
 C:\Users\tony1\OneDrive\Documentos\back-endCarManage\BackCar.Presentation\bin\Debug\net8.0\FluentValidation.dll
@@ -522,6 +523,7 @@ C:\Users\tony1\OneDrive\Documentos\back-endCarManage\BackCar.Presentation\bin\De
 C:\Users\tony1\OneDrive\Documentos\back-endCarManage\BackCar.Presentation\bin\Debug\net8.0\Humanizer.dll
 C:\Users\tony1\OneDrive\Documentos\back-endCarManage\BackCar.Presentation\bin\Debug\net8.0\MediatR.dll
 C:\Users\tony1\OneDrive\Documentos\back-endCarManage\BackCar.Presentation\bin\Debug\net8.0\MediatR.Contracts.dll
+C:\Users\tony1\OneDrive\Documentos\back-endCarManage\BackCar.Presentation\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\tony1\OneDrive\Documentos\back-endCarManage\BackCar.Presentation\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\tony1\OneDrive\Documentos\back-endCarManage\BackCar.Presentation\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\tony1\OneDrive\Documentos\back-endCarManage\BackCar.Presentation\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll

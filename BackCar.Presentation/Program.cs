@@ -1,7 +1,10 @@
 using BackCar.Application.Interfaces;
 using BackCar.Infrastructure;
 using BackCar.Infrastructure.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,29 +12,58 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<IRolService, RolService>();
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 builder.Services.AddScoped<ICategoriaService, CategoriaService>();
-<<<<<<< HEAD
+
 builder.Services.AddScoped<IVehiculoService, VehiculoService>();
 builder.Services.AddScoped<IMantenimientoService, MantenimientoService>();
 builder.Services.AddScoped<IContratoRentaService, ContratoRentaService>();
-=======
+
 builder.Services.AddScoped<IClienteService, ClienteService>();
 builder.Services.AddScoped<ISeguroService, SeguroService>();
 builder.Services.AddScoped<IRegistroEstadoVehiculoService, RegistroEstadoVehiculoService>();
 builder.Services.AddScoped<IIncidenteService, IncidenteService>();
 
 
->>>>>>> d5b22415334c534204caa9f30661d87bba01c92a
 
-// Configurar DbContext con la cadena de conexión de MySQL
-// Configuración del resto de servicios de la aplicación
+// AÃ±adir servicios
+builder.Services.AddScoped<JwtService>();
+builder.Services.AddScoped<PasswordHasher>();
+builder.Services.AddScoped<IUsuarioService, UsuarioService>();
+
+// ConfiguraciÃ³n de AutenticaciÃ³n JWT
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = "BackCarApp",
+            ValidAudience = "BackCarClients",
+            IssuerSigningKey = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(builder.Configuration["Jwt:SecretKey"]))
+        };
+    });
+
+// AÃ±adir autorizaciÃ³n
+builder.Services.AddAuthorization();
+
+
+
+
+
+
+// Configurar DbContext con la cadena de conexiï¿½n de MySQL
+// Configuraciï¿½n del resto de servicios de la aplicaciï¿½n
 builder.Services.AddControllers();  // Registra los controladores (API)
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
     ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("DefaultConnection")))
-);  // Configura la conexión a la base de datos
-    // Asegúrate de tener la versión correcta de MySQL
+);  // Configura la conexiï¿½n a la base de datos
+    // Asegï¿½rate de tener la versiï¿½n correcta de MySQL
 
-//Más BD, LOL y algo de APP:
+//Mï¿½s BD, LOL y algo de APP:
 
 
 
@@ -43,9 +75,11 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+// En la configuraciÃ³n de middleware
+app.UseAuthentication();
 
 //Prueba para BD:
-// Configurar la tubería de solicitud y respuesta
+// Configurar la tuberï¿½a de solicitud y respuesta
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();  // Mapea los controladores a las rutas
