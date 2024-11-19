@@ -1,3 +1,4 @@
+using BackCar._Domain.Entities;
 using BackCar.Application.Interfaces;
 using BackCar.Infrastructure;
 using BackCar.Infrastructure.Services;
@@ -16,8 +17,7 @@ builder.Services.AddScoped<IClienteService, ClienteService>();
 builder.Services.AddScoped<ISeguroService, SeguroService>();
 builder.Services.AddScoped<IRegistroEstadoVehiculoService, RegistroEstadoVehiculoService>();
 builder.Services.AddScoped<IIncidenteService, IncidenteService>();
-
-
+builder.Services.AddScoped<IVehiculosSegurosService, VehiculosSegurosService>();
 
 // Configurar DbContext con la cadena de conexi�n de MySQL
 // Configuraci�n del resto de servicios de la aplicaci�n

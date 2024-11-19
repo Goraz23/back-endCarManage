@@ -901,26 +901,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Diego Aleman\\.nuget\\packages\\": {},
-    "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages": {},
+    "C:\\Users\\Alex\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\BACKENDCAR\\back-endCarManage\\BackCar.Application\\BackCar.Application.csproj",
+      "projectUniqueName": "C:\\Users\\Alex\\source\\repos\\back-endCarManage\\BackCar.Application\\BackCar.Application.csproj",
       "projectName": "BackCar.Application",
-      "projectPath": "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\BACKENDCAR\\back-endCarManage\\BackCar.Application\\BackCar.Application.csproj",
-      "packagesPath": "C:\\Users\\Diego Aleman\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\BACKENDCAR\\back-endCarManage\\BackCar.Application\\obj\\",
+      "projectPath": "C:\\Users\\Alex\\source\\repos\\back-endCarManage\\BackCar.Application\\BackCar.Application.csproj",
+      "packagesPath": "C:\\Users\\Alex\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Alex\\Source\\Repos\\back-endCarManage\\BackCar.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages",
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Diego Aleman\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 24.1.config",
+        "C:\\Users\\Alex\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -929,15 +926,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\DevExpress 24.1\\Components\\System\\Components\\Packages": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\BACKENDCAR\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj": {
-              "projectPath": "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\BACKENDCAR\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj"
+            "C:\\Users\\Alex\\source\\repos\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj": {
+              "projectPath": "C:\\Users\\Alex\\source\\repos\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj"
             }
           }
         }
@@ -1000,7 +996,7 @@
       "code": "NU1903",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Microsoft.Extensions.Caching.Memory' 8.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-qj66-m88j-hmgj",
+      "message": "El paquete \"Microsoft.Extensions.Caching.Memory\" 8.0.0 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-qj66-m88j-hmgj",
       "libraryId": "Microsoft.Extensions.Caching.Memory",
       "targetGraphs": [
         "net8.0"
