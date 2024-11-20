@@ -33,9 +33,13 @@ namespace BackCar.Infrastructure.Services
                 Placa = v.Placa,
                 Kilometraje = v.Kilometraje,
                 FechaUltimoMantenimiento = v.FechaUltimoMantenimiento,
+                FechaRegistro=v.FechaRegistro,
                 CostoTemporadaAlta = v.CostoTemporadaAlta,
                 CostoTemporadaBaja = v.CostoTemporadaBaja,
                 IsRentado = v.IsRentado,
+                IsMantenimiento =v.IsMantenimiento,
+                Usuarios_id= v.Usuarios_id,
+                Categoria_Id = v.Categoria_Id,
                 IsAutomatico = v.IsAutomatico
             }).ToList();
         }

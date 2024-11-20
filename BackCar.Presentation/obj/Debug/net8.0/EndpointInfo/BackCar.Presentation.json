@@ -2135,14 +2135,16 @@
           },
           "usuarios_id": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "nullable": true
           },
           "usuario": {
             "$ref": "#/components/schemas/Usuario"
           },
           "categoria_Id": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "nullable": true
           },
           "categoria": {
             "$ref": "#/components/schemas/Categoria"
@@ -2192,6 +2194,10 @@
             "type": "string",
             "format": "date-time"
           },
+          "fechaRegistro": {
+            "type": "string",
+            "format": "date-time"
+          },
           "costoTemporadaAlta": {
             "type": "number",
             "format": "double"
@@ -2211,11 +2217,13 @@
           },
           "usuarios_id": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "nullable": true
           },
           "categoria_Id": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "nullable": true
           }
         },
         "additionalProperties": false
