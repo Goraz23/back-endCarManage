@@ -142,5 +142,30 @@ namespace BackCar.Infrastructure.Services
             return true;
         }
 
+        //Servicio para obtener vehiculos segun usuarios:
+        public async Task<List<VehiculoUsuarioDto>> ObtenerVehiculosPorUsuarioAsync(int usuarioId)
+        {
+            var vehiculos = await _context.Vehiculos
+                .Where(v => v.Usuarios_id == usuarioId) // Asegúrate de que esta FK exista
+                .ToListAsync();
+
+            // Mapear a DTO
+            var vehiculosDto = vehiculos.Select(v => new VehiculoUsuarioDto
+            {
+                Id_Vehiculo = v.Id_Vehiculo,
+                Marca = v.Marca,
+                Modelo = v.Modelo,
+                Placa = v.Placa,
+                Usuarios_id = v.Usuarios_id,
+                IsAutomatico = v.IsAutomatico,
+                CostoTemporadaAlta = v.CostoTemporadaAlta,
+                CostoTemporadaBaja = v.CostoTemporadaBaja
+               
+            }).ToList();
+
+            return vehiculosDto;
+        }
+
+
     }
 }

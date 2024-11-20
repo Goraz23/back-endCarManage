@@ -15,5 +15,8 @@ namespace BackCar.Application.Interfaces
         Task CrearVehiculoAsync(VehiculoDTO nuevoVehiculoDTO);
         Task<bool> ActualizarVehiculoAsync(int id, VehiculoDTO vehiculoActualizadoDTO);
         Task<bool> EliminarVehiculoAsync(int id);
+
+        Task<List<VehiculoUsuarioDto>> ObtenerVehiculosPorUsuarioAsync(int usuarioId);
+
     }
 }
