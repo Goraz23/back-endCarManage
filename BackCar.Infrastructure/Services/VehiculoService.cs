@@ -117,13 +117,30 @@ namespace BackCar.Infrastructure.Services
 
         public async Task<bool> EliminarVehiculoAsync(int id)
         {
+            // Buscar el vehículo por su ID
             var vehiculo = await _context.Vehiculos.FindAsync(id);
             if (vehiculo == null)
                 return false;
 
+            // Buscar los registros asociados en VehiculosSeguros
+            var vehiculosSeguros = await _context.VehiculosSeguros
+                .Where(vs => vs.Vehiculos_id == id)
+                .ToListAsync();
+
+            // Eliminar cada registro relacionado en VehiculosSeguros
+            if (vehiculosSeguros.Any())
+            {
+                _context.VehiculosSeguros.RemoveRange(vehiculosSeguros);
+            }
+
+            // Finalmente, eliminar el vehículo
             _context.Vehiculos.Remove(vehiculo);
+
+            // Guardar los cambios en la base de datos
             await _context.SaveChangesAsync();
+
             return true;
         }
+
     }
 }
