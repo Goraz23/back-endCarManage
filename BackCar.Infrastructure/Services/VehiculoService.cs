@@ -44,26 +44,29 @@ namespace BackCar.Infrastructure.Services
             }).ToList();
         }
 
-        public async Task<VehiculoDTO> ObtenerVehiculoPorIdAsync(int id)
+        public async Task<VehiculoDetallesDto> ObtenerVehiculoPorIdAsync(int id)
         {
             var vehiculo = await _context.Vehiculos.FindAsync(id);
             if (vehiculo == null) return null;
 
-            return new VehiculoDTO
+            return new VehiculoDetallesDto
             {
                 Id_Vehiculo = vehiculo.Id_Vehiculo,
                 Marca = vehiculo.Marca,
                 Modelo = vehiculo.Modelo,
                 Anio = vehiculo.Anio,
                 Imagen = vehiculo.Imagen,
+                Usuarios_id = vehiculo.Usuarios_id,
                 Descripcion = vehiculo.Descripcion,
                 Placa = vehiculo.Placa,
                 Kilometraje = vehiculo.Kilometraje,
                 FechaUltimoMantenimiento = vehiculo.FechaUltimoMantenimiento,
+                FechaRegistro = vehiculo.FechaRegistro,
                 CostoTemporadaAlta = vehiculo.CostoTemporadaAlta,
                 CostoTemporadaBaja = vehiculo.CostoTemporadaBaja,
                 IsRentado = vehiculo.IsRentado,
-                IsAutomatico = vehiculo.IsAutomatico
+                IsAutomatico = vehiculo.IsAutomatico,
+                Categoria_Id = vehiculo.Categoria_Id,
             };
         }
 
