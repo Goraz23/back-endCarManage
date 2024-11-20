@@ -2085,14 +2085,16 @@
           },
           "usuarios_id": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "nullable": true
           },
           "usuario": {
             "$ref": "#/components/schemas/Usuario"
           },
           "categoria_Id": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "nullable": true
           },
           "categoria": {
             "$ref": "#/components/schemas/Categoria"

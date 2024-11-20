@@ -30,11 +30,11 @@ namespace BackCar._Domain.Entities
 
         // Relaciones
         [ForeignKey("Usuario")]
-        public int Usuarios_id { get; set; }
+        public int? Usuarios_id { get; set; }
         public Usuario Usuario { get; set; }
 
         [ForeignKey("Categoria")]
-        public int Categoria_Id { get; set; }
+        public int? Categoria_Id { get; set; }
         public Categoria Categoria { get; set; }
 
         // Nuevo Campo
