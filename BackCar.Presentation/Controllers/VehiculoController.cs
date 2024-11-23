@@ -66,5 +66,17 @@ namespace BackCar.Presentation.Controllers
 
             return NoContent();
         }
+        //CONTROLADOR PARA FILTRADO POR USUARIO
+        [HttpGet("usuario/{usuarioId}")]
+        public async Task<ActionResult<List<VehiculoDTO>>> GetVehiculosPorUsuario(int usuarioId)
+        {
+            var vehiculos = await _vehiculoService.ObtenerVehiculosPorUsuarioAsync(usuarioId);
+
+            if (vehiculos == null || !vehiculos.Any())
+                return NotFound("No se encontraron vehículos para este usuario.");
+
+            return Ok(vehiculos);
+        }
+
     }
 }

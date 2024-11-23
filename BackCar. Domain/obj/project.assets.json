@@ -1069,26 +1069,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\tony1\\.nuget\\packages\\": {},
-    "D:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages": {},
+    "C:\\Users\\Alex\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tony1\\OneDrive\\Documentos\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Alex\\source\\repos\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj",
       "projectName": "BackCar. Domain",
-      "projectPath": "C:\\Users\\tony1\\OneDrive\\Documentos\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj",
-      "packagesPath": "C:\\Users\\tony1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tony1\\OneDrive\\Documentos\\back-endCarManage\\BackCar. Domain\\obj\\",
+      "projectPath": "C:\\Users\\Alex\\source\\repos\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj",
+      "packagesPath": "C:\\Users\\Alex\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Alex\\Source\\Repos\\back-endCarManage\\BackCar. Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages",
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\tony1\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 24.1.config",
+        "C:\\Users\\Alex\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1097,8 +1094,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
-        "D:\\Program Files\\DevExpress 24.1\\Components\\System\\Components\\Packages": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1165,7 +1160,7 @@
       "code": "NU1903",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Microsoft.Extensions.Caching.Memory' 8.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-qj66-m88j-hmgj",
+      "message": "El paquete \"Microsoft.Extensions.Caching.Memory\" 8.0.0 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-qj66-m88j-hmgj",
       "libraryId": "Microsoft.Extensions.Caching.Memory",
       "targetGraphs": [
         "net8.0"

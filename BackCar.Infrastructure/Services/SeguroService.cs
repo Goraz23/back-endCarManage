@@ -55,15 +55,28 @@ namespace BackCar.Infrastructure.Services
         // Método DELETE: Eliminar un seguro
         public async Task<bool> DeleteSeguroAsync(int id)
         {
+            // Buscar el vehículo por su ID
             var seguro = await _context.Seguros.FindAsync(id);
-
             if (seguro == null)
+                return false;
+
+            // Buscar los registros asociados en VehiculosSeguros
+            var vehiculosSeguros = await _context.VehiculosSeguros
+                .Where(s => s.Seguros_id == id)
+                .ToListAsync();
+
+            // Eliminar cada registro relacionado en VehiculosSeguros
+            if (vehiculosSeguros.Any())
             {
-                return false; // No se encontró el seguro
+                _context.VehiculosSeguros.RemoveRange(vehiculosSeguros);
             }
 
+            // Finalmente, eliminar el vehículo
             _context.Seguros.Remove(seguro);
+
+            // Guardar los cambios en la base de datos
             await _context.SaveChangesAsync();
+
             return true;
         }
     }

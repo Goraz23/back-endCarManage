@@ -11,9 +11,12 @@ namespace BackCar.Application.Interfaces
     public interface IVehiculoService
     {
         Task<List<VehiculoDTO>> ObtenerTodosLosVehiculosAsync();
-        Task<VehiculoDTO> ObtenerVehiculoPorIdAsync(int id);
+        Task<VehiculoDetallesDto> ObtenerVehiculoPorIdAsync(int id);
         Task CrearVehiculoAsync(VehiculoDTO nuevoVehiculoDTO);
         Task<bool> ActualizarVehiculoAsync(int id, VehiculoDTO vehiculoActualizadoDTO);
         Task<bool> EliminarVehiculoAsync(int id);
+
+        Task<List<VehiculoUsuarioDto>> ObtenerVehiculosPorUsuarioAsync(int usuarioId);
+
     }
 }

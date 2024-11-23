@@ -920,6 +920,105 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "BackCar.Presentation.Controllers.VehiculoController",
+    "Method": "GetVehiculosPorUsuario",
+    "RelativePath": "api/Vehiculo/usuario/{usuarioId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuarioId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[BackCar.Application.DTOs.VehiculoDTO, BackCar.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "VehiculosSegurosController",
+    "Method": "ObtenerVehiculosSegurosAsync",
+    "RelativePath": "api/VehiculosSeguros",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[BackCar.Application.DTOs.VehiculosSegurosDTO, BackCar.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "VehiculosSegurosController",
+    "Method": "PostVehiculoSeguro",
+    "RelativePath": "api/VehiculosSeguros",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "vehiculosSegurosDto",
+        "Type": "BackCar.Application.DTOs.VehiculosSegurosDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VehiculosSegurosController",
+    "Method": "ActualizarVehiculoSeguro",
+    "RelativePath": "api/VehiculosSeguros/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "vehiculoSeguroDto",
+        "Type": "BackCar.Application.DTOs.VehiculosSegurosDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VehiculosSegurosController",
+    "Method": "Delete",
+    "RelativePath": "api/VehiculosSeguros/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Program\u002B\u003C\u003Ec__DisplayClass0_0",
     "Method": "\u003C\u003CMain\u003E$\u003Eb__2",
     "RelativePath": "weatherforecast",

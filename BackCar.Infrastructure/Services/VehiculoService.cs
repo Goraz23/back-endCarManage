@@ -33,33 +33,40 @@ namespace BackCar.Infrastructure.Services
                 Placa = v.Placa,
                 Kilometraje = v.Kilometraje,
                 FechaUltimoMantenimiento = v.FechaUltimoMantenimiento,
+                FechaRegistro=v.FechaRegistro,
                 CostoTemporadaAlta = v.CostoTemporadaAlta,
                 CostoTemporadaBaja = v.CostoTemporadaBaja,
                 IsRentado = v.IsRentado,
+                IsMantenimiento =v.IsMantenimiento,
+                Usuarios_id= v.Usuarios_id,
+                Categoria_Id = v.Categoria_Id,
                 IsAutomatico = v.IsAutomatico
             }).ToList();
         }
 
-        public async Task<VehiculoDTO> ObtenerVehiculoPorIdAsync(int id)
+        public async Task<VehiculoDetallesDto> ObtenerVehiculoPorIdAsync(int id)
         {
             var vehiculo = await _context.Vehiculos.FindAsync(id);
             if (vehiculo == null) return null;
 
-            return new VehiculoDTO
+            return new VehiculoDetallesDto
             {
                 Id_Vehiculo = vehiculo.Id_Vehiculo,
                 Marca = vehiculo.Marca,
                 Modelo = vehiculo.Modelo,
                 Anio = vehiculo.Anio,
                 Imagen = vehiculo.Imagen,
+                Usuarios_id = vehiculo.Usuarios_id,
                 Descripcion = vehiculo.Descripcion,
                 Placa = vehiculo.Placa,
                 Kilometraje = vehiculo.Kilometraje,
                 FechaUltimoMantenimiento = vehiculo.FechaUltimoMantenimiento,
+                FechaRegistro = vehiculo.FechaRegistro,
                 CostoTemporadaAlta = vehiculo.CostoTemporadaAlta,
                 CostoTemporadaBaja = vehiculo.CostoTemporadaBaja,
                 IsRentado = vehiculo.IsRentado,
-                IsAutomatico = vehiculo.IsAutomatico
+                IsAutomatico = vehiculo.IsAutomatico,
+                Categoria_Id = vehiculo.Categoria_Id,
             };
         }
 
@@ -113,13 +120,55 @@ namespace BackCar.Infrastructure.Services
 
         public async Task<bool> EliminarVehiculoAsync(int id)
         {
+            // Buscar el vehículo por su ID
             var vehiculo = await _context.Vehiculos.FindAsync(id);
             if (vehiculo == null)
                 return false;
 
+            // Buscar los registros asociados en VehiculosSeguros
+            var vehiculosSeguros = await _context.VehiculosSeguros
+                .Where(vs => vs.Vehiculos_id == id)
+                .ToListAsync();
+
+            // Eliminar cada registro relacionado en VehiculosSeguros
+            if (vehiculosSeguros.Any())
+            {
+                _context.VehiculosSeguros.RemoveRange(vehiculosSeguros);
+            }
+
+            // Finalmente, eliminar el vehículo
             _context.Vehiculos.Remove(vehiculo);
+
+            // Guardar los cambios en la base de datos
             await _context.SaveChangesAsync();
+
             return true;
         }
+
+        //Servicio para obtener vehiculos segun usuarios:
+        public async Task<List<VehiculoUsuarioDto>> ObtenerVehiculosPorUsuarioAsync(int usuarioId)
+        {
+            var vehiculos = await _context.Vehiculos
+                .Where(v => v.Usuarios_id == usuarioId) // Asegúrate de que esta FK exista
+                .ToListAsync();
+
+            // Mapear a DTO
+            var vehiculosDto = vehiculos.Select(v => new VehiculoUsuarioDto
+            {
+                Id_Vehiculo = v.Id_Vehiculo,
+                Marca = v.Marca,
+                Modelo = v.Modelo,
+                Placa = v.Placa,
+                Usuarios_id = v.Usuarios_id,
+                IsAutomatico = v.IsAutomatico,
+                CostoTemporadaAlta = v.CostoTemporadaAlta,
+                CostoTemporadaBaja = v.CostoTemporadaBaja
+               
+            }).ToList();
+
+            return vehiculosDto;
+        }
+
+
     }
 }

@@ -1,25 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tony1\\OneDrive\\Documentos\\back-endCarManage\\BackCar.Infrastructure\\BackCar.Infrastructure.csproj": {}
+    "C:\\Users\\Alex\\source\\repos\\back-endCarManage\\BackCar.Infrastructure\\BackCar.Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tony1\\OneDrive\\Documentos\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj": {
+    "C:\\Users\\Alex\\source\\repos\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tony1\\OneDrive\\Documentos\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Alex\\source\\repos\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj",
         "projectName": "BackCar. Domain",
-        "projectPath": "C:\\Users\\tony1\\OneDrive\\Documentos\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj",
-        "packagesPath": "C:\\Users\\tony1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tony1\\OneDrive\\Documentos\\back-endCarManage\\BackCar. Domain\\obj\\",
+        "projectPath": "C:\\Users\\Alex\\source\\repos\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj",
+        "packagesPath": "C:\\Users\\Alex\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Alex\\source\\repos\\back-endCarManage\\BackCar. Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages",
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\tony1\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 24.1.config",
+          "C:\\Users\\Alex\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -28,8 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "D:\\Program Files\\DevExpress 24.1\\Components\\System\\Components\\Packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -91,22 +87,20 @@
         }
       }
     },
-    "C:\\Users\\tony1\\OneDrive\\Documentos\\back-endCarManage\\BackCar.Application\\BackCar.Application.csproj": {
+    "C:\\Users\\Alex\\source\\repos\\back-endCarManage\\BackCar.Application\\BackCar.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tony1\\OneDrive\\Documentos\\back-endCarManage\\BackCar.Application\\BackCar.Application.csproj",
+        "projectUniqueName": "C:\\Users\\Alex\\source\\repos\\back-endCarManage\\BackCar.Application\\BackCar.Application.csproj",
         "projectName": "BackCar.Application",
-        "projectPath": "C:\\Users\\tony1\\OneDrive\\Documentos\\back-endCarManage\\BackCar.Application\\BackCar.Application.csproj",
-        "packagesPath": "C:\\Users\\tony1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tony1\\OneDrive\\Documentos\\back-endCarManage\\BackCar.Application\\obj\\",
+        "projectPath": "C:\\Users\\Alex\\source\\repos\\back-endCarManage\\BackCar.Application\\BackCar.Application.csproj",
+        "packagesPath": "C:\\Users\\Alex\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Alex\\source\\repos\\back-endCarManage\\BackCar.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages",
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\tony1\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 24.1.config",
+          "C:\\Users\\Alex\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -115,16 +109,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "D:\\Program Files\\DevExpress 24.1\\Components\\System\\Components\\Packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\tony1\\OneDrive\\Documentos\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj": {
-                "projectPath": "C:\\Users\\tony1\\OneDrive\\Documentos\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj"
+              "C:\\Users\\Alex\\source\\repos\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj": {
+                "projectPath": "C:\\Users\\Alex\\source\\repos\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj"
               }
             }
           }
@@ -186,22 +178,20 @@
         }
       }
     },
-    "C:\\Users\\tony1\\OneDrive\\Documentos\\back-endCarManage\\BackCar.Infrastructure\\BackCar.Infrastructure.csproj": {
+    "C:\\Users\\Alex\\source\\repos\\back-endCarManage\\BackCar.Infrastructure\\BackCar.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tony1\\OneDrive\\Documentos\\back-endCarManage\\BackCar.Infrastructure\\BackCar.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Alex\\source\\repos\\back-endCarManage\\BackCar.Infrastructure\\BackCar.Infrastructure.csproj",
         "projectName": "BackCar.Infrastructure",
-        "projectPath": "C:\\Users\\tony1\\OneDrive\\Documentos\\back-endCarManage\\BackCar.Infrastructure\\BackCar.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\tony1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tony1\\OneDrive\\Documentos\\back-endCarManage\\BackCar.Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\Alex\\source\\repos\\back-endCarManage\\BackCar.Infrastructure\\BackCar.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Alex\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Alex\\source\\repos\\back-endCarManage\\BackCar.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages",
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\tony1\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 24.1.config",
+          "C:\\Users\\Alex\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -210,19 +200,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "D:\\Program Files\\DevExpress 24.1\\Components\\System\\Components\\Packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\tony1\\OneDrive\\Documentos\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj": {
-                "projectPath": "C:\\Users\\tony1\\OneDrive\\Documentos\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj"
+              "C:\\Users\\Alex\\source\\repos\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj": {
+                "projectPath": "C:\\Users\\Alex\\source\\repos\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj"
               },
-              "C:\\Users\\tony1\\OneDrive\\Documentos\\back-endCarManage\\BackCar.Application\\BackCar.Application.csproj": {
-                "projectPath": "C:\\Users\\tony1\\OneDrive\\Documentos\\back-endCarManage\\BackCar.Application\\BackCar.Application.csproj"
+              "C:\\Users\\Alex\\source\\repos\\back-endCarManage\\BackCar.Application\\BackCar.Application.csproj": {
+                "projectPath": "C:\\Users\\Alex\\source\\repos\\back-endCarManage\\BackCar.Application\\BackCar.Application.csproj"
               }
             }
           }

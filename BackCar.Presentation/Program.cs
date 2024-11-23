@@ -1,3 +1,4 @@
+using BackCar._Domain.Entities;
 using BackCar.Application.Interfaces;
 using BackCar.Infrastructure;
 using BackCar.Infrastructure.Services;
@@ -12,16 +13,24 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<IRolService, RolService>();
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 builder.Services.AddScoped<ICategoriaService, CategoriaService>();
+<<<<<<< HEAD
 
 builder.Services.AddScoped<IVehiculoService, VehiculoService>();
 builder.Services.AddScoped<IMantenimientoService, MantenimientoService>();
 builder.Services.AddScoped<IContratoRentaService, ContratoRentaService>();
 
+=======
+builder.Services.AddScoped<IVehiculoService, VehiculoService>();
+builder.Services.AddScoped<IMantenimientoService, MantenimientoService>();
+builder.Services.AddScoped<IContratoRentaService, ContratoRentaService>();
+>>>>>>> 08004e7f1f59ce83fc862f281e380c15474ca09c
 builder.Services.AddScoped<IClienteService, ClienteService>();
 builder.Services.AddScoped<ISeguroService, SeguroService>();
 builder.Services.AddScoped<IRegistroEstadoVehiculoService, RegistroEstadoVehiculoService>();
 builder.Services.AddScoped<IIncidenteService, IncidenteService>();
+builder.Services.AddScoped<IVehiculosSegurosService, VehiculosSegurosService>();
 
+<<<<<<< HEAD
 
 
 // Añadir servicios
@@ -54,6 +63,8 @@ builder.Services.AddAuthorization();
 
 
 
+=======
+>>>>>>> 08004e7f1f59ce83fc862f281e380c15474ca09c
 // Configurar DbContext con la cadena de conexi�n de MySQL
 // Configuraci�n del resto de servicios de la aplicaci�n
 builder.Services.AddControllers();  // Registra los controladores (API)
