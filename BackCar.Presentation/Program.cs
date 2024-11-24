@@ -13,24 +13,24 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<IRolService, RolService>();
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 builder.Services.AddScoped<ICategoriaService, CategoriaService>();
-<<<<<<< HEAD
+
 
 builder.Services.AddScoped<IVehiculoService, VehiculoService>();
 builder.Services.AddScoped<IMantenimientoService, MantenimientoService>();
 builder.Services.AddScoped<IContratoRentaService, ContratoRentaService>();
 
-=======
+
 builder.Services.AddScoped<IVehiculoService, VehiculoService>();
 builder.Services.AddScoped<IMantenimientoService, MantenimientoService>();
 builder.Services.AddScoped<IContratoRentaService, ContratoRentaService>();
->>>>>>> 08004e7f1f59ce83fc862f281e380c15474ca09c
+
 builder.Services.AddScoped<IClienteService, ClienteService>();
 builder.Services.AddScoped<ISeguroService, SeguroService>();
 builder.Services.AddScoped<IRegistroEstadoVehiculoService, RegistroEstadoVehiculoService>();
 builder.Services.AddScoped<IIncidenteService, IncidenteService>();
 builder.Services.AddScoped<IVehiculosSegurosService, VehiculosSegurosService>();
 
-<<<<<<< HEAD
+
 
 
 // Añadir servicios
@@ -60,11 +60,20 @@ builder.Services.AddAuthorization();
 
 
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigin",
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:5173") // Reemplaza con la URL de tu frontend
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
+        });
+});
 
 
 
-=======
->>>>>>> 08004e7f1f59ce83fc862f281e380c15474ca09c
+
 // Configurar DbContext con la cadena de conexi�n de MySQL
 // Configuraci�n del resto de servicios de la aplicaci�n
 builder.Services.AddControllers();  // Registra los controladores (API)
@@ -89,6 +98,7 @@ var app = builder.Build();
 // En la configuración de middleware
 app.UseAuthentication();
 
+app.UseCors("AllowSpecificOrigin"); // Aplica la política aquí
 //Prueba para BD:
 // Configurar la tuber�a de solicitud y respuesta
 app.UseHttpsRedirection();

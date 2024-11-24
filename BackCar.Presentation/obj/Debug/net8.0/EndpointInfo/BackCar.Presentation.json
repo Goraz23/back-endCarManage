@@ -1979,7 +1979,6 @@
         },
         "additionalProperties": false
       },
-<<<<<<< HEAD
       "LoginDto": {
         "type": "object",
         "properties": {
@@ -2012,8 +2011,6 @@
         },
         "additionalProperties": false
       },
-=======
->>>>>>> 08004e7f1f59ce83fc862f281e380c15474ca09c
       "MantenimientoDTO": {
         "type": "object",
         "properties": {
@@ -2326,13 +2323,10 @@
             "type": "string",
             "format": "date-time"
           },
-<<<<<<< HEAD
-=======
           "fechaRegistro": {
             "type": "string",
             "format": "date-time"
           },
->>>>>>> 08004e7f1f59ce83fc862f281e380c15474ca09c
           "costoTemporadaAlta": {
             "type": "number",
             "format": "double"
@@ -2352,11 +2346,6 @@
           },
           "usuarios_id": {
             "type": "integer",
-<<<<<<< HEAD
-            "format": "int32"
-          },
-          "categoria_Id": {
-=======
             "format": "int32",
             "nullable": true
           },
@@ -2376,7 +2365,6 @@
             "format": "int32"
           },
           "vehiculos_id": {
->>>>>>> 08004e7f1f59ce83fc862f281e380c15474ca09c
             "type": "integer",
             "format": "int32"
           }
