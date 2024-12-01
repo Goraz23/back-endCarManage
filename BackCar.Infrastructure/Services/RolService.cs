@@ -1,6 +1,7 @@
 ﻿using BackCar._Domain.Entities;
 using BackCar.Application.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,44 +19,85 @@ namespace BackCar.Infrastructure.Services
             _context = context;
         }
 
-     
         public async Task<List<Rol>> ObtenerTodosLosRolesAsync()
         {
-            Console.WriteLine("Conectando a la base de datos...");  // Mensaje de depuración
-            var roles = await _context.Roles.ToListAsync();
-            Console.WriteLine($"Número de roles obtenidos: {roles.Count}");  // Verifica la cantidad de roles obtenidos
-            return roles;
+            try
+            {
+                Log.Information("Conectando a la base de datos para obtener roles...");
+                var roles = await _context.Roles.ToListAsync();
+                Log.Information($"Número de roles obtenidos: {roles.Count}");
+                return roles;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Error al obtener los roles.");
+                throw;
+            }
         }
 
-        public async Task CrearRolAsync(Rol nuevoRol)  // Implementación del método para crear
+        public async Task CrearRolAsync(Rol nuevoRol)
         {
-            await _context.Roles.AddAsync(nuevoRol);
-            await _context.SaveChangesAsync();
+            try
+            {
+                Log.Information("Creando un nuevo rol...");
+                await _context.Roles.AddAsync(nuevoRol);
+                await _context.SaveChangesAsync();
+                Log.Information($"Rol {nuevoRol.Nombre} creado exitosamente.");
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Error al crear un rol.");
+                throw;
+            }
         }
 
         public async Task<bool> EliminarRolAsync(int id)
         {
-            var rol = await _context.Roles.FindAsync(id);
-            if (rol == null)
-                return false;
+            try
+            {
+                Log.Information($"Eliminando rol con ID: {id}...");
+                var rol = await _context.Roles.FindAsync(id);
+                if (rol == null)
+                {
+                    Log.Warning($"Rol con ID {id} no encontrado.");
+                    return false;
+                }
 
-            _context.Roles.Remove(rol);
-            await _context.SaveChangesAsync();
-            return true;
+                _context.Roles.Remove(rol);
+                await _context.SaveChangesAsync();
+                Log.Information($"Rol con ID {id} eliminado exitosamente.");
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, $"Error al eliminar rol con ID {id}.");
+                throw;
+            }
         }
 
         public async Task<bool> ActualizarRolAsync(int id, Rol rolActualizado)
         {
-            var rolExistente = await _context.Roles.FindAsync(id);
-            if (rolExistente == null)
-                return false;
+            try
+            {
+                Log.Information($"Actualizando rol con ID: {id}...");
+                var rolExistente = await _context.Roles.FindAsync(id);
+                if (rolExistente == null)
+                {
+                    Log.Warning($"Rol con ID {id} no encontrado.");
+                    return false;
+                }
 
-            // Actualiza las propiedades del rol
-            rolExistente.Nombre = rolActualizado.Nombre;
-
-            _context.Roles.Update(rolExistente);
-            await _context.SaveChangesAsync();
-            return true;
+                rolExistente.Nombre = rolActualizado.Nombre;
+                _context.Roles.Update(rolExistente);
+                await _context.SaveChangesAsync();
+                Log.Information($"Rol con ID {id} actualizado exitosamente.");
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, $"Error al actualizar rol con ID {id}.");
+                throw;
+            }
         }
     }
 }

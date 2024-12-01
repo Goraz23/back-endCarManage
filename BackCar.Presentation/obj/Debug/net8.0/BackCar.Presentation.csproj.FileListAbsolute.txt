@@ -973,3 +973,12 @@ C:\Users\Alex\Source\Repos\back-endCarManage\BackCar.Presentation\obj\Debug\net8
 C:\Users\Alex\Source\Repos\back-endCarManage\BackCar.Presentation\obj\Debug\net8.0\BackCar.Presentation.pdb
 C:\Users\Alex\Source\Repos\back-endCarManage\BackCar.Presentation\obj\Debug\net8.0\BackCar.Presentation.genruntimeconfig.cache
 C:\Users\Alex\Source\Repos\back-endCarManage\BackCar.Presentation\obj\Debug\net8.0\ref\BackCar.Presentation.dll
+C:\Users\tony1\OneDrive\Documentos\back-endCarManage\BackCar.Presentation\bin\Debug\net8.0\Serilog.dll
+C:\Users\tony1\OneDrive\Documentos\back-endCarManage\BackCar.Presentation\bin\Debug\net8.0\Serilog.AspNetCore.dll
+C:\Users\tony1\OneDrive\Documentos\back-endCarManage\BackCar.Presentation\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+C:\Users\tony1\OneDrive\Documentos\back-endCarManage\BackCar.Presentation\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+C:\Users\tony1\OneDrive\Documentos\back-endCarManage\BackCar.Presentation\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+C:\Users\tony1\OneDrive\Documentos\back-endCarManage\BackCar.Presentation\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+C:\Users\tony1\OneDrive\Documentos\back-endCarManage\BackCar.Presentation\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+C:\Users\tony1\OneDrive\Documentos\back-endCarManage\BackCar.Presentation\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+C:\Users\tony1\OneDrive\Documentos\back-endCarManage\BackCar.Presentation\bin\Debug\net8.0\Serilog.Sinks.File.dll

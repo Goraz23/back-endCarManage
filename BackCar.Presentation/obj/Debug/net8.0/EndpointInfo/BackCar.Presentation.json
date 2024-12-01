@@ -5,29 +5,6 @@
     "version": "1.0"
   },
   "paths": {
-    "/weatherforecast": {
-      "get": {
-        "tags": [
-          "BackCar.Presentation"
-        ],
-        "operationId": "GetWeatherForecast",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/api/Categoria": {
       "get": {
         "tags": [
@@ -1414,91 +1391,42 @@
         }
       }
     },
-    "/api/Usuario/login": {
-      "post": {
-        "tags": [
-          "Usuario"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/LoginDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/LoginDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/LoginDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/LoginResponseDto"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LoginResponseDto"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LoginResponseDto"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Vehiculo": {
+    "/api/Vehiculo/obtener-todos": {
       "get": {
         "tags": [
           "Vehiculo"
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/VehiculoDTO"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/VehiculoDTO"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/VehiculoDTO"
-                  }
-                }
-              }
-            }
+            "description": "OK"
           }
         }
-      },
+      }
+    },
+    "/api/Vehiculo/{id}": {
+      "get": {
+        "tags": [
+          "Vehiculo"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Vehiculo/crear": {
       "post": {
         "tags": [
           "Vehiculo"
@@ -1529,45 +1457,7 @@
         }
       }
     },
-    "/api/Vehiculo/{id}": {
-      "get": {
-        "tags": [
-          "Vehiculo"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/VehiculoDTO"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/VehiculoDTO"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/VehiculoDTO"
-                }
-              }
-            }
-          }
-        }
-      },
+    "/api/Vehiculo/actualizar/{id}": {
       "put": {
         "tags": [
           "Vehiculo"
@@ -1607,7 +1497,9 @@
             "description": "OK"
           }
         }
-      },
+      }
+    },
+    "/api/Vehiculo/eliminar/{id}": {
       "delete": {
         "tags": [
           "Vehiculo"
@@ -1626,55 +1518,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Vehiculo/usuario/{usuarioId}": {
-      "get": {
-        "tags": [
-          "Vehiculo"
-        ],
-        "parameters": [
-          {
-            "name": "usuarioId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/VehiculoDTO"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/VehiculoDTO"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/VehiculoDTO"
-                  }
-                }
-              }
-            }
           }
         }
       }
@@ -1975,38 +1818,6 @@
           "id_ContratoRenta": {
             "type": "integer",
             "format": "int32"
-          }
-        },
-        "additionalProperties": false
-      },
-      "LoginDto": {
-        "type": "object",
-        "properties": {
-          "correo": {
-            "type": "string",
-            "nullable": true
-          },
-          "contrasenia": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "LoginResponseDto": {
-        "type": "object",
-        "properties": {
-          "token": {
-            "type": "string",
-            "nullable": true
-          },
-          "nombre": {
-            "type": "string",
-            "nullable": true
-          },
-          "rol": {
-            "type": "string",
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -2367,29 +2178,6 @@
           "vehiculos_id": {
             "type": "integer",
             "format": "int32"
-          }
-        },
-        "additionalProperties": false
-      },
-      "WeatherForecast": {
-        "type": "object",
-        "properties": {
-          "date": {
-            "type": "string",
-            "format": "date"
-          },
-          "temperatureC": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "summary": {
-            "type": "string",
-            "nullable": true
-          },
-          "temperatureF": {
-            "type": "integer",
-            "format": "int32",
-            "readOnly": true
           }
         },
         "additionalProperties": false

@@ -4,6 +4,7 @@ using BackCar._Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Serilog;
 
 namespace BackCar.Presentation.Controllers
 {
@@ -18,72 +19,131 @@ namespace BackCar.Presentation.Controllers
             _incidenteService = incidenteService;
         }
 
-        // Obtener todos los incidentes
         [HttpGet]
         public async Task<ActionResult<List<Incidente>>> GetIncidentes()
         {
-            var incidentes = await _incidenteService.ObtenerTodosAsync();
-            return Ok(incidentes);
+            try
+            {
+                var incidentes = await _incidenteService.ObtenerTodosAsync();
+                Log.Information("Se obtuvieron todos los incidentes desde el endpoint.");
+                return Ok(incidentes);
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Error al obtener todos los incidentes desde el endpoint.");
+                return StatusCode(500, "Error interno del servidor.");
+            }
         }
 
-        // Obtener un incidente por ID
         [HttpGet("{id}")]
         public async Task<ActionResult<Incidente>> GetIncidente(int id)
         {
-            var incidente = await _incidenteService.ObtenerPorIdAsync(id);
-            if (incidente == null) return NotFound();
-            return Ok(incidente);
+            try
+            {
+                var incidente = await _incidenteService.ObtenerPorIdAsync(id);
+                if (incidente == null)
+                {
+                    Log.Warning("Incidente con ID {Id} no encontrado en el endpoint.", id);
+                    return NotFound();
+                }
+
+                Log.Information("Incidente con ID {Id} obtenido desde el endpoint.", id);
+                return Ok(incidente);
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Error al obtener el incidente con ID {Id} desde el endpoint.", id);
+                return StatusCode(500, "Error interno del servidor.");
+            }
         }
 
-        // Crear un incidente
         [HttpPost]
         public async Task<ActionResult<Incidente>> CreateIncidente([FromBody] IncidenteDto incidenteDto)
         {
-            var incidente = new Incidente
+            try
             {
-                FechaIncidente = incidenteDto.FechaIncidente,
-                Descripcion = incidenteDto.Descripcion,
-                AplicoSeguro = incidenteDto.AplicoSeguro,
-                Id_ContratoRenta = incidenteDto.Id_ContratoRenta
-            };
+                if (incidenteDto == null)
+                {
+                    Log.Warning("Datos inválidos para crear un incidente en el endpoint.");
+                    return BadRequest("Datos inválidos.");
+                }
 
-            var nuevoIncidente = await _incidenteService.CrearAsync(incidente);
-            return CreatedAtAction(nameof(GetIncidente), new { id = nuevoIncidente.Id_Incidente }, nuevoIncidente);
+                var incidente = new Incidente
+                {
+                    FechaIncidente = incidenteDto.FechaIncidente,
+                    Descripcion = incidenteDto.Descripcion,
+                    AplicoSeguro = incidenteDto.AplicoSeguro,
+                    Id_ContratoRenta = incidenteDto.Id_ContratoRenta
+                };
+
+                var nuevoIncidente = await _incidenteService.CrearAsync(incidente);
+                Log.Information("Incidente creado correctamente desde el endpoint.");
+                return CreatedAtAction(nameof(GetIncidente), new { id = nuevoIncidente.Id_Incidente }, nuevoIncidente);
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Error al crear un nuevo incidente desde el endpoint.");
+                return StatusCode(500, "Error interno del servidor.");
+            }
         }
 
-        // Actualizar un incidente
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateIncidente(int id, [FromBody] IncidenteDto incidenteDto)
         {
-            var incidente = new Incidente
+            try
             {
-                Id_Incidente = id,
-                FechaIncidente = incidenteDto.FechaIncidente,
-                Descripcion = incidenteDto.Descripcion,
-                AplicoSeguro = incidenteDto.AplicoSeguro,
-                Id_ContratoRenta = incidenteDto.Id_ContratoRenta
-            };
+                if (incidenteDto == null || incidenteDto.Id_ContratoRenta != id)
+                {
+                    Log.Warning("Datos inválidos para actualizar el incidente con ID {Id} en el endpoint.", id);
+                    return BadRequest("Datos inválidos.");
+                }
 
-            var incidenteActualizado = await _incidenteService.ActualizarAsync(id, incidente);
-            if (incidenteActualizado == null)
-            {
-                return NotFound();
+                var incidente = new Incidente
+                {
+                    Id_Incidente = id,
+                    FechaIncidente = incidenteDto.FechaIncidente,
+                    Descripcion = incidenteDto.Descripcion,
+                    AplicoSeguro = incidenteDto.AplicoSeguro,
+                    Id_ContratoRenta = incidenteDto.Id_ContratoRenta
+                };
+
+                var incidenteActualizado = await _incidenteService.ActualizarAsync(id, incidente);
+                if (incidenteActualizado == null)
+                {
+                    Log.Warning("Incidente con ID {Id} no encontrado para actualización en el endpoint.", id);
+                    return NotFound();
+                }
+
+                Log.Information("Incidente con ID {Id} actualizado correctamente desde el endpoint.", id);
+                return Ok(incidenteActualizado);
             }
-
-            return Ok(incidenteActualizado);
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Error al actualizar el incidente con ID {Id} desde el endpoint.", id);
+                return StatusCode(500, "Error interno del servidor.");
+            }
         }
 
-        // Eliminar un incidente
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteIncidente(int id)
         {
-            var eliminado = await _incidenteService.EliminarAsync(id);
-            if (!eliminado)
+            try
             {
-                return NotFound();
-            }
+                var eliminado = await _incidenteService.EliminarAsync(id);
+                if (!eliminado)
+                {
+                    Log.Warning("Incidente con ID {Id} no encontrado para eliminación en el endpoint.", id);
+                    return NotFound();
+                }
 
-            return NoContent();
+                Log.Information("Incidente con ID {Id} eliminado correctamente desde el endpoint.", id);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Error al eliminar el incidente con ID {Id} desde el endpoint.", id);
+                return StatusCode(500, "Error interno del servidor.");
+            }
         }
     }
 }

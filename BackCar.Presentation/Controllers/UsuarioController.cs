@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using BackCar.Infrastructure;
 using BackCar.Application.DTOs;
 using Microsoft.AspNetCore.Authorization;
+using Serilog;
 
 namespace BackCar.Presentation.Controllers
 {
@@ -16,118 +17,124 @@ namespace BackCar.Presentation.Controllers
     public class UsuarioController : ControllerBase
     {
         private readonly IUsuarioService _usuarioService;
-
         private readonly ApplicationDbContext context;
+
         public UsuarioController(IUsuarioService usuarioService, ApplicationDbContext _context)
         {
             _usuarioService = usuarioService;
             context = _context;
-
         }
 
         [HttpGet]
         public async Task<ActionResult<List<Usuario>>> GetUsuarios()
         {
-            var usuarios = await _usuarioService.ObtenerTodosLosUsuariosAsync();
-            return Ok(usuarios);
+            try
+            {
+                Log.Information("Obteniendo todos los usuarios.");
+                var usuarios = await _usuarioService.ObtenerTodosLosUsuariosAsync();
+                return Ok(usuarios);
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Error al obtener los usuarios.");
+                return StatusCode(500, "Hubo un error al obtener los usuarios.");
+            }
         }
 
         [HttpPost]
         public async Task<ActionResult<Usuario>> CreateUsuario([FromBody] UsuarioDto usuarioDto)
         {
-            if (usuarioDto == null)
+            try
             {
-                return BadRequest("El usuario no puede ser nulo.");
+                Log.Information("Creando un nuevo usuario con correo: {UserEmail}", usuarioDto.Correo);
+
+                if (usuarioDto == null)
+                {
+                    Log.Warning("El usuario no puede ser nulo.");
+                    return BadRequest("El usuario no puede ser nulo.");
+                }
+
+                var rol = await context.Roles.FirstOrDefaultAsync(r => r.Id_Rol == usuarioDto.Roles_Usuarios_id);
+                if (rol == null)
+                {
+                    Log.Warning("El rol especificado no existe.");
+                    return BadRequest("El rol especificado no existe.");
+                }
+
+                var usuario = new Usuario
+                {
+                    Nombre = usuarioDto.Nombre,
+                    Correo = usuarioDto.Correo,
+                    Contrasenia = usuarioDto.Contrasenia,
+                    Telefono = usuarioDto.Telefono,
+                    Roles_Usuarios_id = usuarioDto.Roles_Usuarios_id,
+                    Rol = rol,
+                    FechaRegistro = DateTime.Now
+                };
+
+                var nuevoUsuario = await _usuarioService.CrearUsuarioAsync(usuario);
+                Log.Information("Usuario creado con ID: {UserId}", nuevoUsuario.Id_Usuario);
+                return CreatedAtAction(nameof(GetUsuarios), new { id = nuevoUsuario.Id_Usuario }, nuevoUsuario);
             }
-
-            // Buscar el rol desde la base de datos usando el roles_Usuarios_id
-            var rol = await context.Roles.FirstOrDefaultAsync(r => r.Id_Rol == usuarioDto.Roles_Usuarios_id);
-            if (rol == null)
+            catch (Exception ex)
             {
-                return BadRequest("El rol especificado no existe.");
+                Log.Error(ex, "Error al crear el usuario con correo: {UserEmail}", usuarioDto.Correo);
+                return StatusCode(500, "Hubo un error al crear el usuario.");
             }
-
-            // Mapear el DTO al modelo de entidad Usuario
-            var usuario = new Usuario
-            {
-                Nombre = usuarioDto.Nombre,
-                Correo = usuarioDto.Correo,
-                Contrasenia = usuarioDto.Contrasenia,
-                Telefono = usuarioDto.Telefono,
-                Roles_Usuarios_id = usuarioDto.Roles_Usuarios_id,
-                Rol = rol,  // Asignar el rol correspondiente
-                FechaRegistro = DateTime.Now // Establecer la fecha de registro
-            };
-
-            // Crear el usuario
-            var nuevoUsuario = await _usuarioService.CrearUsuarioAsync(usuario);
-            return CreatedAtAction(nameof(GetUsuarios), new { id = nuevoUsuario.Id_Usuario }, nuevoUsuario);
         }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateUsuario(int id, [FromBody] UsuarioDto usuarioDto)
         {
-            // Buscar el usuario a actualizar
-            var usuario = await context.Usuarios.FindAsync(id);
-            if (usuario == null)
+            try
             {
-                return NotFound(); // Si no se encuentra el usuario
-            }
+                Log.Information("Actualizando usuario con ID: {UserId}", id);
 
-            // Buscar el rol desde la base de datos
-            var rol = await context.Roles.FirstOrDefaultAsync(r => r.Id_Rol == usuarioDto.Roles_Usuarios_id);
-            if (rol == null)
+                var usuario = await context.Usuarios.FindAsync(id);
+                if (usuario == null)
+                {
+                    Log.Error("Usuario con ID {UserId} no encontrado", id);
+                    return NotFound();
+                }
+
+                usuario.Nombre = usuarioDto.Nombre;
+                usuario.Telefono = usuarioDto.Telefono;
+                usuario.Correo = usuarioDto.Correo;
+
+                await _usuarioService.UpdateUsuarioAsync(id, usuario);
+
+                Log.Information("Usuario con ID {UserId} actualizado exitosamente", id);
+                return NoContent();
+            }
+            catch (Exception ex)
             {
-                return BadRequest("El rol especificado no existe.");
+                Log.Error(ex, "Error al actualizar el usuario con ID: {UserId}", id);
+                return StatusCode(500, "Hubo un error al actualizar el usuario.");
             }
-
-            // Mapear el DTO al modelo de entidad Usuario
-            usuario.Nombre = usuarioDto.Nombre;
-            usuario.Correo = usuarioDto.Correo;
-            usuario.Contrasenia = usuarioDto.Contrasenia;
-            usuario.Telefono = usuarioDto.Telefono;
-            usuario.Roles_Usuarios_id = usuarioDto.Roles_Usuarios_id;
-            usuario.Rol = rol;
-
-            // Actualizar el usuario
-            var usuarioActualizado = await _usuarioService.UpdateUsuarioAsync(id, usuario);
-
-            if (usuarioActualizado == null)
-            {
-                return NotFound(); // Si no existe el usuario
-            }
-
-            return Ok(usuarioActualizado); // Si el usuario se actualizó correctamente
         }
-
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUsuario(int id)
         {
-            var eliminado = await _usuarioService.DeleteUsuarioAsync(id);
-
-            if (!eliminado)
-            {
-                return NotFound();  // Si no se encuentra el usuario
-            }
-
-            return NoContent();  // Si el usuario fue eliminado correctamente
-        }
-
-        [AllowAnonymous]
-        [HttpPost("login")]
-        public async Task<ActionResult<LoginResponseDto>> Login([FromBody] LoginDto loginDto)
-        {
             try
             {
-                var loginResponse = await _usuarioService.LoginAsync(loginDto);
-                return Ok(loginResponse);
+                Log.Information("Eliminando usuario con ID: {UserId}", id);
+                var resultado = await _usuarioService.DeleteUsuarioAsync(id);
+
+                if (!resultado)
+                {
+                    Log.Error("No se pudo eliminar el usuario con ID {UserId}", id);
+                    return NotFound();
+                }
+
+                Log.Information("Usuario con ID {UserId} eliminado exitosamente", id);
+                return NoContent();
             }
-            catch (UnauthorizedAccessException)
+            catch (Exception ex)
             {
-                return Unauthorized("Credenciales inválidas");
+                Log.Error(ex, "Error al eliminar el usuario con ID: {UserId}", id);
+                return StatusCode(500, "Hubo un error al eliminar el usuario.");
             }
         }
-
     }
 }

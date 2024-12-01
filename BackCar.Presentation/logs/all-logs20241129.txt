@@ -1,0 +1,828 @@
+2024-11-29 03:26:36.967 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-11-29 03:26:37.092 -05:00 [DBG] Hosting starting
+2024-11-29 03:26:37.143 -05:00 [INF] User profile is available. Using 'C:\Users\tony1\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-29 03:26:37.152 -05:00 [DBG] Reading data from file 'C:\Users\tony1\AppData\Local\ASP.NET\DataProtection-Keys\key-53f457e7-32f0-4dc3-9de1-9fe7491153c7.xml'.
+2024-11-29 03:26:37.159 -05:00 [DBG] Reading data from file 'C:\Users\tony1\AppData\Local\ASP.NET\DataProtection-Keys\key-8305f168-6c05-4e6a-bd26-6929a0269bdb.xml'.
+2024-11-29 03:26:37.164 -05:00 [DBG] Found key {53f457e7-32f0-4dc3-9de1-9fe7491153c7}.
+2024-11-29 03:26:37.168 -05:00 [DBG] Found key {8305f168-6c05-4e6a-bd26-6929a0269bdb}.
+2024-11-29 03:26:37.174 -05:00 [DBG] Considering key {53f457e7-32f0-4dc3-9de1-9fe7491153c7} with expiration date 2025-02-23 06:33:00Z as default key.
+2024-11-29 03:26:37.177 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-11-29 03:26:37.179 -05:00 [DBG] Decrypting secret element using Windows DPAPI.
+2024-11-29 03:26:37.181 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-11-29 03:26:37.185 -05:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2024-11-29 03:26:37.188 -05:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2024-11-29 03:26:37.189 -05:00 [DBG] Using key {53f457e7-32f0-4dc3-9de1-9fe7491153c7} as the default key.
+2024-11-29 03:26:37.191 -05:00 [DBG] Key ring with default key {53f457e7-32f0-4dc3-9de1-9fe7491153c7} was loaded during application startup.
+2024-11-29 03:26:37.412 -05:00 [INF] Now listening on: https://localhost:7223
+2024-11-29 03:26:37.413 -05:00 [INF] Now listening on: http://localhost:5120
+2024-11-29 03:26:37.414 -05:00 [DBG] Loaded hosting startup assembly BackCar.Presentation
+2024-11-29 03:26:37.415 -05:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2024-11-29 03:26:37.416 -05:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-11-29 03:26:37.417 -05:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-11-29 03:26:37.496 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-29 03:26:37.498 -05:00 [INF] Hosting environment: Development
+2024-11-29 03:26:37.500 -05:00 [INF] Content root path: C:\Users\tony1\OneDrive\Documentos\back-endCarManage\BackCar.Presentation
+2024-11-29 03:26:37.500 -05:00 [DBG] Hosting started
+2024-11-29 03:26:37.747 -05:00 [DBG] Connection id "0HN8G9U5GELMH" received FIN.
+2024-11-29 03:26:37.747 -05:00 [DBG] Connection id "0HN8G9U5GELMI" received FIN.
+2024-11-29 03:26:37.759 -05:00 [DBG] Connection id "0HN8G9U5GELMI" accepted.
+2024-11-29 03:26:37.759 -05:00 [DBG] Connection id "0HN8G9U5GELMH" accepted.
+2024-11-29 03:26:37.761 -05:00 [DBG] Connection id "0HN8G9U5GELMI" started.
+2024-11-29 03:26:37.761 -05:00 [DBG] Connection id "0HN8G9U5GELMH" started.
+2024-11-29 03:26:37.782 -05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-11-29 03:26:37.782 -05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-11-29 03:26:37.846 -05:00 [DBG] Connection id "0HN8G9U5GELMH" stopped.
+2024-11-29 03:26:37.846 -05:00 [DBG] Connection id "0HN8G9U5GELMI" stopped.
+2024-11-29 03:26:37.849 -05:00 [DBG] Connection id "0HN8G9U5GELMH" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-11-29 03:26:37.849 -05:00 [DBG] Connection id "0HN8G9U5GELMI" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-11-29 03:26:37.979 -05:00 [DBG] Connection id "0HN8G9U5GELMJ" accepted.
+2024-11-29 03:26:37.981 -05:00 [DBG] Connection id "0HN8G9U5GELMJ" started.
+2024-11-29 03:26:38.059 -05:00 [DBG] Connection 0HN8G9U5GELMJ established using the following protocol: "Tls13"
+2024-11-29 03:26:38.115 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "SETTINGS" frame for stream ID 0 with length 24 and flags "NONE".
+2024-11-29 03:26:38.129 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0.
+2024-11-29 03:26:38.133 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" received "SETTINGS" frame for stream ID 0 with length 24 and flags "NONE".
+2024-11-29 03:26:38.137 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "SETTINGS" frame for stream ID 0 with length 0 and flags "ACK".
+2024-11-29 03:26:38.143 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" received "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0.
+2024-11-29 03:26:38.146 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" received "HEADERS" frame for stream ID 1 with length 506 and flags "END_STREAM, END_HEADERS, PRIORITY".
+2024-11-29 03:26:38.182 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" received "SETTINGS" frame for stream ID 0 with length 0 and flags "ACK".
+2024-11-29 03:26:38.207 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7223/swagger/index.html - null null
+2024-11-29 03:26:38.336 -05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-11-29 03:26:38.337 -05:00 [VRB] All hosts are allowed.
+2024-11-29 03:26:38.362 -05:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2024-11-29 03:26:38.364 -05:00 [DBG] Request did not match any endpoints
+2024-11-29 03:26:38.431 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-11-29 03:26:38.478 -05:00 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-11-29 03:26:38.482 -05:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-11-29 03:26:38.485 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "HEADERS" frame for stream ID 1 with length 66 and flags "END_HEADERS".
+2024-11-29 03:26:38.491 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "DATA" frame for stream ID 1 with length 4096 and flags "NONE".
+2024-11-29 03:26:38.496 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "DATA" frame for stream ID 1 with length 932 and flags "NONE".
+2024-11-29 03:26:38.498 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "DATA" frame for stream ID 1 with length 81 and flags "NONE".
+2024-11-29 03:26:38.500 -05:00 [DBG] Response markup was updated to include Browser Link script injection.
+2024-11-29 03:26:38.502 -05:00 [DBG] Response markup was updated to include browser refresh script injection.
+2024-11-29 03:26:38.504 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "DATA" frame for stream ID 1 with length 0 and flags "END_STREAM".
+2024-11-29 03:26:38.517 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7223/swagger/index.html - 200 null text/html;charset=utf-8 306.0985ms
+2024-11-29 03:26:38.608 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" received "HEADERS" frame for stream ID 3 with length 115 and flags "END_STREAM, END_HEADERS, PRIORITY".
+2024-11-29 03:26:38.615 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7223/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-29 03:26:38.622 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "HEADERS" frame for stream ID 3 with length 60 and flags "END_HEADERS".
+2024-11-29 03:26:38.624 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "DATA" frame for stream ID 3 with length 13776 and flags "NONE".
+2024-11-29 03:26:38.628 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "DATA" frame for stream ID 3 with length 0 and flags "END_STREAM".
+2024-11-29 03:26:38.628 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7223/_framework/aspnetcore-browser-refresh.js - 200 13776 application/javascript; charset=utf-8 12.4682ms
+2024-11-29 03:26:38.671 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" received "HEADERS" frame for stream ID 5 with length 57 and flags "END_STREAM, END_HEADERS, PRIORITY".
+2024-11-29 03:26:38.675 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7223/_vs/browserLink - null null
+2024-11-29 03:26:38.719 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "HEADERS" frame for stream ID 5 with length 119 and flags "END_HEADERS".
+2024-11-29 03:26:38.722 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "DATA" frame for stream ID 5 with length 9986 and flags "NONE".
+2024-11-29 03:26:38.726 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 03:26:38.728 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 03:26:38.731 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 03:26:38.734 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 03:26:38.737 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 03:26:38.742 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 03:26:38.745 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 03:26:38.747 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 03:26:38.749 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 03:26:38.752 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 03:26:38.754 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 03:26:38.757 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 03:26:38.761 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 03:26:38.765 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 03:26:38.768 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "DATA" frame for stream ID 5 with length 1806 and flags "NONE".
+2024-11-29 03:26:38.770 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7223/_vs/browserLink - 200 null text/javascript; charset=UTF-8 95.1463ms
+2024-11-29 03:26:38.770 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "DATA" frame for stream ID 5 with length 0 and flags "END_STREAM".
+2024-11-29 03:26:38.902 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" received "HEADERS" frame for stream ID 7 with length 74 and flags "END_STREAM, END_HEADERS, PRIORITY".
+2024-11-29 03:26:38.971 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7223/swagger/v1/swagger.json - null null
+2024-11-29 03:26:39.000 -05:00 [VRB] All hosts are allowed.
+2024-11-29 03:26:39.004 -05:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2024-11-29 03:26:39.006 -05:00 [DBG] Request did not match any endpoints
+2024-11-29 03:26:39.015 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-11-29 03:26:39.073 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "HEADERS" frame for stream ID 7 with length 35 and flags "END_HEADERS".
+2024-11-29 03:26:39.076 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2024-11-29 03:26:39.079 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2024-11-29 03:26:39.080 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2024-11-29 03:26:39.082 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "DATA" frame for stream ID 7 with length 3258 and flags "NONE".
+2024-11-29 03:26:39.086 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "DATA" frame for stream ID 7 with length 0 and flags "END_STREAM".
+2024-11-29 03:26:39.086 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7223/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 114.8581ms
+2024-11-29 03:26:46.151 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" received "HEADERS" frame for stream ID 9 with length 39 and flags "END_STREAM, END_HEADERS, PRIORITY".
+2024-11-29 03:26:46.155 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7223/api/Cliente - null null
+2024-11-29 03:26:46.161 -05:00 [VRB] All hosts are allowed.
+2024-11-29 03:26:46.169 -05:00 [DBG] 1 candidate(s) found for the request path '/api/Cliente'
+2024-11-29 03:26:46.174 -05:00 [DBG] Endpoint 'BackCar.Presentation.Controllers.ClienteController.GetClientes (BackCar.Presentation)' with route pattern 'api/Cliente' is valid for the request path '/api/Cliente'
+2024-11-29 03:26:46.179 -05:00 [DBG] Request matched endpoint 'BackCar.Presentation.Controllers.ClienteController.GetClientes (BackCar.Presentation)'
+2024-11-29 03:26:46.182 -05:00 [VRB] The endpoint does not specify the IRequestSizeLimitMetadata.
+2024-11-29 03:26:46.184 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-11-29 03:26:46.187 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-11-29 03:26:46.191 -05:00 [INF] Executing endpoint 'BackCar.Presentation.Controllers.ClienteController.GetClientes (BackCar.Presentation)'
+2024-11-29 03:26:46.211 -05:00 [INF] Route matched with {action = "GetClientes", controller = "Cliente"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[BackCar._Domain.Entities.Cliente]]] GetClientes() on controller BackCar.Presentation.Controllers.ClienteController (BackCar.Presentation).
+2024-11-29 03:26:46.217 -05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-11-29 03:26:46.219 -05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-11-29 03:26:46.221 -05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-11-29 03:26:46.223 -05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-11-29 03:26:46.225 -05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-11-29 03:26:46.227 -05:00 [DBG] Executing controller factory for controller BackCar.Presentation.Controllers.ClienteController (BackCar.Presentation)
+2024-11-29 03:26:47.667 -05:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-11-29 03:26:47.701 -05:00 [DBG] Executed controller factory for controller BackCar.Presentation.Controllers.ClienteController (BackCar.Presentation)
+2024-11-29 03:26:47.707 -05:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-11-29 03:26:47.708 -05:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-11-29 03:26:47.710 -05:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-11-29 03:26:47.711 -05:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-11-29 03:26:47.715 -05:00 [INF] Executing action method BackCar.Presentation.Controllers.ClienteController.GetClientes (BackCar.Presentation) - Validation state: "Valid"
+2024-11-29 03:26:47.717 -05:00 [INF] Petición para obtener todos los clientes.
+2024-11-29 03:26:47.719 -05:00 [INF] Obteniendo todos los clientes.
+2024-11-29 03:26:48.435 -05:00 [DBG] Entity Framework Core 8.0.10 initialized 'ApplicationDbContext' using provider 'Pomelo.EntityFrameworkCore.MySql:8.0.2' with options: ServerVersion=10.11.9-mariadb 
+2024-11-29 03:26:48.462 -05:00 [DBG] Compiling query expression: 
+'DbSet<Cliente>()'
+2024-11-29 03:26:48.613 -05:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Cliente>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Cliente.Id_Cliente (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Cliente.Correo (string) Required, 1], [Property: Cliente.NombreCliente (string) Required, 2], [Property: Cliente.Telefono (string) Required, 3] }
+        SELECT c.Id_Cliente, c.Correo, c.NombreCliente, c.Telefono
+        FROM Clientes AS c), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Cliente>, 
+    BackCar.Infrastructure.ApplicationDbContext, 
+    False, 
+    False, 
+    True
+)'
+2024-11-29 03:26:48.644 -05:00 [DBG] Creating DbConnection.
+2024-11-29 03:26:48.653 -05:00 [DBG] Created DbConnection. (5ms).
+2024-11-29 03:26:48.661 -05:00 [DBG] Opening connection to database 'bdalex_carmanage' on server 'mysql-bdalex.alwaysdata.net'.
+2024-11-29 03:26:49.572 -05:00 [DBG] Opened connection to database 'bdalex_carmanage' on server 'mysql-bdalex.alwaysdata.net'.
+2024-11-29 03:26:49.586 -05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-11-29 03:26:49.602 -05:00 [DBG] Created DbCommand for 'ExecuteReader' (10ms).
+2024-11-29 03:26:49.610 -05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (25ms).
+2024-11-29 03:26:49.628 -05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id_Cliente`, `c`.`Correo`, `c`.`NombreCliente`, `c`.`Telefono`
+FROM `Clientes` AS `c`
+2024-11-29 03:26:49.844 -05:00 [INF] Executed DbCommand (222ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id_Cliente`, `c`.`Correo`, `c`.`NombreCliente`, `c`.`Telefono`
+FROM `Clientes` AS `c`
+2024-11-29 03:26:49.884 -05:00 [DBG] Context 'ApplicationDbContext' started tracking 'Cliente' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-11-29 03:26:49.908 -05:00 [DBG] Context 'ApplicationDbContext' started tracking 'Cliente' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-11-29 03:26:49.914 -05:00 [DBG] Context 'ApplicationDbContext' started tracking 'Cliente' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-11-29 03:26:49.918 -05:00 [DBG] Closing data reader to 'bdalex_carmanage' on server 'mysql-bdalex.alwaysdata.net'.
+2024-11-29 03:26:49.928 -05:00 [DBG] A data reader for 'bdalex_carmanage' on server 'mysql-bdalex.alwaysdata.net' is being disposed after spending 76ms reading results.
+2024-11-29 03:26:49.933 -05:00 [DBG] Closing connection to database 'bdalex_carmanage' on server 'mysql-bdalex.alwaysdata.net'.
+2024-11-29 03:26:49.936 -05:00 [DBG] Closed connection to database 'bdalex_carmanage' on server 'mysql-bdalex.alwaysdata.net' (3ms).
+2024-11-29 03:26:49.941 -05:00 [INF] Executed action method BackCar.Presentation.Controllers.ClienteController.GetClientes (BackCar.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2222.634ms.
+2024-11-29 03:26:49.943 -05:00 [VRB] Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-11-29 03:26:49.944 -05:00 [VRB] Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-11-29 03:26:49.945 -05:00 [VRB] Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-11-29 03:26:49.946 -05:00 [VRB] Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-11-29 03:26:49.949 -05:00 [VRB] Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-11-29 03:26:49.950 -05:00 [VRB] Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-11-29 03:26:49.952 -05:00 [VRB] Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult.
+2024-11-29 03:26:49.954 -05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-11-29 03:26:49.957 -05:00 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]'.
+2024-11-29 03:26:49.959 -05:00 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2024-11-29 03:26:49.960 -05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-11-29 03:26:49.960 -05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-11-29 03:26:49.961 -05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-11-29 03:26:49.962 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BackCar._Domain.Entities.Cliente, BackCar. Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-29 03:26:49.969 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "HEADERS" frame for stream ID 9 with length 66 and flags "END_HEADERS".
+2024-11-29 03:26:49.969 -05:00 [VRB] After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult.
+2024-11-29 03:26:49.971 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "DATA" frame for stream ID 9 with length 289 and flags "NONE".
+2024-11-29 03:26:49.972 -05:00 [VRB] Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-11-29 03:26:49.974 -05:00 [VRB] Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-11-29 03:26:49.978 -05:00 [INF] Executed action BackCar.Presentation.Controllers.ClienteController.GetClientes (BackCar.Presentation) in 3750.2161ms
+2024-11-29 03:26:49.979 -05:00 [INF] Executed endpoint 'BackCar.Presentation.Controllers.ClienteController.GetClientes (BackCar.Presentation)'
+2024-11-29 03:26:49.981 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "DATA" frame for stream ID 9 with length 0 and flags "END_STREAM".
+2024-11-29 03:26:49.983 -05:00 [DBG] 'ApplicationDbContext' disposed.
+2024-11-29 03:26:49.986 -05:00 [DBG] Disposing connection to database 'bdalex_carmanage' on server 'mysql-bdalex.alwaysdata.net'.
+2024-11-29 03:26:49.989 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" received "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0.
+2024-11-29 03:26:49.989 -05:00 [DBG] Disposed connection to database 'bdalex_carmanage' on server 'mysql-bdalex.alwaysdata.net' (2ms).
+2024-11-29 03:26:49.993 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7223/api/Cliente - 200 null application/json; charset=utf-8 3837.6171ms
+2024-11-29 03:27:18.507 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" received "HEADERS" frame for stream ID 11 with length 72 and flags "END_HEADERS, PRIORITY".
+2024-11-29 03:27:18.520 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" received "PING" frame for stream ID 0 with length 8 and flags "NONE".
+2024-11-29 03:27:18.520 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7223/api/Cliente - application/json 83
+2024-11-29 03:27:18.524 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "PING" frame for stream ID 0 with length 8 and flags "ACK".
+2024-11-29 03:27:18.527 -05:00 [VRB] All hosts are allowed.
+2024-11-29 03:27:18.529 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" received "DATA" frame for stream ID 11 with length 83 and flags "END_STREAM".
+2024-11-29 03:27:18.536 -05:00 [DBG] 1 candidate(s) found for the request path '/api/Cliente'
+2024-11-29 03:27:18.542 -05:00 [DBG] Endpoint 'BackCar.Presentation.Controllers.ClienteController.CreateCliente (BackCar.Presentation)' with route pattern 'api/Cliente' is valid for the request path '/api/Cliente'
+2024-11-29 03:27:18.545 -05:00 [DBG] Request matched endpoint 'BackCar.Presentation.Controllers.ClienteController.CreateCliente (BackCar.Presentation)'
+2024-11-29 03:27:18.545 -05:00 [VRB] The endpoint does not specify the IRequestSizeLimitMetadata.
+2024-11-29 03:27:18.548 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-11-29 03:27:18.550 -05:00 [DBG] The request has an origin header: 'https://localhost:7223'.
+2024-11-29 03:27:18.552 -05:00 [INF] CORS policy execution failed.
+2024-11-29 03:27:18.552 -05:00 [INF] Request origin https://localhost:7223 does not have permission to access the resource.
+2024-11-29 03:27:18.553 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-11-29 03:27:18.555 -05:00 [INF] Executing endpoint 'BackCar.Presentation.Controllers.ClienteController.CreateCliente (BackCar.Presentation)'
+2024-11-29 03:27:18.570 -05:00 [INF] Route matched with {action = "CreateCliente", controller = "Cliente"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BackCar._Domain.Entities.Cliente]] CreateCliente(BackCar._Domain.Entities.Cliente) on controller BackCar.Presentation.Controllers.ClienteController (BackCar.Presentation).
+2024-11-29 03:27:18.573 -05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-11-29 03:27:18.575 -05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-11-29 03:27:18.576 -05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-11-29 03:27:18.577 -05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-11-29 03:27:18.578 -05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-11-29 03:27:18.581 -05:00 [DBG] Executing controller factory for controller BackCar.Presentation.Controllers.ClienteController (BackCar.Presentation)
+2024-11-29 03:27:19.473 -05:00 [DBG] Executed controller factory for controller BackCar.Presentation.Controllers.ClienteController (BackCar.Presentation)
+2024-11-29 03:27:19.487 -05:00 [DBG] Attempting to bind parameter 'cliente' of type 'BackCar._Domain.Entities.Cliente' ...
+2024-11-29 03:27:19.491 -05:00 [DBG] Attempting to bind parameter 'cliente' of type 'BackCar._Domain.Entities.Cliente' using the name '' in request data ...
+2024-11-29 03:27:19.493 -05:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2024-11-29 03:27:19.498 -05:00 [DBG] Connection id "0HN8G9U5GELMJ", Request id "0HN8G9U5GELMJ:0000000B": started reading request body.
+2024-11-29 03:27:19.499 -05:00 [DBG] Connection id "0HN8G9U5GELMJ", Request id "0HN8G9U5GELMJ:0000000B": done reading request body.
+2024-11-29 03:27:19.508 -05:00 [DBG] JSON input formatter threw an exception: The JSON value could not be converted to System.String. Path: $.telefono | LineNumber: 3 | BytePositionInLine: 15.
+2024-11-29 03:27:19.509 -05:00 [DBG] Done attempting to bind parameter 'cliente' of type 'BackCar._Domain.Entities.Cliente'.
+2024-11-29 03:27:19.510 -05:00 [DBG] Done attempting to bind parameter 'cliente' of type 'BackCar._Domain.Entities.Cliente'.
+2024-11-29 03:27:19.511 -05:00 [DBG] Attempting to validate the bound parameter 'cliente' of type 'BackCar._Domain.Entities.Cliente' ...
+2024-11-29 03:27:19.517 -05:00 [DBG] Done attempting to validate the bound parameter 'cliente' of type 'BackCar._Domain.Entities.Cliente'.
+2024-11-29 03:27:19.520 -05:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-11-29 03:27:19.522 -05:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-11-29 03:27:19.523 -05:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-11-29 03:27:19.525 -05:00 [DBG] The request has model state errors, returning an error response.
+2024-11-29 03:27:19.526 -05:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-11-29 03:27:19.527 -05:00 [DBG] Request was short circuited at action filter 'Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter'.
+2024-11-29 03:27:19.528 -05:00 [VRB] Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-11-29 03:27:19.530 -05:00 [VRB] Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-11-29 03:27:19.531 -05:00 [VRB] Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-11-29 03:27:19.532 -05:00 [VRB] Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-11-29 03:27:19.532 -05:00 [VRB] Before executing action result Microsoft.AspNetCore.Mvc.BadRequestObjectResult.
+2024-11-29 03:27:19.533 -05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-11-29 03:27:19.535 -05:00 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]' and explicitly specified content types '["application/problem+json","application/problem+xml","application/problem+json","application/problem+xml"]'. The content types in the accept header must be a subset of the explicitly set content types.
+2024-11-29 03:27:19.538 -05:00 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2024-11-29 03:27:19.539 -05:00 [DBG] Attempting to select the first output formatter in the output formatters list which supports a content type from the explicitly specified content types '["application/problem+json","application/problem+xml","application/problem+json","application/problem+xml"]'.
+2024-11-29 03:27:19.541 -05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/problem+json' to write the response.
+2024-11-29 03:27:19.542 -05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-11-29 03:27:19.557 -05:00 [VRB] After executing action result Microsoft.AspNetCore.Mvc.BadRequestObjectResult.
+2024-11-29 03:27:19.557 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "HEADERS" frame for stream ID 11 with length 74 and flags "END_HEADERS".
+2024-11-29 03:27:19.558 -05:00 [VRB] Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-11-29 03:27:19.560 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "DATA" frame for stream ID 11 with length 380 and flags "NONE".
+2024-11-29 03:27:19.561 -05:00 [VRB] Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-11-29 03:27:19.564 -05:00 [INF] Executed action BackCar.Presentation.Controllers.ClienteController.CreateCliente (BackCar.Presentation) in 983.2454ms
+2024-11-29 03:27:19.565 -05:00 [INF] Executed endpoint 'BackCar.Presentation.Controllers.ClienteController.CreateCliente (BackCar.Presentation)'
+2024-11-29 03:27:19.566 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "DATA" frame for stream ID 11 with length 0 and flags "END_STREAM".
+2024-11-29 03:27:19.566 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7223/api/Cliente - 400 null application/problem+json; charset=utf-8 1045.8493ms
+2024-11-29 03:27:19.577 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" received "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0.
+2024-11-29 03:27:49.910 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" received "HEADERS" frame for stream ID 13 with length 34 and flags "END_HEADERS, PRIORITY".
+2024-11-29 03:27:49.914 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7223/api/Cliente - application/json 83
+2024-11-29 03:27:49.918 -05:00 [VRB] All hosts are allowed.
+2024-11-29 03:27:49.918 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" received "PING" frame for stream ID 0 with length 8 and flags "NONE".
+2024-11-29 03:27:49.919 -05:00 [DBG] 1 candidate(s) found for the request path '/api/Cliente'
+2024-11-29 03:27:49.932 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "PING" frame for stream ID 0 with length 8 and flags "ACK".
+2024-11-29 03:27:49.933 -05:00 [DBG] Endpoint 'BackCar.Presentation.Controllers.ClienteController.CreateCliente (BackCar.Presentation)' with route pattern 'api/Cliente' is valid for the request path '/api/Cliente'
+2024-11-29 03:27:49.935 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" received "DATA" frame for stream ID 13 with length 83 and flags "END_STREAM".
+2024-11-29 03:27:49.938 -05:00 [DBG] Request matched endpoint 'BackCar.Presentation.Controllers.ClienteController.CreateCliente (BackCar.Presentation)'
+2024-11-29 03:27:49.942 -05:00 [VRB] The endpoint does not specify the IRequestSizeLimitMetadata.
+2024-11-29 03:27:49.943 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-11-29 03:27:49.945 -05:00 [DBG] The request has an origin header: 'https://localhost:7223'.
+2024-11-29 03:27:49.946 -05:00 [INF] CORS policy execution failed.
+2024-11-29 03:27:49.946 -05:00 [INF] Request origin https://localhost:7223 does not have permission to access the resource.
+2024-11-29 03:27:49.947 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-11-29 03:27:49.947 -05:00 [INF] Executing endpoint 'BackCar.Presentation.Controllers.ClienteController.CreateCliente (BackCar.Presentation)'
+2024-11-29 03:27:49.949 -05:00 [INF] Route matched with {action = "CreateCliente", controller = "Cliente"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BackCar._Domain.Entities.Cliente]] CreateCliente(BackCar._Domain.Entities.Cliente) on controller BackCar.Presentation.Controllers.ClienteController (BackCar.Presentation).
+2024-11-29 03:27:49.952 -05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-11-29 03:27:49.953 -05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-11-29 03:27:49.954 -05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-11-29 03:27:49.955 -05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-11-29 03:27:49.956 -05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-11-29 03:27:49.958 -05:00 [DBG] Executing controller factory for controller BackCar.Presentation.Controllers.ClienteController (BackCar.Presentation)
+2024-11-29 03:27:50.824 -05:00 [DBG] Executed controller factory for controller BackCar.Presentation.Controllers.ClienteController (BackCar.Presentation)
+2024-11-29 03:27:50.826 -05:00 [DBG] Attempting to bind parameter 'cliente' of type 'BackCar._Domain.Entities.Cliente' ...
+2024-11-29 03:27:50.827 -05:00 [DBG] Attempting to bind parameter 'cliente' of type 'BackCar._Domain.Entities.Cliente' using the name '' in request data ...
+2024-11-29 03:27:50.828 -05:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2024-11-29 03:27:50.829 -05:00 [DBG] Connection id "0HN8G9U5GELMJ", Request id "0HN8G9U5GELMJ:0000000D": started reading request body.
+2024-11-29 03:27:50.831 -05:00 [DBG] Connection id "0HN8G9U5GELMJ", Request id "0HN8G9U5GELMJ:0000000D": done reading request body.
+2024-11-29 03:27:50.833 -05:00 [DBG] JSON input formatter threw an exception: The JSON value could not be converted to System.String. Path: $.telefono | LineNumber: 3 | BytePositionInLine: 15.
+2024-11-29 03:27:50.834 -05:00 [DBG] Done attempting to bind parameter 'cliente' of type 'BackCar._Domain.Entities.Cliente'.
+2024-11-29 03:27:50.835 -05:00 [DBG] Done attempting to bind parameter 'cliente' of type 'BackCar._Domain.Entities.Cliente'.
+2024-11-29 03:27:50.835 -05:00 [DBG] Attempting to validate the bound parameter 'cliente' of type 'BackCar._Domain.Entities.Cliente' ...
+2024-11-29 03:27:50.836 -05:00 [DBG] Done attempting to validate the bound parameter 'cliente' of type 'BackCar._Domain.Entities.Cliente'.
+2024-11-29 03:27:50.837 -05:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-11-29 03:27:50.838 -05:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-11-29 03:27:50.841 -05:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-11-29 03:27:50.842 -05:00 [DBG] The request has model state errors, returning an error response.
+2024-11-29 03:27:50.843 -05:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-11-29 03:27:50.844 -05:00 [DBG] Request was short circuited at action filter 'Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter'.
+2024-11-29 03:27:50.844 -05:00 [VRB] Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-11-29 03:27:50.845 -05:00 [VRB] Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-11-29 03:27:50.846 -05:00 [VRB] Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-11-29 03:27:50.847 -05:00 [VRB] Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-11-29 03:27:50.849 -05:00 [VRB] Before executing action result Microsoft.AspNetCore.Mvc.BadRequestObjectResult.
+2024-11-29 03:27:50.850 -05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-11-29 03:27:50.851 -05:00 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]' and explicitly specified content types '["application/problem+json","application/problem+xml","application/problem+json","application/problem+xml"]'. The content types in the accept header must be a subset of the explicitly set content types.
+2024-11-29 03:27:50.853 -05:00 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2024-11-29 03:27:50.854 -05:00 [DBG] Attempting to select the first output formatter in the output formatters list which supports a content type from the explicitly specified content types '["application/problem+json","application/problem+xml","application/problem+json","application/problem+xml"]'.
+2024-11-29 03:27:50.855 -05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/problem+json' to write the response.
+2024-11-29 03:27:50.857 -05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-11-29 03:27:50.858 -05:00 [VRB] After executing action result Microsoft.AspNetCore.Mvc.BadRequestObjectResult.
+2024-11-29 03:27:50.858 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "HEADERS" frame for stream ID 13 with length 34 and flags "END_HEADERS".
+2024-11-29 03:27:50.859 -05:00 [VRB] Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-11-29 03:27:50.860 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "DATA" frame for stream ID 13 with length 380 and flags "NONE".
+2024-11-29 03:27:50.861 -05:00 [VRB] Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-11-29 03:27:50.863 -05:00 [INF] Executed action BackCar.Presentation.Controllers.ClienteController.CreateCliente (BackCar.Presentation) in 905.7071ms
+2024-11-29 03:27:50.864 -05:00 [INF] Executed endpoint 'BackCar.Presentation.Controllers.ClienteController.CreateCliente (BackCar.Presentation)'
+2024-11-29 03:27:50.865 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "DATA" frame for stream ID 13 with length 0 and flags "END_STREAM".
+2024-11-29 03:27:50.865 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7223/api/Cliente - 400 null application/problem+json; charset=utf-8 951.8541ms
+2024-11-29 03:27:50.876 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" received "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0.
+2024-11-29 03:27:55.992 -05:00 [INF] Application is shutting down...
+2024-11-29 03:27:55.992 -05:00 [DBG] Hosting stopping
+2024-11-29 03:27:56.010 -05:00 [DBG] Connection id "0HN8G9U5GELMJ" is closing.
+2024-11-29 03:27:56.012 -05:00 [DBG] Connection id "0HN8G9U5GELMJ" is closed. The last processed stream ID was 13.
+2024-11-29 03:27:56.013 -05:00 [VRB] Connection id "0HN8G9U5GELMJ" sending "GOAWAY" frame for stream ID 0 with length 8 and flags 0x0.
+2024-11-29 03:27:56.015 -05:00 [DBG] Connection id "0HN8G9U5GELMJ" received FIN.
+2024-11-29 03:27:56.017 -05:00 [DBG] Connection id "0HN8G9U5GELMJ" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-11-29 03:27:56.028 -05:00 [DBG] The connection queue processing loop for 0HN8G9U5GELMJ completed.
+2024-11-29 03:27:56.031 -05:00 [DBG] Connection id "0HN8G9U5GELMJ" stopped.
+2024-11-29 03:27:56.034 -05:00 [DBG] Hosting stopped
+2024-11-29 03:42:10.143 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-11-29 03:42:10.273 -05:00 [DBG] Hosting starting
+2024-11-29 03:42:10.336 -05:00 [INF] User profile is available. Using 'C:\Users\tony1\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-29 03:42:10.347 -05:00 [DBG] Reading data from file 'C:\Users\tony1\AppData\Local\ASP.NET\DataProtection-Keys\key-53f457e7-32f0-4dc3-9de1-9fe7491153c7.xml'.
+2024-11-29 03:42:10.359 -05:00 [DBG] Reading data from file 'C:\Users\tony1\AppData\Local\ASP.NET\DataProtection-Keys\key-8305f168-6c05-4e6a-bd26-6929a0269bdb.xml'.
+2024-11-29 03:42:10.367 -05:00 [DBG] Found key {53f457e7-32f0-4dc3-9de1-9fe7491153c7}.
+2024-11-29 03:42:10.371 -05:00 [DBG] Found key {8305f168-6c05-4e6a-bd26-6929a0269bdb}.
+2024-11-29 03:42:10.378 -05:00 [DBG] Considering key {53f457e7-32f0-4dc3-9de1-9fe7491153c7} with expiration date 2025-02-23 06:33:00Z as default key.
+2024-11-29 03:42:10.384 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-11-29 03:42:10.386 -05:00 [DBG] Decrypting secret element using Windows DPAPI.
+2024-11-29 03:42:10.388 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-11-29 03:42:10.395 -05:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2024-11-29 03:42:10.402 -05:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2024-11-29 03:42:10.407 -05:00 [DBG] Using key {53f457e7-32f0-4dc3-9de1-9fe7491153c7} as the default key.
+2024-11-29 03:42:10.410 -05:00 [DBG] Key ring with default key {53f457e7-32f0-4dc3-9de1-9fe7491153c7} was loaded during application startup.
+2024-11-29 03:42:10.668 -05:00 [INF] Now listening on: https://localhost:7223
+2024-11-29 03:42:10.670 -05:00 [INF] Now listening on: http://localhost:5120
+2024-11-29 03:42:10.671 -05:00 [DBG] Loaded hosting startup assembly BackCar.Presentation
+2024-11-29 03:42:10.672 -05:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2024-11-29 03:42:10.673 -05:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-11-29 03:42:10.673 -05:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-11-29 03:42:10.718 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-29 03:42:10.719 -05:00 [INF] Hosting environment: Development
+2024-11-29 03:42:10.720 -05:00 [INF] Content root path: C:\Users\tony1\OneDrive\Documentos\back-endCarManage\BackCar.Presentation
+2024-11-29 03:42:10.721 -05:00 [DBG] Hosting started
+2024-11-29 03:42:11.080 -05:00 [DBG] Connection id "0HN8GA6RLDR5M" accepted.
+2024-11-29 03:42:11.080 -05:00 [DBG] Connection id "0HN8GA6RLDR5N" accepted.
+2024-11-29 03:42:11.083 -05:00 [DBG] Connection id "0HN8GA6RLDR5M" started.
+2024-11-29 03:42:11.083 -05:00 [DBG] Connection id "0HN8GA6RLDR5N" started.
+2024-11-29 03:42:11.097 -05:00 [DBG] Connection id "0HN8GA6RLDR5M" received FIN.
+2024-11-29 03:42:11.097 -05:00 [DBG] Connection id "0HN8GA6RLDR5N" received FIN.
+2024-11-29 03:42:11.126 -05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-11-29 03:42:11.126 -05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-11-29 03:42:11.167 -05:00 [DBG] Connection id "0HN8GA6RLDR5N" stopped.
+2024-11-29 03:42:11.167 -05:00 [DBG] Connection id "0HN8GA6RLDR5M" stopped.
+2024-11-29 03:42:11.170 -05:00 [DBG] Connection id "0HN8GA6RLDR5N" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-11-29 03:42:11.170 -05:00 [DBG] Connection id "0HN8GA6RLDR5M" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-11-29 03:42:11.309 -05:00 [DBG] Connection id "0HN8GA6RLDR5O" accepted.
+2024-11-29 03:42:11.311 -05:00 [DBG] Connection id "0HN8GA6RLDR5O" started.
+2024-11-29 03:42:11.363 -05:00 [DBG] Connection 0HN8GA6RLDR5O established using the following protocol: "Tls13"
+2024-11-29 03:42:11.394 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "SETTINGS" frame for stream ID 0 with length 24 and flags "NONE".
+2024-11-29 03:42:11.402 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0.
+2024-11-29 03:42:11.405 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" received "SETTINGS" frame for stream ID 0 with length 24 and flags "NONE".
+2024-11-29 03:42:11.409 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "SETTINGS" frame for stream ID 0 with length 0 and flags "ACK".
+2024-11-29 03:42:11.411 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" received "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0.
+2024-11-29 03:42:11.414 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" received "HEADERS" frame for stream ID 1 with length 506 and flags "END_STREAM, END_HEADERS, PRIORITY".
+2024-11-29 03:42:11.430 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" received "SETTINGS" frame for stream ID 0 with length 0 and flags "ACK".
+2024-11-29 03:42:11.455 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7223/swagger/index.html - null null
+2024-11-29 03:42:11.575 -05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-11-29 03:42:11.576 -05:00 [VRB] All hosts are allowed.
+2024-11-29 03:42:11.599 -05:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2024-11-29 03:42:11.601 -05:00 [DBG] Request did not match any endpoints
+2024-11-29 03:42:11.676 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-11-29 03:42:11.729 -05:00 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-11-29 03:42:11.732 -05:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-11-29 03:42:11.737 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "HEADERS" frame for stream ID 1 with length 66 and flags "END_HEADERS".
+2024-11-29 03:42:11.743 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "DATA" frame for stream ID 1 with length 4096 and flags "NONE".
+2024-11-29 03:42:11.750 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "DATA" frame for stream ID 1 with length 932 and flags "NONE".
+2024-11-29 03:42:11.752 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "DATA" frame for stream ID 1 with length 81 and flags "NONE".
+2024-11-29 03:42:11.755 -05:00 [DBG] Response markup was updated to include Browser Link script injection.
+2024-11-29 03:42:11.756 -05:00 [DBG] Response markup was updated to include browser refresh script injection.
+2024-11-29 03:42:11.757 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "DATA" frame for stream ID 1 with length 0 and flags "END_STREAM".
+2024-11-29 03:42:11.759 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7223/swagger/index.html - 200 null text/html;charset=utf-8 311.4183ms
+2024-11-29 03:42:11.958 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" received "HEADERS" frame for stream ID 3 with length 115 and flags "END_STREAM, END_HEADERS, PRIORITY".
+2024-11-29 03:42:11.964 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7223/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-29 03:42:11.968 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" received "HEADERS" frame for stream ID 5 with length 57 and flags "END_STREAM, END_HEADERS, PRIORITY".
+2024-11-29 03:42:11.973 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "HEADERS" frame for stream ID 3 with length 60 and flags "END_HEADERS".
+2024-11-29 03:42:11.975 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7223/_vs/browserLink - null null
+2024-11-29 03:42:11.977 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "DATA" frame for stream ID 3 with length 13776 and flags "NONE".
+2024-11-29 03:42:11.983 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "DATA" frame for stream ID 3 with length 0 and flags "END_STREAM".
+2024-11-29 03:42:11.983 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7223/_framework/aspnetcore-browser-refresh.js - 200 13776 application/javascript; charset=utf-8 19.3281ms
+2024-11-29 03:42:12.021 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "HEADERS" frame for stream ID 5 with length 119 and flags "END_HEADERS".
+2024-11-29 03:42:12.024 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "DATA" frame for stream ID 5 with length 9986 and flags "NONE".
+2024-11-29 03:42:12.028 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 03:42:12.030 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 03:42:12.032 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 03:42:12.036 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 03:42:12.039 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 03:42:12.042 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 03:42:12.046 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 03:42:12.048 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 03:42:12.050 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 03:42:12.053 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 03:42:12.055 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 03:42:12.058 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 03:42:12.059 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 03:42:12.062 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 03:42:12.064 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "DATA" frame for stream ID 5 with length 1806 and flags "NONE".
+2024-11-29 03:42:12.066 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7223/_vs/browserLink - 200 null text/javascript; charset=UTF-8 89.5557ms
+2024-11-29 03:42:12.069 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "DATA" frame for stream ID 5 with length 0 and flags "END_STREAM".
+2024-11-29 03:42:12.163 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" received "HEADERS" frame for stream ID 7 with length 74 and flags "END_STREAM, END_HEADERS, PRIORITY".
+2024-11-29 03:42:12.166 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7223/swagger/v1/swagger.json - null null
+2024-11-29 03:42:12.170 -05:00 [VRB] All hosts are allowed.
+2024-11-29 03:42:12.171 -05:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2024-11-29 03:42:12.173 -05:00 [DBG] Request did not match any endpoints
+2024-11-29 03:42:12.175 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-11-29 03:42:12.206 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "HEADERS" frame for stream ID 7 with length 35 and flags "END_HEADERS".
+2024-11-29 03:42:12.209 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2024-11-29 03:42:12.211 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2024-11-29 03:42:12.213 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2024-11-29 03:42:12.214 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "DATA" frame for stream ID 7 with length 3258 and flags "NONE".
+2024-11-29 03:42:12.217 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "DATA" frame for stream ID 7 with length 0 and flags "END_STREAM".
+2024-11-29 03:42:12.217 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7223/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 50.8361ms
+2024-11-29 03:44:20.730 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" received "HEADERS" frame for stream ID 9 with length 80 and flags "END_HEADERS, PRIORITY".
+2024-11-29 03:44:20.752 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" received "PING" frame for stream ID 0 with length 8 and flags "NONE".
+2024-11-29 03:44:20.752 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7223/api/Cliente - application/json 85
+2024-11-29 03:44:20.755 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "PING" frame for stream ID 0 with length 8 and flags "ACK".
+2024-11-29 03:44:20.758 -05:00 [VRB] All hosts are allowed.
+2024-11-29 03:44:20.761 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" received "DATA" frame for stream ID 9 with length 85 and flags "END_STREAM".
+2024-11-29 03:44:20.768 -05:00 [DBG] 1 candidate(s) found for the request path '/api/Cliente'
+2024-11-29 03:44:20.770 -05:00 [DBG] Endpoint 'BackCar.Presentation.Controllers.ClienteController.CreateCliente (BackCar.Presentation)' with route pattern 'api/Cliente' is valid for the request path '/api/Cliente'
+2024-11-29 03:44:20.772 -05:00 [DBG] Request matched endpoint 'BackCar.Presentation.Controllers.ClienteController.CreateCliente (BackCar.Presentation)'
+2024-11-29 03:44:20.776 -05:00 [VRB] The endpoint does not specify the IRequestSizeLimitMetadata.
+2024-11-29 03:44:20.780 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-11-29 03:44:20.785 -05:00 [DBG] The request has an origin header: 'https://localhost:7223'.
+2024-11-29 03:44:20.787 -05:00 [INF] CORS policy execution failed.
+2024-11-29 03:44:20.787 -05:00 [INF] Request origin https://localhost:7223 does not have permission to access the resource.
+2024-11-29 03:44:20.791 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-11-29 03:44:20.793 -05:00 [INF] Executing endpoint 'BackCar.Presentation.Controllers.ClienteController.CreateCliente (BackCar.Presentation)'
+2024-11-29 03:44:20.820 -05:00 [INF] Route matched with {action = "CreateCliente", controller = "Cliente"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BackCar._Domain.Entities.Cliente]] CreateCliente(BackCar._Domain.Entities.Cliente) on controller BackCar.Presentation.Controllers.ClienteController (BackCar.Presentation).
+2024-11-29 03:44:20.825 -05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-11-29 03:44:20.826 -05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-11-29 03:44:20.828 -05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-11-29 03:44:20.829 -05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-11-29 03:44:20.830 -05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-11-29 03:44:20.834 -05:00 [DBG] Executing controller factory for controller BackCar.Presentation.Controllers.ClienteController (BackCar.Presentation)
+2024-11-29 03:44:22.288 -05:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-11-29 03:44:22.323 -05:00 [DBG] Executed controller factory for controller BackCar.Presentation.Controllers.ClienteController (BackCar.Presentation)
+2024-11-29 03:44:22.341 -05:00 [DBG] Attempting to bind parameter 'cliente' of type 'BackCar._Domain.Entities.Cliente' ...
+2024-11-29 03:44:22.345 -05:00 [DBG] Attempting to bind parameter 'cliente' of type 'BackCar._Domain.Entities.Cliente' using the name '' in request data ...
+2024-11-29 03:44:22.350 -05:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2024-11-29 03:44:22.359 -05:00 [DBG] Connection id "0HN8GA6RLDR5O", Request id "0HN8GA6RLDR5O:00000009": started reading request body.
+2024-11-29 03:44:22.361 -05:00 [DBG] Connection id "0HN8GA6RLDR5O", Request id "0HN8GA6RLDR5O:00000009": done reading request body.
+2024-11-29 03:44:22.375 -05:00 [DBG] JSON input formatter threw an exception: The JSON value could not be converted to System.String. Path: $.nombreCliente | LineNumber: 2 | BytePositionInLine: 22.
+2024-11-29 03:44:22.377 -05:00 [DBG] Done attempting to bind parameter 'cliente' of type 'BackCar._Domain.Entities.Cliente'.
+2024-11-29 03:44:22.378 -05:00 [DBG] Done attempting to bind parameter 'cliente' of type 'BackCar._Domain.Entities.Cliente'.
+2024-11-29 03:44:22.380 -05:00 [DBG] Attempting to validate the bound parameter 'cliente' of type 'BackCar._Domain.Entities.Cliente' ...
+2024-11-29 03:44:22.386 -05:00 [DBG] Done attempting to validate the bound parameter 'cliente' of type 'BackCar._Domain.Entities.Cliente'.
+2024-11-29 03:44:22.390 -05:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-11-29 03:44:22.392 -05:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-11-29 03:44:22.393 -05:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-11-29 03:44:22.394 -05:00 [DBG] The request has model state errors, returning an error response.
+2024-11-29 03:44:22.396 -05:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-11-29 03:44:22.399 -05:00 [DBG] Request was short circuited at action filter 'Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter'.
+2024-11-29 03:44:22.400 -05:00 [VRB] Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-11-29 03:44:22.402 -05:00 [VRB] Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-11-29 03:44:22.403 -05:00 [VRB] Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-11-29 03:44:22.405 -05:00 [VRB] Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-11-29 03:44:22.408 -05:00 [VRB] Before executing action result Microsoft.AspNetCore.Mvc.BadRequestObjectResult.
+2024-11-29 03:44:22.410 -05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-11-29 03:44:22.416 -05:00 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]' and explicitly specified content types '["application/problem+json","application/problem+xml","application/problem+json","application/problem+xml"]'. The content types in the accept header must be a subset of the explicitly set content types.
+2024-11-29 03:44:22.419 -05:00 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2024-11-29 03:44:22.420 -05:00 [DBG] Attempting to select the first output formatter in the output formatters list which supports a content type from the explicitly specified content types '["application/problem+json","application/problem+xml","application/problem+json","application/problem+xml"]'.
+2024-11-29 03:44:22.424 -05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/problem+json' to write the response.
+2024-11-29 03:44:22.425 -05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-11-29 03:44:22.443 -05:00 [VRB] After executing action result Microsoft.AspNetCore.Mvc.BadRequestObjectResult.
+2024-11-29 03:44:22.443 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "HEADERS" frame for stream ID 9 with length 74 and flags "END_HEADERS".
+2024-11-29 03:44:22.443 -05:00 [VRB] Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-11-29 03:44:22.445 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "DATA" frame for stream ID 9 with length 390 and flags "NONE".
+2024-11-29 03:44:22.447 -05:00 [VRB] Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-11-29 03:44:22.453 -05:00 [INF] Executed action BackCar.Presentation.Controllers.ClienteController.CreateCliente (BackCar.Presentation) in 1619.2639ms
+2024-11-29 03:44:22.455 -05:00 [INF] Executed endpoint 'BackCar.Presentation.Controllers.ClienteController.CreateCliente (BackCar.Presentation)'
+2024-11-29 03:44:22.456 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "DATA" frame for stream ID 9 with length 0 and flags "END_STREAM".
+2024-11-29 03:44:22.457 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7223/api/Cliente - 400 null application/problem+json; charset=utf-8 1705.8048ms
+2024-11-29 03:44:22.467 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" received "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0.
+2024-11-29 03:44:47.466 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" received "HEADERS" frame for stream ID 11 with length 34 and flags "END_HEADERS, PRIORITY".
+2024-11-29 03:44:47.487 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" received "PING" frame for stream ID 0 with length 8 and flags "NONE".
+2024-11-29 03:44:47.487 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7223/api/Cliente - application/json 85
+2024-11-29 03:44:47.489 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "PING" frame for stream ID 0 with length 8 and flags "ACK".
+2024-11-29 03:44:47.492 -05:00 [VRB] All hosts are allowed.
+2024-11-29 03:44:47.498 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" received "DATA" frame for stream ID 11 with length 85 and flags "END_STREAM".
+2024-11-29 03:44:47.508 -05:00 [DBG] 1 candidate(s) found for the request path '/api/Cliente'
+2024-11-29 03:44:47.514 -05:00 [DBG] Endpoint 'BackCar.Presentation.Controllers.ClienteController.CreateCliente (BackCar.Presentation)' with route pattern 'api/Cliente' is valid for the request path '/api/Cliente'
+2024-11-29 03:44:47.516 -05:00 [DBG] Request matched endpoint 'BackCar.Presentation.Controllers.ClienteController.CreateCliente (BackCar.Presentation)'
+2024-11-29 03:44:47.517 -05:00 [VRB] The endpoint does not specify the IRequestSizeLimitMetadata.
+2024-11-29 03:44:47.518 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-11-29 03:44:47.520 -05:00 [DBG] The request has an origin header: 'https://localhost:7223'.
+2024-11-29 03:44:47.521 -05:00 [INF] CORS policy execution failed.
+2024-11-29 03:44:47.522 -05:00 [INF] Request origin https://localhost:7223 does not have permission to access the resource.
+2024-11-29 03:44:47.523 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-11-29 03:44:47.525 -05:00 [INF] Executing endpoint 'BackCar.Presentation.Controllers.ClienteController.CreateCliente (BackCar.Presentation)'
+2024-11-29 03:44:47.526 -05:00 [INF] Route matched with {action = "CreateCliente", controller = "Cliente"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BackCar._Domain.Entities.Cliente]] CreateCliente(BackCar._Domain.Entities.Cliente) on controller BackCar.Presentation.Controllers.ClienteController (BackCar.Presentation).
+2024-11-29 03:44:47.529 -05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-11-29 03:44:47.531 -05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-11-29 03:44:47.532 -05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-11-29 03:44:47.533 -05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-11-29 03:44:47.535 -05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-11-29 03:44:47.536 -05:00 [DBG] Executing controller factory for controller BackCar.Presentation.Controllers.ClienteController (BackCar.Presentation)
+2024-11-29 03:44:48.482 -05:00 [DBG] Executed controller factory for controller BackCar.Presentation.Controllers.ClienteController (BackCar.Presentation)
+2024-11-29 03:44:48.485 -05:00 [DBG] Attempting to bind parameter 'cliente' of type 'BackCar._Domain.Entities.Cliente' ...
+2024-11-29 03:44:48.488 -05:00 [DBG] Attempting to bind parameter 'cliente' of type 'BackCar._Domain.Entities.Cliente' using the name '' in request data ...
+2024-11-29 03:44:48.490 -05:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2024-11-29 03:44:48.495 -05:00 [DBG] Connection id "0HN8GA6RLDR5O", Request id "0HN8GA6RLDR5O:0000000B": started reading request body.
+2024-11-29 03:44:48.496 -05:00 [DBG] Connection id "0HN8GA6RLDR5O", Request id "0HN8GA6RLDR5O:0000000B": done reading request body.
+2024-11-29 03:44:48.498 -05:00 [DBG] JSON input formatter threw an exception: The JSON value could not be converted to System.String. Path: $.nombreCliente | LineNumber: 2 | BytePositionInLine: 22.
+2024-11-29 03:44:48.501 -05:00 [DBG] Done attempting to bind parameter 'cliente' of type 'BackCar._Domain.Entities.Cliente'.
+2024-11-29 03:44:48.504 -05:00 [DBG] Done attempting to bind parameter 'cliente' of type 'BackCar._Domain.Entities.Cliente'.
+2024-11-29 03:44:48.506 -05:00 [DBG] Attempting to validate the bound parameter 'cliente' of type 'BackCar._Domain.Entities.Cliente' ...
+2024-11-29 03:44:48.510 -05:00 [DBG] Done attempting to validate the bound parameter 'cliente' of type 'BackCar._Domain.Entities.Cliente'.
+2024-11-29 03:44:48.512 -05:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-11-29 03:44:48.514 -05:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-11-29 03:44:48.518 -05:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-11-29 03:44:48.522 -05:00 [DBG] The request has model state errors, returning an error response.
+2024-11-29 03:44:48.524 -05:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-11-29 03:44:48.527 -05:00 [DBG] Request was short circuited at action filter 'Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter'.
+2024-11-29 03:44:48.529 -05:00 [VRB] Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-11-29 03:44:48.531 -05:00 [VRB] Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-11-29 03:44:48.534 -05:00 [VRB] Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-11-29 03:44:48.537 -05:00 [VRB] Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-11-29 03:44:48.539 -05:00 [VRB] Before executing action result Microsoft.AspNetCore.Mvc.BadRequestObjectResult.
+2024-11-29 03:44:48.540 -05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-11-29 03:44:48.545 -05:00 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]' and explicitly specified content types '["application/problem+json","application/problem+xml","application/problem+json","application/problem+xml"]'. The content types in the accept header must be a subset of the explicitly set content types.
+2024-11-29 03:44:48.550 -05:00 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2024-11-29 03:44:48.551 -05:00 [DBG] Attempting to select the first output formatter in the output formatters list which supports a content type from the explicitly specified content types '["application/problem+json","application/problem+xml","application/problem+json","application/problem+xml"]'.
+2024-11-29 03:44:48.554 -05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/problem+json' to write the response.
+2024-11-29 03:44:48.555 -05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-11-29 03:44:48.556 -05:00 [VRB] After executing action result Microsoft.AspNetCore.Mvc.BadRequestObjectResult.
+2024-11-29 03:44:48.556 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "HEADERS" frame for stream ID 11 with length 34 and flags "END_HEADERS".
+2024-11-29 03:44:48.558 -05:00 [VRB] Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-11-29 03:44:48.561 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "DATA" frame for stream ID 11 with length 390 and flags "NONE".
+2024-11-29 03:44:48.562 -05:00 [VRB] Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-11-29 03:44:48.566 -05:00 [INF] Executed action BackCar.Presentation.Controllers.ClienteController.CreateCliente (BackCar.Presentation) in 1029.4363ms
+2024-11-29 03:44:48.568 -05:00 [INF] Executed endpoint 'BackCar.Presentation.Controllers.ClienteController.CreateCliente (BackCar.Presentation)'
+2024-11-29 03:44:48.569 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "DATA" frame for stream ID 11 with length 0 and flags "END_STREAM".
+2024-11-29 03:44:48.570 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7223/api/Cliente - 400 null application/problem+json; charset=utf-8 1082.5705ms
+2024-11-29 03:44:48.586 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" received "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0.
+2024-11-29 03:45:09.582 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" received "HEADERS" frame for stream ID 13 with length 37 and flags "END_HEADERS, PRIORITY".
+2024-11-29 03:45:09.589 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" received "PING" frame for stream ID 0 with length 8 and flags "NONE".
+2024-11-29 03:45:09.589 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7223/api/Cliente - application/json 66
+2024-11-29 03:45:09.603 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "PING" frame for stream ID 0 with length 8 and flags "ACK".
+2024-11-29 03:45:09.606 -05:00 [VRB] All hosts are allowed.
+2024-11-29 03:45:09.608 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" received "DATA" frame for stream ID 13 with length 66 and flags "END_STREAM".
+2024-11-29 03:45:09.608 -05:00 [DBG] 1 candidate(s) found for the request path '/api/Cliente'
+2024-11-29 03:45:09.612 -05:00 [DBG] Endpoint 'BackCar.Presentation.Controllers.ClienteController.CreateCliente (BackCar.Presentation)' with route pattern 'api/Cliente' is valid for the request path '/api/Cliente'
+2024-11-29 03:45:09.615 -05:00 [DBG] Request matched endpoint 'BackCar.Presentation.Controllers.ClienteController.CreateCliente (BackCar.Presentation)'
+2024-11-29 03:45:09.616 -05:00 [VRB] The endpoint does not specify the IRequestSizeLimitMetadata.
+2024-11-29 03:45:09.617 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-11-29 03:45:09.619 -05:00 [DBG] The request has an origin header: 'https://localhost:7223'.
+2024-11-29 03:45:09.621 -05:00 [INF] CORS policy execution failed.
+2024-11-29 03:45:09.622 -05:00 [INF] Request origin https://localhost:7223 does not have permission to access the resource.
+2024-11-29 03:45:09.624 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-11-29 03:45:09.624 -05:00 [INF] Executing endpoint 'BackCar.Presentation.Controllers.ClienteController.CreateCliente (BackCar.Presentation)'
+2024-11-29 03:45:09.625 -05:00 [INF] Route matched with {action = "CreateCliente", controller = "Cliente"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BackCar._Domain.Entities.Cliente]] CreateCliente(BackCar._Domain.Entities.Cliente) on controller BackCar.Presentation.Controllers.ClienteController (BackCar.Presentation).
+2024-11-29 03:45:09.627 -05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-11-29 03:45:09.629 -05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-11-29 03:45:09.631 -05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-11-29 03:45:09.633 -05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-11-29 03:45:09.634 -05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-11-29 03:45:09.635 -05:00 [DBG] Executing controller factory for controller BackCar.Presentation.Controllers.ClienteController (BackCar.Presentation)
+2024-11-29 03:45:10.530 -05:00 [DBG] Executed controller factory for controller BackCar.Presentation.Controllers.ClienteController (BackCar.Presentation)
+2024-11-29 03:45:10.531 -05:00 [DBG] Attempting to bind parameter 'cliente' of type 'BackCar._Domain.Entities.Cliente' ...
+2024-11-29 03:45:10.532 -05:00 [DBG] Attempting to bind parameter 'cliente' of type 'BackCar._Domain.Entities.Cliente' using the name '' in request data ...
+2024-11-29 03:45:10.533 -05:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2024-11-29 03:45:10.534 -05:00 [DBG] Connection id "0HN8GA6RLDR5O", Request id "0HN8GA6RLDR5O:0000000D": started reading request body.
+2024-11-29 03:45:10.536 -05:00 [DBG] Connection id "0HN8GA6RLDR5O", Request id "0HN8GA6RLDR5O:0000000D": done reading request body.
+2024-11-29 03:45:10.539 -05:00 [DBG] JSON input formatter threw an exception: The JSON value could not be converted to System.String. Path: $.nombreCliente | LineNumber: 1 | BytePositionInLine: 22.
+2024-11-29 03:45:10.539 -05:00 [DBG] Done attempting to bind parameter 'cliente' of type 'BackCar._Domain.Entities.Cliente'.
+2024-11-29 03:45:10.540 -05:00 [DBG] Done attempting to bind parameter 'cliente' of type 'BackCar._Domain.Entities.Cliente'.
+2024-11-29 03:45:10.541 -05:00 [DBG] Attempting to validate the bound parameter 'cliente' of type 'BackCar._Domain.Entities.Cliente' ...
+2024-11-29 03:45:10.542 -05:00 [DBG] Done attempting to validate the bound parameter 'cliente' of type 'BackCar._Domain.Entities.Cliente'.
+2024-11-29 03:45:10.543 -05:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-11-29 03:45:10.545 -05:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-11-29 03:45:10.546 -05:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-11-29 03:45:10.547 -05:00 [DBG] The request has model state errors, returning an error response.
+2024-11-29 03:45:10.548 -05:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-11-29 03:45:10.549 -05:00 [DBG] Request was short circuited at action filter 'Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter'.
+2024-11-29 03:45:10.550 -05:00 [VRB] Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-11-29 03:45:10.551 -05:00 [VRB] Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-11-29 03:45:10.553 -05:00 [VRB] Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-11-29 03:45:10.555 -05:00 [VRB] Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-11-29 03:45:10.556 -05:00 [VRB] Before executing action result Microsoft.AspNetCore.Mvc.BadRequestObjectResult.
+2024-11-29 03:45:10.556 -05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-11-29 03:45:10.558 -05:00 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]' and explicitly specified content types '["application/problem+json","application/problem+xml","application/problem+json","application/problem+xml"]'. The content types in the accept header must be a subset of the explicitly set content types.
+2024-11-29 03:45:10.560 -05:00 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2024-11-29 03:45:10.561 -05:00 [DBG] Attempting to select the first output formatter in the output formatters list which supports a content type from the explicitly specified content types '["application/problem+json","application/problem+xml","application/problem+json","application/problem+xml"]'.
+2024-11-29 03:45:10.563 -05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/problem+json' to write the response.
+2024-11-29 03:45:10.565 -05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-11-29 03:45:10.566 -05:00 [VRB] After executing action result Microsoft.AspNetCore.Mvc.BadRequestObjectResult.
+2024-11-29 03:45:10.566 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "HEADERS" frame for stream ID 13 with length 34 and flags "END_HEADERS".
+2024-11-29 03:45:10.567 -05:00 [VRB] Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-11-29 03:45:10.568 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "DATA" frame for stream ID 13 with length 390 and flags "NONE".
+2024-11-29 03:45:10.570 -05:00 [VRB] Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-11-29 03:45:10.572 -05:00 [INF] Executed action BackCar.Presentation.Controllers.ClienteController.CreateCliente (BackCar.Presentation) in 937.3565ms
+2024-11-29 03:45:10.574 -05:00 [INF] Executed endpoint 'BackCar.Presentation.Controllers.ClienteController.CreateCliente (BackCar.Presentation)'
+2024-11-29 03:45:10.574 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "DATA" frame for stream ID 13 with length 0 and flags "END_STREAM".
+2024-11-29 03:45:10.574 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7223/api/Cliente - 400 null application/problem+json; charset=utf-8 985.6511ms
+2024-11-29 03:45:10.588 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" received "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0.
+2024-11-29 03:45:30.411 -05:00 [INF] Application is shutting down...
+2024-11-29 03:45:30.415 -05:00 [DBG] Hosting stopping
+2024-11-29 03:45:30.437 -05:00 [DBG] Connection id "0HN8GA6RLDR5O" is closing.
+2024-11-29 03:45:30.442 -05:00 [DBG] Connection id "0HN8GA6RLDR5O" is closed. The last processed stream ID was 13.
+2024-11-29 03:45:30.443 -05:00 [VRB] Connection id "0HN8GA6RLDR5O" sending "GOAWAY" frame for stream ID 0 with length 8 and flags 0x0.
+2024-11-29 03:45:30.448 -05:00 [DBG] Connection id "0HN8GA6RLDR5O" received FIN.
+2024-11-29 03:45:30.450 -05:00 [DBG] Connection id "0HN8GA6RLDR5O" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-11-29 03:45:30.450 -05:00 [DBG] The connection queue processing loop for 0HN8GA6RLDR5O completed.
+2024-11-29 03:45:30.453 -05:00 [DBG] Connection id "0HN8GA6RLDR5O" stopped.
+2024-11-29 03:45:30.456 -05:00 [DBG] Hosting stopped
+2024-11-29 05:21:45.382 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-11-29 05:21:45.573 -05:00 [DBG] Hosting starting
+2024-11-29 05:21:45.682 -05:00 [INF] User profile is available. Using 'C:\Users\tony1\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-29 05:21:45.695 -05:00 [DBG] Reading data from file 'C:\Users\tony1\AppData\Local\ASP.NET\DataProtection-Keys\key-53f457e7-32f0-4dc3-9de1-9fe7491153c7.xml'.
+2024-11-29 05:21:45.715 -05:00 [DBG] Reading data from file 'C:\Users\tony1\AppData\Local\ASP.NET\DataProtection-Keys\key-8305f168-6c05-4e6a-bd26-6929a0269bdb.xml'.
+2024-11-29 05:21:45.724 -05:00 [DBG] Found key {53f457e7-32f0-4dc3-9de1-9fe7491153c7}.
+2024-11-29 05:21:45.732 -05:00 [DBG] Found key {8305f168-6c05-4e6a-bd26-6929a0269bdb}.
+2024-11-29 05:21:45.741 -05:00 [DBG] Considering key {53f457e7-32f0-4dc3-9de1-9fe7491153c7} with expiration date 2025-02-23 06:33:00Z as default key.
+2024-11-29 05:21:45.747 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-11-29 05:21:45.750 -05:00 [DBG] Decrypting secret element using Windows DPAPI.
+2024-11-29 05:21:45.753 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-11-29 05:21:45.759 -05:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2024-11-29 05:21:45.763 -05:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2024-11-29 05:21:45.765 -05:00 [DBG] Using key {53f457e7-32f0-4dc3-9de1-9fe7491153c7} as the default key.
+2024-11-29 05:21:45.766 -05:00 [DBG] Key ring with default key {53f457e7-32f0-4dc3-9de1-9fe7491153c7} was loaded during application startup.
+2024-11-29 05:21:46.124 -05:00 [INF] Now listening on: https://localhost:7223
+2024-11-29 05:21:46.126 -05:00 [INF] Now listening on: http://localhost:5120
+2024-11-29 05:21:46.128 -05:00 [DBG] Loaded hosting startup assembly BackCar.Presentation
+2024-11-29 05:21:46.129 -05:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2024-11-29 05:21:46.130 -05:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-11-29 05:21:46.131 -05:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-11-29 05:21:46.213 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-29 05:21:46.216 -05:00 [INF] Hosting environment: Development
+2024-11-29 05:21:46.218 -05:00 [INF] Content root path: C:\Users\tony1\OneDrive\Documentos\back-endCarManage\BackCar.Presentation
+2024-11-29 05:21:46.219 -05:00 [DBG] Hosting started
+2024-11-29 05:21:46.354 -05:00 [DBG] Connection id "0HN8GBUGE2QD7" accepted.
+2024-11-29 05:21:46.357 -05:00 [DBG] Connection id "0HN8GBUGE2QD7" started.
+2024-11-29 05:21:46.360 -05:00 [DBG] Connection id "0HN8GBUGE2QD8" accepted.
+2024-11-29 05:21:46.362 -05:00 [DBG] Connection id "0HN8GBUGE2QD8" started.
+2024-11-29 05:21:46.427 -05:00 [DBG] Connection id "0HN8GBUGE2QD8" received FIN.
+2024-11-29 05:21:46.427 -05:00 [DBG] Connection id "0HN8GBUGE2QD7" received FIN.
+2024-11-29 05:21:46.448 -05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-11-29 05:21:46.448 -05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-11-29 05:21:46.513 -05:00 [DBG] Connection id "0HN8GBUGE2QD7" stopped.
+2024-11-29 05:21:46.513 -05:00 [DBG] Connection id "0HN8GBUGE2QD8" stopped.
+2024-11-29 05:21:46.516 -05:00 [DBG] Connection id "0HN8GBUGE2QD8" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-11-29 05:21:46.516 -05:00 [DBG] Connection id "0HN8GBUGE2QD7" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-11-29 05:21:46.764 -05:00 [DBG] Connection id "0HN8GBUGE2QD9" accepted.
+2024-11-29 05:21:46.790 -05:00 [DBG] Connection id "0HN8GBUGE2QD9" started.
+2024-11-29 05:21:46.926 -05:00 [DBG] Connection 0HN8GBUGE2QD9 established using the following protocol: "Tls13"
+2024-11-29 05:21:46.980 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" sending "SETTINGS" frame for stream ID 0 with length 24 and flags "NONE".
+2024-11-29 05:21:46.986 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" sending "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0.
+2024-11-29 05:21:46.994 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" received "SETTINGS" frame for stream ID 0 with length 24 and flags "NONE".
+2024-11-29 05:21:47.004 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" sending "SETTINGS" frame for stream ID 0 with length 0 and flags "ACK".
+2024-11-29 05:21:47.011 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" received "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0.
+2024-11-29 05:21:47.014 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" received "HEADERS" frame for stream ID 1 with length 506 and flags "END_STREAM, END_HEADERS, PRIORITY".
+2024-11-29 05:21:47.045 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" received "SETTINGS" frame for stream ID 0 with length 0 and flags "ACK".
+2024-11-29 05:21:47.074 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7223/swagger/index.html - null null
+2024-11-29 05:21:47.233 -05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-11-29 05:21:47.234 -05:00 [VRB] All hosts are allowed.
+2024-11-29 05:21:47.260 -05:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2024-11-29 05:21:47.262 -05:00 [DBG] Request did not match any endpoints
+2024-11-29 05:21:47.359 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-11-29 05:21:47.464 -05:00 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-11-29 05:21:47.468 -05:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-11-29 05:21:47.481 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" sending "HEADERS" frame for stream ID 1 with length 66 and flags "END_HEADERS".
+2024-11-29 05:21:47.492 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" sending "DATA" frame for stream ID 1 with length 4096 and flags "NONE".
+2024-11-29 05:21:47.510 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" sending "DATA" frame for stream ID 1 with length 1013 and flags "NONE".
+2024-11-29 05:21:47.518 -05:00 [DBG] Response markup was updated to include Browser Link script injection.
+2024-11-29 05:21:47.520 -05:00 [DBG] Response markup was updated to include browser refresh script injection.
+2024-11-29 05:21:47.522 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" sending "DATA" frame for stream ID 1 with length 0 and flags "END_STREAM".
+2024-11-29 05:21:47.525 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7223/swagger/index.html - 200 null text/html;charset=utf-8 458.7298ms
+2024-11-29 05:21:47.711 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" received "HEADERS" frame for stream ID 3 with length 115 and flags "END_STREAM, END_HEADERS, PRIORITY".
+2024-11-29 05:21:47.718 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7223/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-29 05:21:47.720 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" received "HEADERS" frame for stream ID 5 with length 57 and flags "END_STREAM, END_HEADERS, PRIORITY".
+2024-11-29 05:21:47.726 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7223/_vs/browserLink - null null
+2024-11-29 05:21:47.728 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" sending "HEADERS" frame for stream ID 3 with length 60 and flags "END_HEADERS".
+2024-11-29 05:21:47.731 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" sending "DATA" frame for stream ID 3 with length 13776 and flags "NONE".
+2024-11-29 05:21:47.735 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" sending "DATA" frame for stream ID 3 with length 0 and flags "END_STREAM".
+2024-11-29 05:21:47.735 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7223/_framework/aspnetcore-browser-refresh.js - 200 13776 application/javascript; charset=utf-8 16.6287ms
+2024-11-29 05:21:47.780 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" sending "HEADERS" frame for stream ID 5 with length 149 and flags "END_HEADERS".
+2024-11-29 05:21:47.786 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" sending "DATA" frame for stream ID 5 with length 9986 and flags "NONE".
+2024-11-29 05:21:47.793 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 05:21:47.796 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 05:21:47.802 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 05:21:47.805 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 05:21:47.808 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 05:21:47.811 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 05:21:47.817 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 05:21:47.820 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 05:21:47.824 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 05:21:47.826 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 05:21:47.829 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 05:21:47.832 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 05:21:47.835 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 05:21:47.838 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+2024-11-29 05:21:47.840 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" sending "DATA" frame for stream ID 5 with length 1806 and flags "NONE".
+2024-11-29 05:21:47.841 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7223/_vs/browserLink - 200 null text/javascript; charset=UTF-8 115.1674ms
+2024-11-29 05:21:47.842 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" sending "DATA" frame for stream ID 5 with length 0 and flags "END_STREAM".
+2024-11-29 05:21:48.018 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" received "HEADERS" frame for stream ID 7 with length 74 and flags "END_STREAM, END_HEADERS, PRIORITY".
+2024-11-29 05:21:48.026 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7223/swagger/v1/swagger.json - null null
+2024-11-29 05:21:48.028 -05:00 [VRB] All hosts are allowed.
+2024-11-29 05:21:48.029 -05:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2024-11-29 05:21:48.042 -05:00 [DBG] Request did not match any endpoints
+2024-11-29 05:21:48.044 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-11-29 05:21:48.090 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" sending "HEADERS" frame for stream ID 7 with length 35 and flags "END_HEADERS".
+2024-11-29 05:21:48.100 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2024-11-29 05:21:48.105 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2024-11-29 05:21:48.120 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2024-11-29 05:21:48.124 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" sending "DATA" frame for stream ID 7 with length 3258 and flags "NONE".
+2024-11-29 05:21:48.129 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" sending "DATA" frame for stream ID 7 with length 0 and flags "END_STREAM".
+2024-11-29 05:21:48.129 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7223/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 103.3153ms
+2024-11-29 05:22:19.086 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" received "HEADERS" frame for stream ID 9 with length 80 and flags "END_HEADERS, PRIORITY".
+2024-11-29 05:22:19.123 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" received "PING" frame for stream ID 0 with length 8 and flags "NONE".
+2024-11-29 05:22:19.123 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7223/api/Cliente - application/json 90
+2024-11-29 05:22:19.128 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" sending "PING" frame for stream ID 0 with length 8 and flags "ACK".
+2024-11-29 05:22:19.131 -05:00 [VRB] All hosts are allowed.
+2024-11-29 05:22:19.132 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" received "DATA" frame for stream ID 9 with length 90 and flags "END_STREAM".
+2024-11-29 05:22:19.139 -05:00 [DBG] 1 candidate(s) found for the request path '/api/Cliente'
+2024-11-29 05:22:19.143 -05:00 [DBG] Endpoint 'BackCar.Presentation.Controllers.ClienteController.CreateCliente (BackCar.Presentation)' with route pattern 'api/Cliente' is valid for the request path '/api/Cliente'
+2024-11-29 05:22:19.145 -05:00 [DBG] Request matched endpoint 'BackCar.Presentation.Controllers.ClienteController.CreateCliente (BackCar.Presentation)'
+2024-11-29 05:22:19.147 -05:00 [VRB] The endpoint does not specify the IRequestSizeLimitMetadata.
+2024-11-29 05:22:19.151 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-11-29 05:22:19.153 -05:00 [DBG] The request has an origin header: 'https://localhost:7223'.
+2024-11-29 05:22:19.155 -05:00 [INF] CORS policy execution failed.
+2024-11-29 05:22:19.155 -05:00 [INF] Request origin https://localhost:7223 does not have permission to access the resource.
+2024-11-29 05:22:19.157 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-11-29 05:22:19.159 -05:00 [INF] Executing endpoint 'BackCar.Presentation.Controllers.ClienteController.CreateCliente (BackCar.Presentation)'
+2024-11-29 05:22:19.187 -05:00 [INF] Route matched with {action = "CreateCliente", controller = "Cliente"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BackCar._Domain.Entities.Cliente]] CreateCliente(BackCar._Domain.Entities.Cliente) on controller BackCar.Presentation.Controllers.ClienteController (BackCar.Presentation).
+2024-11-29 05:22:19.193 -05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-11-29 05:22:19.195 -05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-11-29 05:22:19.196 -05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-11-29 05:22:19.198 -05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-11-29 05:22:19.198 -05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-11-29 05:22:19.203 -05:00 [DBG] Executing controller factory for controller BackCar.Presentation.Controllers.ClienteController (BackCar.Presentation)
+2024-11-29 05:22:20.674 -05:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-11-29 05:22:20.705 -05:00 [DBG] Executed controller factory for controller BackCar.Presentation.Controllers.ClienteController (BackCar.Presentation)
+2024-11-29 05:22:20.725 -05:00 [DBG] Attempting to bind parameter 'cliente' of type 'BackCar._Domain.Entities.Cliente' ...
+2024-11-29 05:22:20.730 -05:00 [DBG] Attempting to bind parameter 'cliente' of type 'BackCar._Domain.Entities.Cliente' using the name '' in request data ...
+2024-11-29 05:22:20.733 -05:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2024-11-29 05:22:20.741 -05:00 [DBG] Connection id "0HN8GBUGE2QD9", Request id "0HN8GBUGE2QD9:00000009": started reading request body.
+2024-11-29 05:22:20.743 -05:00 [DBG] Connection id "0HN8GBUGE2QD9", Request id "0HN8GBUGE2QD9:00000009": done reading request body.
+2024-11-29 05:22:20.753 -05:00 [DBG] JSON input formatter threw an exception: The JSON value could not be converted to System.String. Path: $.nombreCliente | LineNumber: 2 | BytePositionInLine: 21.
+2024-11-29 05:22:20.754 -05:00 [DBG] Done attempting to bind parameter 'cliente' of type 'BackCar._Domain.Entities.Cliente'.
+2024-11-29 05:22:20.756 -05:00 [DBG] Done attempting to bind parameter 'cliente' of type 'BackCar._Domain.Entities.Cliente'.
+2024-11-29 05:22:20.758 -05:00 [DBG] Attempting to validate the bound parameter 'cliente' of type 'BackCar._Domain.Entities.Cliente' ...
+2024-11-29 05:22:20.766 -05:00 [DBG] Done attempting to validate the bound parameter 'cliente' of type 'BackCar._Domain.Entities.Cliente'.
+2024-11-29 05:22:20.768 -05:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-11-29 05:22:20.769 -05:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-11-29 05:22:20.771 -05:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-11-29 05:22:20.775 -05:00 [DBG] The request has model state errors, returning an error response.
+2024-11-29 05:22:20.777 -05:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-11-29 05:22:20.778 -05:00 [DBG] Request was short circuited at action filter 'Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter'.
+2024-11-29 05:22:20.779 -05:00 [VRB] Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-11-29 05:22:20.782 -05:00 [VRB] Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-11-29 05:22:20.784 -05:00 [VRB] Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-11-29 05:22:20.785 -05:00 [VRB] Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-11-29 05:22:20.787 -05:00 [VRB] Before executing action result Microsoft.AspNetCore.Mvc.BadRequestObjectResult.
+2024-11-29 05:22:20.792 -05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-11-29 05:22:20.796 -05:00 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]' and explicitly specified content types '["application/problem+json","application/problem+xml","application/problem+json","application/problem+xml"]'. The content types in the accept header must be a subset of the explicitly set content types.
+2024-11-29 05:22:20.800 -05:00 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2024-11-29 05:22:20.802 -05:00 [DBG] Attempting to select the first output formatter in the output formatters list which supports a content type from the explicitly specified content types '["application/problem+json","application/problem+xml","application/problem+json","application/problem+xml"]'.
+2024-11-29 05:22:20.807 -05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/problem+json' to write the response.
+2024-11-29 05:22:20.809 -05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-11-29 05:22:20.829 -05:00 [VRB] After executing action result Microsoft.AspNetCore.Mvc.BadRequestObjectResult.
+2024-11-29 05:22:20.829 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" sending "HEADERS" frame for stream ID 9 with length 74 and flags "END_HEADERS".
+2024-11-29 05:22:20.830 -05:00 [VRB] Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-11-29 05:22:20.831 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" sending "DATA" frame for stream ID 9 with length 390 and flags "NONE".
+2024-11-29 05:22:20.833 -05:00 [VRB] Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-11-29 05:22:20.839 -05:00 [INF] Executed action BackCar.Presentation.Controllers.ClienteController.CreateCliente (BackCar.Presentation) in 1635.2086ms
+2024-11-29 05:22:20.841 -05:00 [INF] Executed endpoint 'BackCar.Presentation.Controllers.ClienteController.CreateCliente (BackCar.Presentation)'
+2024-11-29 05:22:20.842 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" sending "DATA" frame for stream ID 9 with length 0 and flags "END_STREAM".
+2024-11-29 05:22:20.843 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7223/api/Cliente - 400 null application/problem+json; charset=utf-8 1720.0676ms
+2024-11-29 05:22:20.854 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" received "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0.
+2024-11-29 05:22:29.299 -05:00 [INF] Application is shutting down...
+2024-11-29 05:22:29.300 -05:00 [DBG] Hosting stopping
+2024-11-29 05:22:29.317 -05:00 [DBG] Connection id "0HN8GBUGE2QD9" is closing.
+2024-11-29 05:22:29.320 -05:00 [DBG] Connection id "0HN8GBUGE2QD9" is closed. The last processed stream ID was 9.
+2024-11-29 05:22:29.321 -05:00 [VRB] Connection id "0HN8GBUGE2QD9" sending "GOAWAY" frame for stream ID 0 with length 8 and flags 0x0.
+2024-11-29 05:22:29.323 -05:00 [DBG] Connection id "0HN8GBUGE2QD9" received FIN.
+2024-11-29 05:22:29.324 -05:00 [DBG] Connection id "0HN8GBUGE2QD9" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-11-29 05:22:29.326 -05:00 [DBG] The connection queue processing loop for 0HN8GBUGE2QD9 completed.
+2024-11-29 05:22:29.327 -05:00 [DBG] Connection id "0HN8GBUGE2QD9" stopped.
+2024-11-29 05:22:29.330 -05:00 [DBG] Hosting stopped

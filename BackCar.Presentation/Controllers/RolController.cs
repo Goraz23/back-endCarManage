@@ -1,6 +1,7 @@
 using BackCar.Application.Interfaces;
 using BackCar._Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Serilog;
 
 namespace BackCar.API.Controllers
 {
@@ -18,41 +19,93 @@ namespace BackCar.API.Controllers
         [HttpGet]
         public async Task<ActionResult<List<Rol>>> GetRoles()
         {
-            var roles = await _rolService.ObtenerTodosLosRolesAsync();
-            return Ok(roles);
+            try
+            {
+                Log.Information("Obteniendo todos los roles...");
+                var roles = await _rolService.ObtenerTodosLosRolesAsync();
+                Log.Information("Roles obtenidos con éxito.");
+                return Ok(roles);
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Error al obtener los roles.");
+                return StatusCode(500, "Error interno del servidor");
+            }
         }
 
         [HttpPost]
         public async Task<ActionResult> Create([FromBody] Rol nuevoRol)
         {
             if (nuevoRol == null || string.IsNullOrEmpty(nuevoRol.Nombre))
+            {
+                Log.Warning("Intento de crear rol con datos inválidos.");
                 return BadRequest("Datos inválidos");
+            }
 
-            await _rolService.CrearRolAsync(nuevoRol);
-            return CreatedAtAction(nameof(GetRoles), new { id = nuevoRol.Id_Rol }, nuevoRol);
+            try
+            {
+                Log.Information($"Creando rol: {nuevoRol.Nombre}...");
+                await _rolService.CrearRolAsync(nuevoRol);
+                Log.Information($"Rol {nuevoRol.Nombre} creado exitosamente.");
+                return CreatedAtAction(nameof(GetRoles), new { id = nuevoRol.Id_Rol }, nuevoRol);
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Error al crear el rol.");
+                return StatusCode(500, "Error interno del servidor");
+            }
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            var eliminado = await _rolService.EliminarRolAsync(id);
-            if (!eliminado)
-                return NotFound("Rol no encontrado");
+            try
+            {
+                Log.Information($"Eliminando rol con ID: {id}...");
+                var eliminado = await _rolService.EliminarRolAsync(id);
+                if (!eliminado)
+                {
+                    Log.Warning($"Rol con ID {id} no encontrado.");
+                    return NotFound("Rol no encontrado");
+                }
 
-            return NoContent();
+                Log.Information($"Rol con ID {id} eliminado exitosamente.");
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, $"Error al eliminar rol con ID {id}.");
+                return StatusCode(500, "Error interno del servidor");
+            }
         }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, [FromBody] Rol rolActualizado)
         {
             if (rolActualizado == null || rolActualizado.Id_Rol != id)
+            {
+                Log.Warning($"Datos de rol inválidos para ID {id}.");
                 return BadRequest("Datos de rol inválidos");
+            }
 
-            var actualizado = await _rolService.ActualizarRolAsync(id, rolActualizado);
-            if (!actualizado)
-                return NotFound("Rol no encontrado");
+            try
+            {
+                Log.Information($"Actualizando rol con ID {id}...");
+                var actualizado = await _rolService.ActualizarRolAsync(id, rolActualizado);
+                if (!actualizado)
+                {
+                    Log.Warning($"Rol con ID {id} no encontrado para actualización.");
+                    return NotFound("Rol no encontrado");
+                }
 
-            return NoContent();
+                Log.Information($"Rol con ID {id} actualizado exitosamente.");
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, $"Error al actualizar rol con ID {id}.");
+                return StatusCode(500, "Error interno del servidor");
+            }
         }
     }
 }

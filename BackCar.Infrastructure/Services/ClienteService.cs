@@ -1,6 +1,7 @@
 ﻿using BackCar._Domain.Entities;
 using BackCar.Application.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,57 +14,97 @@ namespace BackCar.Infrastructure.Services
     public class ClienteService : IClienteService
     {
         private readonly ApplicationDbContext _context;
+        private readonly ILogger _logger;
 
         public ClienteService(ApplicationDbContext context)
         {
             _context = context;
+            _logger = Log.ForContext<ClienteService>();
         }
 
         // Método READ: Obtener todos los clientes
         public async Task<List<Cliente>> ObtenerTodosLosClientesAsync()
         {
-            return await _context.Clientes.ToListAsync();
+            try
+            {
+                _logger.Information("Obteniendo todos los clientes.");
+                return await _context.Clientes.ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(ex, "Error al obtener todos los clientes.");
+                throw;
+            }
         }
 
         // Método CREATE: Crear un nuevo cliente
         public async Task<Cliente> CrearClienteAsync(Cliente cliente)
         {
-            await _context.Clientes.AddAsync(cliente);
-            await _context.SaveChangesAsync();
-            return cliente;
+            try
+            {
+                await _context.Clientes.AddAsync(cliente);
+                await _context.SaveChangesAsync();
+                _logger.Information("Cliente creado exitosamente: {@Cliente}", cliente);
+                return cliente;
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(ex, "Error al crear el cliente: {@Cliente}", cliente);
+                throw;
+            }
         }
 
         // Método UPDATE: Actualizar un cliente existente
         public async Task<Cliente> UpdateClienteAsync(int id, Cliente cliente)
         {
-            var clienteExistente = await _context.Clientes.FindAsync(id);
-
-            if (clienteExistente == null)
+            try
             {
-                return null; // No se encontró el cliente
+                var clienteExistente = await _context.Clientes.FindAsync(id);
+
+                if (clienteExistente == null)
+                {
+                    _logger.Warning("Cliente con ID {Id} no encontrado para actualizar.", id);
+                    return null;
+                }
+
+                clienteExistente.NombreCliente = cliente.NombreCliente;
+                clienteExistente.Telefono = cliente.Telefono;
+                clienteExistente.Correo = cliente.Correo;
+
+                await _context.SaveChangesAsync();
+                _logger.Information("Cliente con ID {Id} actualizado exitosamente: {@Cliente}", id, clienteExistente);
+                return clienteExistente;
             }
-
-            clienteExistente.NombreCliente = cliente.NombreCliente;
-            clienteExistente.Telefono = cliente.Telefono;
-            clienteExistente.Correo = cliente.Correo;
-
-            await _context.SaveChangesAsync();
-            return clienteExistente;
+            catch (Exception ex)
+            {
+                _logger.Error(ex, "Error al actualizar el cliente con ID {Id}: {@Cliente}", id, cliente);
+                throw;
+            }
         }
 
         // Método DELETE: Eliminar un cliente
         public async Task<bool> DeleteClienteAsync(int id)
         {
-            var cliente = await _context.Clientes.FindAsync(id);
-
-            if (cliente == null)
+            try
             {
-                return false; // No se encontró el cliente
-            }
+                var cliente = await _context.Clientes.FindAsync(id);
 
-            _context.Clientes.Remove(cliente);
-            await _context.SaveChangesAsync();
-            return true;
+                if (cliente == null)
+                {
+                    _logger.Warning("Cliente con ID {Id} no encontrado para eliminar.", id);
+                    return false;
+                }
+
+                _context.Clientes.Remove(cliente);
+                await _context.SaveChangesAsync();
+                _logger.Information("Cliente con ID {Id} eliminado exitosamente.", id);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(ex, "Error al eliminar el cliente con ID {Id}.", id);
+                throw;
+            }
         }
     }
 }

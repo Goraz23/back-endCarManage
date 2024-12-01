@@ -12,6 +12,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using BackCar.Application.DTOs;
+using Serilog;
 
 namespace BackCar.Infrastructure.Services
 {
@@ -28,96 +29,131 @@ namespace BackCar.Infrastructure.Services
 
         public async Task<List<Usuario>> ObtenerTodosLosUsuariosAsync()
         {
-            return await _context.Usuarios.Include(u => u.Rol).ToListAsync();
+            try
+            {
+                Log.Information("Obteniendo todos los usuarios.");
+                return await _context.Usuarios.Include(u => u.Rol).ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Error al obtener los usuarios.");
+                throw new Exception("Hubo un error al obtener los usuarios.");
+            }
         }
-        //Método CREATE para Usuarios
+
         public async Task<Usuario> CrearUsuarioAsync(Usuario usuario)
         {
-            // Verificar que usuario jale
-            if (usuario.Roles_Usuarios_id != 0)
+            try
             {
-                //Verifica si usuario existe antes de crear;
-                var rol = await _context.Roles.FirstOrDefaultAsync(r => r.Id_Rol == usuario.Roles_Usuarios_id);
-                if (rol == null)
+                Log.Information("Creando un nuevo usuario: {UserName}", usuario.Nombre);
+
+                if (usuario.Roles_Usuarios_id != 0)
                 {
-                    throw new ArgumentException("El rol no existe.");
+                    var rol = await _context.Roles.FirstOrDefaultAsync(r => r.Id_Rol == usuario.Roles_Usuarios_id);
+                    if (rol == null)
+                    {
+                        Log.Error("El rol especificado no existe.");
+                        throw new ArgumentException("El rol no existe.");
+                    }
                 }
+
+                usuario.Contrasenia = PasswordHasher.HashPassword(usuario.Contrasenia);
+                await _context.Usuarios.AddAsync(usuario);
+                await _context.SaveChangesAsync();
+
+                Log.Information("Usuario creado exitosamente: {UserName}", usuario.Nombre);
+                return usuario;
             }
-
-            // Hashear contraseña antes de guardar
-            usuario.Contrasenia = PasswordHasher.HashPassword(usuario.Contrasenia);
-
-            // Añadir usuario
-            await _context.Usuarios.AddAsync(usuario);
-            await _context.SaveChangesAsync();
-            return usuario;
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Error al crear el usuario.");
+                throw new Exception("Hubo un error al crear el usuario.");
+            }
         }
 
-        //Método UPDATE:
         public async Task<Usuario> UpdateUsuarioAsync(int id, Usuario usuario)
         {
-            // Buscar el usuario existente por su Id
-            var usuarioExistente = await _context.Usuarios.FindAsync(id);
-
-            if (usuarioExistente == null)
+            try
             {
-                // Si no se encuentra, devolver null (o puedes lanzar una excepción)
-                return null;
+                Log.Information("Actualizando usuario con ID: {UserId}", id);
+
+                var usuarioExistente = await _context.Usuarios.FindAsync(id);
+                if (usuarioExistente == null)
+                {
+                    Log.Error("Usuario con ID {UserId} no encontrado", id);
+                    return null;
+                }
+
+                usuarioExistente.Nombre = usuario.Nombre;
+                usuarioExistente.Correo = usuario.Correo;
+                usuarioExistente.Contrasenia = usuario.Contrasenia;
+                usuarioExistente.Telefono = usuario.Telefono;
+                usuarioExistente.FechaRegistro = usuario.FechaRegistro;
+                usuarioExistente.Roles_Usuarios_id = usuario.Roles_Usuarios_id;
+
+                await _context.SaveChangesAsync();
+                Log.Information("Usuario con ID {UserId} actualizado exitosamente", id);
+
+                return usuarioExistente;
             }
-
-            // Si el usuario existe, actualizamos sus propiedades
-            usuarioExistente.Nombre = usuario.Nombre;
-            usuarioExistente.Correo = usuario.Correo;
-            usuarioExistente.Contrasenia = usuario.Contrasenia;
-            usuarioExistente.Telefono = usuario.Telefono;
-            usuarioExistente.FechaRegistro = usuario.FechaRegistro;
-            usuarioExistente.Roles_Usuarios_id = usuario.Roles_Usuarios_id;
-
-            // Guardamos los cambios en la base de datos
-            await _context.SaveChangesAsync();
-
-            return usuarioExistente;  // Devolvemos el usuario actualizado
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Error al actualizar el usuario con ID: {UserId}", id);
+                throw new Exception($"Hubo un error al actualizar el usuario con ID {id}.");
+            }
         }
 
-        //Método DELETE:
         public async Task<bool> DeleteUsuarioAsync(int id)
         {
-            // Buscar el usuario por Id
-            var usuario = await _context.Usuarios.FindAsync(id);
-
-            if (usuario == null)
+            try
             {
-                // Si no se encuentra el usuario, devolvemos false
-                return false;
+                Log.Information("Eliminando usuario con ID: {UserId}", id);
+
+                var usuario = await _context.Usuarios.FindAsync(id);
+                if (usuario == null)
+                {
+                    Log.Error("Usuario con ID {UserId} no encontrado", id);
+                    return false;
+                }
+
+                _context.Usuarios.Remove(usuario);
+                await _context.SaveChangesAsync();
+                Log.Information("Usuario con ID {UserId} eliminado exitosamente", id);
+                return true;
             }
-
-            // Si se encuentra, lo eliminamos
-            _context.Usuarios.Remove(usuario);
-
-            // Guardamos los cambios en la base de datos
-            await _context.SaveChangesAsync();
-
-            return true;  // Devolvemos true indicando que el usuario fue eliminado
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Error al eliminar el usuario con ID: {UserId}", id);
+                throw new Exception($"Hubo un error al eliminar el usuario con ID {id}.");
+            }
         }
 
         public async Task<LoginResponseDto> LoginAsync(LoginDto loginDto)
         {
-            var usuario = await _context.Usuarios
-                .FirstOrDefaultAsync(u => u.Correo == loginDto.Correo);
-
-            if (usuario == null ||
-                !PasswordHasher.VerifyPassword(loginDto.Contrasenia, usuario.Contrasenia))
+            try
             {
-                throw new UnauthorizedAccessException("Credenciales inválidas");
+                Log.Information("Intentando login con correo: {UserEmail}", loginDto.Correo);
+
+                var usuario = await _context.Usuarios.FirstOrDefaultAsync(u => u.Correo == loginDto.Correo);
+                if (usuario == null || !PasswordHasher.VerifyPassword(loginDto.Contrasenia, usuario.Contrasenia))
+                {
+                    Log.Warning("Credenciales inválidas para el correo: {UserEmail}", loginDto.Correo);
+                    throw new UnauthorizedAccessException("Credenciales inválidas");
+                }
+
+                Log.Information("Login exitoso para el correo: {UserEmail}", loginDto.Correo);
+                return new LoginResponseDto
+                {
+                    Token = _jwtService.GenerateToken(usuario),
+                    Nombre = usuario.Nombre,
+                    Rol = usuario.Roles_Usuarios_id == 1 ? "Admin" : "Socio"
+                };
             }
-
-            return new LoginResponseDto
+            catch (Exception ex)
             {
-                Token = _jwtService.GenerateToken(usuario),
-                Nombre = usuario.Nombre,
-                Rol = usuario.Roles_Usuarios_id == 1 ? "Admin" : "Socio"
-            };
+                Log.Error(ex, "Error en el proceso de login con correo: {UserEmail}", loginDto.Correo);
+                throw new Exception("Hubo un error en el proceso de login.");
+            }
         }
-
     }
 }

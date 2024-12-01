@@ -795,70 +795,8 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "BackCar.Presentation.Controllers.UsuarioController",
-    "Method": "Login",
-    "RelativePath": "api/Usuario/login",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "loginDto",
-        "Type": "BackCar.Application.DTOs.LoginDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "BackCar.Application.DTOs.LoginResponseDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
     "ContainingType": "BackCar.Presentation.Controllers.VehiculoController",
-    "Method": "GetVehiculos",
-    "RelativePath": "api/Vehiculo",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.List\u00601[[BackCar.Application.DTOs.VehiculoDTO, BackCar.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "BackCar.Presentation.Controllers.VehiculoController",
-    "Method": "Create",
-    "RelativePath": "api/Vehiculo",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "nuevoVehiculoDTO",
-        "Type": "BackCar.Application.DTOs.VehiculoDTO",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "BackCar.Presentation.Controllers.VehiculoController",
-    "Method": "GetVehiculoById",
+    "Method": "ObtenerPorId",
     "RelativePath": "api/Vehiculo/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -870,22 +808,12 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "BackCar.Application.DTOs.VehiculoDTO",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "BackCar.Presentation.Controllers.VehiculoController",
-    "Method": "Update",
-    "RelativePath": "api/Vehiculo/{id}",
+    "Method": "Actualizar",
+    "RelativePath": "api/Vehiculo/actualizar/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -896,7 +824,7 @@
         "IsRequired": true
       },
       {
-        "Name": "vehiculoActualizadoDTO",
+        "Name": "vehiculoActualizado",
         "Type": "BackCar.Application.DTOs.VehiculoDTO",
         "IsRequired": true
       }
@@ -905,8 +833,24 @@
   },
   {
     "ContainingType": "BackCar.Presentation.Controllers.VehiculoController",
-    "Method": "Delete",
-    "RelativePath": "api/Vehiculo/{id}",
+    "Method": "Crear",
+    "RelativePath": "api/Vehiculo/crear",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nuevoVehiculo",
+        "Type": "BackCar.Application.DTOs.VehiculoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackCar.Presentation.Controllers.VehiculoController",
+    "Method": "Eliminar",
+    "RelativePath": "api/Vehiculo/eliminar/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -921,29 +865,13 @@
   },
   {
     "ContainingType": "BackCar.Presentation.Controllers.VehiculoController",
-    "Method": "GetVehiculosPorUsuario",
-    "RelativePath": "api/Vehiculo/usuario/{usuarioId}",
+    "Method": "ObtenerTodos",
+    "RelativePath": "api/Vehiculo/obtener-todos",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "usuarioId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.List\u00601[[BackCar.Application.DTOs.VehiculoDTO, BackCar.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "Parameters": [],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "VehiculosSegurosController",
@@ -1017,24 +945,5 @@
       }
     ],
     "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Program\u002B\u003C\u003Ec__DisplayClass0_0",
-    "Method": "\u003C\u003CMain\u003E$\u003Eb__3",
-    "RelativePath": "weatherforecast",
-    "HttpMethod": "GET",
-    "IsController": false,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "WeatherForecast[]",
-        "MediaTypes": [
-          "application/json"
-        ],
-        "StatusCode": 200
-      }
-    ],
-    "EndpointName": "GetWeatherForecast"
   }
 ]
