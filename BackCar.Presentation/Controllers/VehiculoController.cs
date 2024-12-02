@@ -74,7 +74,7 @@ namespace BackCar.Presentation.Controllers
             }
         }
 
-        [HttpPut("actualizar/{id}")]
+        [HttpPut("{id}")]
         public async Task<IActionResult> Actualizar(int id, [FromBody] VehiculoDTO vehiculoActualizado)
         {
             try
@@ -97,7 +97,7 @@ namespace BackCar.Presentation.Controllers
             }
         }
 
-        [HttpDelete("eliminar/{id}")]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> Eliminar(int id)
         {
             try
