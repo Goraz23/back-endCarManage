@@ -106,5 +106,11 @@ namespace BackCar.Infrastructure.Services
                 throw;
             }
         }
+
+        // Método GET: Obtener una categoría por ID
+        public async Task<Categoria> ObtenerCategoriaPorIdAsync(int id)
+        {
+            return await _context.Categorias.FindAsync(id);
+        }
     }
 }

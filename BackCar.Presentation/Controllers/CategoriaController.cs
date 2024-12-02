@@ -37,6 +37,20 @@ namespace BackCar.Presentation.Controllers
             }
         }
 
+        // Método GET: Obtener categoría por ID
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Categoria>> GetCategoriaPorId(int id)
+        {
+            var categoria = await _categoriaService.ObtenerCategoriaPorIdAsync(id);
+
+            if (categoria == null)
+            {
+                return NotFound(); // Si no se encuentra la categoría
+            }
+
+            return Ok(categoria);
+        }
+
         // Método POST: Crear una nueva categoría
         [HttpPost]
         public async Task<ActionResult<Categoria>> CreateCategoria([FromBody] Categoria categoria)

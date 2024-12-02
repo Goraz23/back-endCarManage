@@ -41,34 +41,27 @@ namespace BackCar.Infrastructure.Services
             }
         }
 
+        //Método CREATE para Usuarios
         public async Task<Usuario> CrearUsuarioAsync(Usuario usuario)
         {
-            try
+            // Verificar que usuario jale
+            if (usuario.Roles_Usuarios_id != 0)
             {
-                Log.Information("Creando un nuevo usuario: {UserName}", usuario.Nombre);
-
-                if (usuario.Roles_Usuarios_id != 0)
+                //Verifica si usuario existe antes de crear;
+                var rol = await _context.Roles.FirstOrDefaultAsync(r => r.Id_Rol == usuario.Roles_Usuarios_id);
+                if (rol == null)
                 {
-                    var rol = await _context.Roles.FirstOrDefaultAsync(r => r.Id_Rol == usuario.Roles_Usuarios_id);
-                    if (rol == null)
-                    {
-                        Log.Error("El rol especificado no existe.");
-                        throw new ArgumentException("El rol no existe.");
-                    }
+                    throw new ArgumentException("El rol no existe.");
                 }
-
-                usuario.Contrasenia = PasswordHasher.HashPassword(usuario.Contrasenia);
-                await _context.Usuarios.AddAsync(usuario);
-                await _context.SaveChangesAsync();
-
-                Log.Information("Usuario creado exitosamente: {UserName}", usuario.Nombre);
-                return usuario;
             }
-            catch (Exception ex)
-            {
-                Log.Error(ex, "Error al crear el usuario.");
-                throw new Exception("Hubo un error al crear el usuario.");
-            }
+
+            // Hashear contraseña antes de guardar
+            usuario.Contrasenia = PasswordHasher.HashPassword(usuario.Contrasenia);
+
+            // Añadir usuario
+            await _context.Usuarios.AddAsync(usuario);
+            await _context.SaveChangesAsync();
+            return usuario;
         }
 
         public async Task<Usuario> UpdateUsuarioAsync(int id, Usuario usuario)
@@ -130,30 +123,32 @@ namespace BackCar.Infrastructure.Services
 
         public async Task<LoginResponseDto> LoginAsync(LoginDto loginDto)
         {
-            try
-            {
-                Log.Information("Intentando login con correo: {UserEmail}", loginDto.Correo);
+            var usuario = await _context.Usuarios
+                .FirstOrDefaultAsync(u => u.Correo == loginDto.Correo);
 
-                var usuario = await _context.Usuarios.FirstOrDefaultAsync(u => u.Correo == loginDto.Correo);
-                if (usuario == null || !PasswordHasher.VerifyPassword(loginDto.Contrasenia, usuario.Contrasenia))
-                {
-                    Log.Warning("Credenciales inválidas para el correo: {UserEmail}", loginDto.Correo);
-                    throw new UnauthorizedAccessException("Credenciales inválidas");
-                }
-
-                Log.Information("Login exitoso para el correo: {UserEmail}", loginDto.Correo);
-                return new LoginResponseDto
-                {
-                    Token = _jwtService.GenerateToken(usuario),
-                    Nombre = usuario.Nombre,
-                    Rol = usuario.Roles_Usuarios_id == 1 ? "Admin" : "Socio"
-                };
-            }
-            catch (Exception ex)
+            if (usuario == null ||
+                !PasswordHasher.VerifyPassword(loginDto.Contrasenia, usuario.Contrasenia))
             {
-                Log.Error(ex, "Error en el proceso de login con correo: {UserEmail}", loginDto.Correo);
-                throw new Exception("Hubo un error en el proceso de login.");
+                throw new UnauthorizedAccessException("Credenciales inválidas");
             }
+
+            return new LoginResponseDto
+            {
+                Token = _jwtService.GenerateToken(usuario),
+                Nombre = usuario.Nombre,
+                Rol = usuario.Roles_Usuarios_id == 1 ? "Admin" : "Socio",
+                UsuarioId = usuario.Id_Usuario  // Asegúrate de tener acceso al ID
+            };
+        }
+
+        public async Task<Usuario> ObtenerUsuarioPorIdAsync(int id)
+        {
+            var usuario = await _context.Usuarios.Include(u => u.Rol).FirstOrDefaultAsync(u => u.Id_Usuario == id);
+            if (usuario == null)
+            {
+                throw new KeyNotFoundException("El usuario no existe.");
+            }
+            return usuario;
         }
     }
 }

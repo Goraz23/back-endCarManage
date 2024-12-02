@@ -19,20 +19,21 @@ namespace BackCar.Infrastructure.Services
             _context = context;
         }
 
-        public async Task<List<MantenimientoDTO>> ObtenerTodosLosMantenimientosAsync()
+        public async Task<List<MantenimientoMapeoDto>> ObtenerTodosLosMantenimientosAsync()
         {
             var mantenimientos = await _context.Mantenimientos
                                                .Include(m => m.Vehiculo) // Para incluir información del vehículo si es necesario
                                                .ToListAsync();
 
-            return mantenimientos.Select(m => new MantenimientoDTO
+            return mantenimientos.Select(m => new MantenimientoMapeoDto
             {
                 Id_Mantenimiento = m.Id_Mantenimiento,
                 Fecha = m.Fecha,
                 Tipo = m.Tipo,
                 Costo = m.Costo,
                 Detalles = m.Detalles,
-                Vehiculo_id = m.Vehiculo_id
+                Vehiculo_id = m.Vehiculo_id,
+                Placa = m.Vehiculo.Placa
             }).ToList();
         }
 

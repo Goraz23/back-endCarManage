@@ -9,7 +9,7 @@ namespace BackCar.Application.Interfaces
 {
     public interface IMantenimientoService
     {
-        Task<List<MantenimientoDTO>> ObtenerTodosLosMantenimientosAsync();
+        Task<List<MantenimientoMapeoDto>> ObtenerTodosLosMantenimientosAsync();
         Task<MantenimientoDTO> ObtenerMantenimientoPorIdAsync(int id);
         Task CrearMantenimientoAsync(MantenimientoDTO nuevoMantenimiento);
         Task<bool> EliminarMantenimientoAsync(int id);

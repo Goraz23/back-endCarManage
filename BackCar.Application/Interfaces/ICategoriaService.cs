@@ -13,6 +13,7 @@ namespace BackCar.Application.Interfaces
         Task<Categoria> CrearCategoriaAsync(Categoria categoria); // Método CREATE
         Task<Categoria> UpdateCategoriaAsync(int id, Categoria categoria); // Método UPDATE
         Task<bool> DeleteCategoriaAsync(int id); // Método DELETE
+        Task<Categoria> ObtenerCategoriaPorIdAsync(int id); // Nuevo método para obtener categoría por ID
     }
 }
 

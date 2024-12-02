@@ -18,5 +18,7 @@ namespace BackCar.Application.Interfaces
 
         Task<LoginResponseDto> LoginAsync(LoginDto loginDto);
 
+        Task<Usuario> ObtenerUsuarioPorIdAsync(int id);
+
     }
 }

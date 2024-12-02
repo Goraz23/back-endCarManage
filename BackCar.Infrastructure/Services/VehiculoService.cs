@@ -95,71 +95,63 @@ namespace BackCar.Infrastructure.Services
 
         public async Task CrearVehiculoAsync(VehiculoDTO nuevoVehiculoDTO)
         {
-            try
-            {
-                Log.Information("Creando nuevo vehículo con placa {Placa}.", nuevoVehiculoDTO.Placa);
-                var nuevoVehiculo = new Vehiculo
-                {
-                    Marca = nuevoVehiculoDTO.Marca,
-                    Modelo = nuevoVehiculoDTO.Modelo,
-                    Anio = nuevoVehiculoDTO.Anio,
-                    Imagen = nuevoVehiculoDTO.Imagen,
-                    Descripcion = nuevoVehiculoDTO.Descripcion,
-                    Placa = nuevoVehiculoDTO.Placa,
-                    Kilometraje = nuevoVehiculoDTO.Kilometraje,
-                    CostoTemporadaAlta = nuevoVehiculoDTO.CostoTemporadaAlta,
-                    CostoTemporadaBaja = nuevoVehiculoDTO.CostoTemporadaBaja,
-                    IsRentado = nuevoVehiculoDTO.IsRentado,
-                    IsAutomatico = nuevoVehiculoDTO.IsAutomatico,
-                    Usuarios_id = nuevoVehiculoDTO.Usuarios_id,
-                    Categoria_Id = nuevoVehiculoDTO.Categoria_Id
-                };
+            // Validar si ya existe una placa igual
+            var placaExiste = await _context.Vehiculos.AnyAsync(v => v.Placa == nuevoVehiculoDTO.Placa);
+            if (placaExiste)
+                throw new Exception("Ya existe un vehículo con la misma placa.");
 
-                await _context.Vehiculos.AddAsync(nuevoVehiculo);
-                await _context.SaveChangesAsync();
-                Log.Information("Vehículo con placa {Placa} creado exitosamente.", nuevoVehiculoDTO.Placa);
-            }
-            catch (Exception ex)
+            var nuevoVehiculo = new Vehiculo
             {
-                Log.Error(ex, "Error al crear el vehículo con placa {Placa}.", nuevoVehiculoDTO.Placa);
-                throw;
-            }
+                Marca = nuevoVehiculoDTO.Marca,
+                Modelo = nuevoVehiculoDTO.Modelo,
+                Anio = nuevoVehiculoDTO.Anio,
+                Imagen = nuevoVehiculoDTO.Imagen,
+                Descripcion = nuevoVehiculoDTO.Descripcion,
+                Placa = nuevoVehiculoDTO.Placa,
+                Kilometraje = nuevoVehiculoDTO.Kilometraje,
+                FechaRegistro = nuevoVehiculoDTO.FechaRegistro, // Asegúrate de asignarlo.
+                CostoTemporadaAlta = nuevoVehiculoDTO.CostoTemporadaAlta,
+                CostoTemporadaBaja = nuevoVehiculoDTO.CostoTemporadaBaja,
+                IsRentado = nuevoVehiculoDTO.IsRentado,
+                IsAutomatico = nuevoVehiculoDTO.IsAutomatico,
+                Usuarios_id = nuevoVehiculoDTO.Usuarios_id,
+                Categoria_Id = nuevoVehiculoDTO.Categoria_Id
+            };
+
+            await _context.Vehiculos.AddAsync(nuevoVehiculo);
+            await _context.SaveChangesAsync();
         }
 
         public async Task<bool> ActualizarVehiculoAsync(int id, VehiculoDTO vehiculoActualizadoDTO)
         {
-            try
-            {
-                Log.Information("Actualizando vehículo con ID {VehiculoId}.", id);
-                var vehiculoExistente = await _context.Vehiculos.FindAsync(id);
-                if (vehiculoExistente == null)
-                {
-                    Log.Warning("Vehículo con ID {VehiculoId} no encontrado para actualizar.", id);
-                    return false;
-                }
+            var vehiculoExistente = await _context.Vehiculos.FindAsync(id);
+            if (vehiculoExistente == null)
+                return false;
+            // Validar si otra placa duplicada existe
+            var placaDuplicada = await _context.Vehiculos
+                .AnyAsync(v => v.Placa == vehiculoActualizadoDTO.Placa && v.Id_Vehiculo != id);
+            if (placaDuplicada)
+                throw new Exception("Ya existe otro vehículo con la misma placa.");
 
-                vehiculoExistente.Marca = vehiculoActualizadoDTO.Marca;
-                vehiculoExistente.Modelo = vehiculoActualizadoDTO.Modelo;
-                vehiculoExistente.Anio = vehiculoActualizadoDTO.Anio;
-                vehiculoExistente.Imagen = vehiculoActualizadoDTO.Imagen;
-                vehiculoExistente.Descripcion = vehiculoActualizadoDTO.Descripcion;
-                vehiculoExistente.Placa = vehiculoActualizadoDTO.Placa;
-                vehiculoExistente.Kilometraje = vehiculoActualizadoDTO.Kilometraje;
-                vehiculoExistente.CostoTemporadaAlta = vehiculoActualizadoDTO.CostoTemporadaAlta;
-                vehiculoExistente.CostoTemporadaBaja = vehiculoActualizadoDTO.CostoTemporadaBaja;
-                vehiculoExistente.IsRentado = vehiculoActualizadoDTO.IsRentado;
-                vehiculoExistente.IsAutomatico = vehiculoActualizadoDTO.IsAutomatico;
+            vehiculoExistente.Marca = vehiculoActualizadoDTO.Marca;
+            vehiculoExistente.Modelo = vehiculoActualizadoDTO.Modelo;
+            vehiculoExistente.Anio = vehiculoActualizadoDTO.Anio;
+            vehiculoExistente.Imagen = vehiculoActualizadoDTO.Imagen;
+            vehiculoExistente.Descripcion = vehiculoActualizadoDTO.Descripcion;
+            vehiculoExistente.Placa = vehiculoActualizadoDTO.Placa;
+            vehiculoExistente.Kilometraje = vehiculoActualizadoDTO.Kilometraje;
+            vehiculoExistente.FechaRegistro = vehiculoActualizadoDTO.FechaRegistro; // Permitir modificarlo.
+            vehiculoExistente.CostoTemporadaAlta = vehiculoActualizadoDTO.CostoTemporadaAlta;
+            vehiculoExistente.CostoTemporadaBaja = vehiculoActualizadoDTO.CostoTemporadaBaja;
+            vehiculoExistente.IsRentado = vehiculoActualizadoDTO.IsRentado;
+            vehiculoExistente.IsAutomatico = vehiculoActualizadoDTO.IsAutomatico;
+            // Asegúrate de que estos campos sean actualizados también
+            vehiculoExistente.Usuarios_id = vehiculoActualizadoDTO.Usuarios_id;
+            vehiculoExistente.Categoria_Id = vehiculoActualizadoDTO.Categoria_Id;
 
-                _context.Vehiculos.Update(vehiculoExistente);
-                await _context.SaveChangesAsync();
-                Log.Information("Vehículo con ID {VehiculoId} actualizado exitosamente.", id);
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Log.Error(ex, "Error al actualizar el vehículo con ID {VehiculoId}.", id);
-                throw;
-            }
+            _context.Vehiculos.Update(vehiculoExistente);
+            await _context.SaveChangesAsync();
+            return true;
         }
 
         public async Task<bool> EliminarVehiculoAsync(int id)
