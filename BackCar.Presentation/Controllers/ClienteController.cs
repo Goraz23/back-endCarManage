@@ -38,6 +38,32 @@ namespace BackCar.Presentation.Controllers
             }
         }
 
+        // Método GET: Obtener cliente por ID
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Cliente>> GetClienteById(int id)
+        {
+            try
+            {
+                _logger.Information("Petición para obtener cliente con ID {Id}.", id);
+                var cliente = await _clienteService.ObtenerClientePorIdAsync(id);
+
+                if (cliente == null)
+                {
+                    _logger.Warning("Cliente con ID {Id} no encontrado.", id);
+                    return NotFound("Cliente no encontrado.");
+                }
+
+                _logger.Information("Cliente con ID {Id} encontrado: {@Cliente}.", id, cliente);
+                return Ok(cliente);
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(ex, "Error al obtener cliente con ID {Id}.", id);
+                return StatusCode(500, "Error interno del servidor.");
+            }
+        }
+
+
         // Método POST: Crear un nuevo cliente
         [HttpPost]
         public async Task<ActionResult<Cliente>> CreateCliente([FromBody] Cliente cliente)

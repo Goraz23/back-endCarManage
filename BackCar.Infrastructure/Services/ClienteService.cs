@@ -37,6 +37,31 @@ namespace BackCar.Infrastructure.Services
             }
         }
 
+        // Método READ: Obtener cliente por ID
+        public async Task<Cliente> ObtenerClientePorIdAsync(int id)
+        {
+            try
+            {
+                _logger.Information("Buscando cliente con ID {Id}.", id);
+                var cliente = await _context.Clientes.FindAsync(id);
+
+                if (cliente == null)
+                {
+                    _logger.Warning("Cliente con ID {Id} no encontrado.", id);
+                    return null;
+                }
+
+                _logger.Information("Cliente con ID {Id} encontrado: {@Cliente}.", id, cliente);
+                return cliente;
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(ex, "Error al obtener el cliente con ID {Id}.", id);
+                throw;
+            }
+        }
+
+
         // Método CREATE: Crear un nuevo cliente
         public async Task<Cliente> CrearClienteAsync(Cliente cliente)
         {

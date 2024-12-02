@@ -10,6 +10,7 @@ namespace BackCar.Application.Interfaces
     public interface IClienteService
     {
         Task<List<Cliente>> ObtenerTodosLosClientesAsync(); // Método READ
+        Task<Cliente> ObtenerClientePorIdAsync(int id);
         Task<Cliente> CrearClienteAsync(Cliente cliente); // Método CREATE
         Task<Cliente> UpdateClienteAsync(int id, Cliente cliente); // Método UPDATE
         Task<bool> DeleteClienteAsync(int id); // Método DELETE

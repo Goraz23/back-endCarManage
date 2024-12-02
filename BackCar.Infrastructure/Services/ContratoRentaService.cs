@@ -25,22 +25,21 @@ namespace BackCar.Infrastructure.Services
             try
             {
                 var contratos = await _context.ContratosRenta
-                                              .Include(c => c.Cliente)
-                                              .Include(c => c.Vehiculo)
+                                              .Select(c => new ContratoRentaDTO
+                                              {
+                                                  Id_ContratoRenta = c.Id_ContratoRenta,
+                                                  FechaInicio = c.FechaInicio,
+                                                  FechaDevolucion = c.FechaDevolucion,
+                                                  CostoSubTotal = c.CostoSubTotal,
+                                                  CostoTotal = c.CostoTotal,
+                                                  FechaCreacion = c.FechaCreacion,
+                                                  Clientes_id = c.Clientes_id,
+                                                  Vehiculos_id = c.Vehiculos_id
+                                              })
                                               .ToListAsync();
 
                 Log.Information("Contratos obtenidos correctamente.");
-                return contratos.Select(c => new ContratoRentaDTO
-                {
-                    Id_ContratoRenta = c.Id_ContratoRenta,
-                    FechaInicio = c.FechaInicio,
-                    FechaDevolucion = c.FechaDevolucion,
-                    CostoSubTotal = c.CostoSubTotal,
-                    CostoTotal = c.CostoTotal,
-                    FechaCreacion = c.FechaCreacion,
-                    Clientes_id = c.Clientes_id,
-                    Vehiculos_id = c.Vehiculos_id
-                }).ToList();
+                return contratos;
             }
             catch (Exception ex)
             {
@@ -53,10 +52,21 @@ namespace BackCar.Infrastructure.Services
         {
             try
             {
+                // Proyección directa al DTO
                 var contrato = await _context.ContratosRenta
-                                             .Include(c => c.Cliente)
-                                             .Include(c => c.Vehiculo)
-                                             .FirstOrDefaultAsync(c => c.Id_ContratoRenta == id);
+                                             .Where(c => c.Id_ContratoRenta == id)
+                                             .Select(c => new ContratoRentaDTO
+                                             {
+                                                 Id_ContratoRenta = c.Id_ContratoRenta,
+                                                 FechaInicio = c.FechaInicio,
+                                                 FechaDevolucion = c.FechaDevolucion,
+                                                 CostoSubTotal = c.CostoSubTotal,
+                                                 CostoTotal = c.CostoTotal,
+                                                 FechaCreacion = c.FechaCreacion,
+                                                 Clientes_id = c.Clientes_id,
+                                                 Vehiculos_id = c.Vehiculos_id
+                                             })
+                                             .FirstOrDefaultAsync();
 
                 if (contrato == null)
                 {
@@ -65,17 +75,7 @@ namespace BackCar.Infrastructure.Services
                 }
 
                 Log.Information("Contrato con ID {Id} obtenido correctamente.", id);
-                return new ContratoRentaDTO
-                {
-                    Id_ContratoRenta = contrato.Id_ContratoRenta,
-                    FechaInicio = contrato.FechaInicio,
-                    FechaDevolucion = contrato.FechaDevolucion,
-                    CostoSubTotal = contrato.CostoSubTotal,
-                    CostoTotal = contrato.CostoTotal,
-                    FechaCreacion = contrato.FechaCreacion,
-                    Clientes_id = contrato.Clientes_id,
-                    Vehiculos_id = contrato.Vehiculos_id
-                };
+                return contrato;
             }
             catch (Exception ex)
             {

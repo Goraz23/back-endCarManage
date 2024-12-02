@@ -24,7 +24,6 @@ builder.Services.AddScoped<IContratoRentaService, ContratoRentaService>();
 
 builder.Services.AddScoped<IVehiculoService, VehiculoService>();
 builder.Services.AddScoped<IMantenimientoService, MantenimientoService>();
-builder.Services.AddScoped<IContratoRentaService, ContratoRentaService>();
 
 builder.Services.AddScoped<IClienteService, ClienteService>();
 builder.Services.AddScoped<ISeguroService, SeguroService>();

@@ -17,7 +17,7 @@ namespace BackCar.Presentation.Controllers
             _vehiculoService = vehiculoService;
         }
 
-        [HttpGet("obtener-todos")]
+        [HttpGet]
         public async Task<IActionResult> ObtenerTodos()
         {
             try

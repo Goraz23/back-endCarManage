@@ -16,7 +16,6 @@ namespace BackCar.Application.DTOs
         public string? Descripcion { get; set; }
         public string? Placa { get; set; }
         public int Kilometraje { get; set; }
-        public DateTime FechaUltimoMantenimiento { get; set; }
         public DateTime FechaRegistro { get; set; }
         public decimal CostoTemporadaAlta { get; set; }
         public decimal CostoTemporadaBaja { get; set; }

@@ -37,7 +37,6 @@ namespace BackCar.Infrastructure.Services
                     Descripcion = v.Descripcion,
                     Placa = v.Placa,
                     Kilometraje = v.Kilometraje,
-                    FechaUltimoMantenimiento = v.FechaUltimoMantenimiento,
                     FechaRegistro = v.FechaRegistro,
                     CostoTemporadaAlta = v.CostoTemporadaAlta,
                     CostoTemporadaBaja = v.CostoTemporadaBaja,
@@ -79,7 +78,6 @@ namespace BackCar.Infrastructure.Services
                     Descripcion = vehiculo.Descripcion,
                     Placa = vehiculo.Placa,
                     Kilometraje = vehiculo.Kilometraje,
-                    FechaUltimoMantenimiento = vehiculo.FechaUltimoMantenimiento,
                     FechaRegistro = vehiculo.FechaRegistro,
                     CostoTemporadaAlta = vehiculo.CostoTemporadaAlta,
                     CostoTemporadaBaja = vehiculo.CostoTemporadaBaja,
@@ -109,7 +107,6 @@ namespace BackCar.Infrastructure.Services
                     Descripcion = nuevoVehiculoDTO.Descripcion,
                     Placa = nuevoVehiculoDTO.Placa,
                     Kilometraje = nuevoVehiculoDTO.Kilometraje,
-                    FechaUltimoMantenimiento = nuevoVehiculoDTO.FechaUltimoMantenimiento,
                     CostoTemporadaAlta = nuevoVehiculoDTO.CostoTemporadaAlta,
                     CostoTemporadaBaja = nuevoVehiculoDTO.CostoTemporadaBaja,
                     IsRentado = nuevoVehiculoDTO.IsRentado,
@@ -148,7 +145,6 @@ namespace BackCar.Infrastructure.Services
                 vehiculoExistente.Descripcion = vehiculoActualizadoDTO.Descripcion;
                 vehiculoExistente.Placa = vehiculoActualizadoDTO.Placa;
                 vehiculoExistente.Kilometraje = vehiculoActualizadoDTO.Kilometraje;
-                vehiculoExistente.FechaUltimoMantenimiento = vehiculoActualizadoDTO.FechaUltimoMantenimiento;
                 vehiculoExistente.CostoTemporadaAlta = vehiculoActualizadoDTO.CostoTemporadaAlta;
                 vehiculoExistente.CostoTemporadaBaja = vehiculoActualizadoDTO.CostoTemporadaBaja;
                 vehiculoExistente.IsRentado = vehiculoActualizadoDTO.IsRentado;
