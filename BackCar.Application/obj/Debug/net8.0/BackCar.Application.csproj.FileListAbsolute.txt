@@ -79,3 +79,19 @@ C:\Users\Alex\Source\Repos\back-endCarManage\BackCar.Application\obj\Debug\net8.
 C:\Users\Alex\Source\Repos\back-endCarManage\BackCar.Application\obj\Debug\net8.0\refint\BackCar.Application.dll
 C:\Users\Alex\Source\Repos\back-endCarManage\BackCar.Application\obj\Debug\net8.0\BackCar.Application.pdb
 C:\Users\Alex\Source\Repos\back-endCarManage\BackCar.Application\obj\Debug\net8.0\ref\BackCar.Application.dll
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\BACKENDCARFIN\BackCar.Application\bin\Debug\net8.0\BackCar.Application.deps.json
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\BACKENDCARFIN\BackCar.Application\bin\Debug\net8.0\BackCar.Application.dll
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\BACKENDCARFIN\BackCar.Application\bin\Debug\net8.0\BackCar.Application.pdb
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\BACKENDCARFIN\BackCar.Application\bin\Debug\net8.0\BackCar. Domain.dll
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\BACKENDCARFIN\BackCar.Application\bin\Debug\net8.0\BackCar. Domain.pdb
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\BACKENDCARFIN\BackCar.Application\obj\Debug\net8.0\BackCar.Application.csproj.AssemblyReference.cache
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\BACKENDCARFIN\BackCar.Application\obj\Debug\net8.0\BackCar.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\BACKENDCARFIN\BackCar.Application\obj\Debug\net8.0\BackCar.Application.AssemblyInfoInputs.cache
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\BACKENDCARFIN\BackCar.Application\obj\Debug\net8.0\BackCar.Application.AssemblyInfo.cs
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\BACKENDCARFIN\BackCar.Application\obj\Debug\net8.0\BackCar.Application.csproj.CoreCompileInputs.cache
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\BACKENDCARFIN\BackCar.Application\obj\Debug\net8.0\BackCar.Application.sourcelink.json
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\BACKENDCARFIN\BackCar.Application\obj\Debug\net8.0\BackCar..5B2E34DD.Up2Date
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\BACKENDCARFIN\BackCar.Application\obj\Debug\net8.0\BackCar.Application.dll
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\BACKENDCARFIN\BackCar.Application\obj\Debug\net8.0\refint\BackCar.Application.dll
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\BACKENDCARFIN\BackCar.Application\obj\Debug\net8.0\BackCar.Application.pdb
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\BACKENDCARFIN\BackCar.Application\obj\Debug\net8.0\ref\BackCar.Application.dll

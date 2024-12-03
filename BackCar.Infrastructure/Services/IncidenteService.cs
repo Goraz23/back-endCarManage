@@ -1,11 +1,11 @@
 ﻿using BackCar._Domain.Entities;
+using BackCar.Application.DTOs;
 using BackCar.Application.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace BackCar.Infrastructure.Services
@@ -19,11 +19,22 @@ namespace BackCar.Infrastructure.Services
             _context = context;
         }
 
-        public async Task<List<Incidente>> ObtenerTodosAsync()
+        public async Task<List<IncidenteMapeoDto>> ObtenerTodosLosIncidentesAsync()
         {
             try
             {
-                var incidentes = await _context.Incidentes.Include(i => i.ContratoRenta).ToListAsync();
+                var incidentes = await _context.Incidentes
+                                               .Include(i => i.ContratoRenta)
+                                               .Select(i => new IncidenteMapeoDto
+                                               {
+                                                   Id_Incidente = i.Id_Incidente,
+                                                   FechaIncidente = i.FechaIncidente,
+                                                   Descripcion = i.Descripcion,
+                                                   AplicoSeguro = i.AplicoSeguro,
+                                                   Id_ContratoRenta = i.Id_ContratoRenta,
+                                                   Id_Vehiculo = i.Id_Vehiculo
+                                               })
+                                               .ToListAsync();
                 Log.Information("Se obtuvieron todos los incidentes correctamente.");
                 return incidentes;
             }
@@ -34,22 +45,31 @@ namespace BackCar.Infrastructure.Services
             }
         }
 
-        public async Task<Incidente> ObtenerPorIdAsync(int id)
+        public async Task<IncidenteDto> ObtenerIncidentePorIdAsync(int id)
         {
             try
             {
-                var incidente = await _context.Incidentes.Include(i => i.ContratoRenta)
-                                                          .FirstOrDefaultAsync(i => i.Id_Incidente == id);
+                var incidente = await _context.Incidentes
+                                              .Include(i => i.ContratoRenta)
+                                              .FirstOrDefaultAsync(i => i.Id_Incidente == id);
+
                 if (incidente == null)
                 {
                     Log.Warning("Incidente con ID {Id} no encontrado.", id);
-                }
-                else
-                {
-                    Log.Information("Incidente con ID {Id} obtenido correctamente.", id);
+                    return null;
                 }
 
-                return incidente;
+                Log.Information("Incidente con ID {Id} obtenido correctamente.", id);
+
+                return new IncidenteDto
+                {
+                    Id_Incidente = incidente.Id_Incidente,
+                    FechaIncidente = incidente.FechaIncidente,
+                    Descripcion = incidente.Descripcion,
+                    AplicoSeguro = incidente.AplicoSeguro,
+                    Id_ContratoRenta = incidente.Id_ContratoRenta,
+                    Id_Vehiculo = incidente.Id_Vehiculo
+                };
             }
             catch (Exception ex)
             {
@@ -58,14 +78,22 @@ namespace BackCar.Infrastructure.Services
             }
         }
 
-        public async Task<Incidente> CrearAsync(Incidente incidente)
+        public async Task CrearIncidenteAsync(IncidenteDto nuevoIncidente)
         {
             try
             {
+                var incidente = new Incidente
+                {
+                    FechaIncidente = nuevoIncidente.FechaIncidente,
+                    Descripcion = nuevoIncidente.Descripcion,
+                    AplicoSeguro = nuevoIncidente.AplicoSeguro,
+                    Id_ContratoRenta = nuevoIncidente.Id_ContratoRenta,
+                    Id_Vehiculo = nuevoIncidente.Id_Vehiculo
+                };
+
                 _context.Incidentes.Add(incidente);
                 await _context.SaveChangesAsync();
                 Log.Information("Incidente creado correctamente.");
-                return incidente;
             }
             catch (Exception ex)
             {
@@ -74,25 +102,26 @@ namespace BackCar.Infrastructure.Services
             }
         }
 
-        public async Task<Incidente> ActualizarAsync(int id, Incidente incidente)
+        public async Task<bool> ActualizarIncidenteAsync(int id, IncidenteDto incidenteActualizado)
         {
             try
             {
-                var existente = await _context.Incidentes.FindAsync(id);
-                if (existente == null)
+                var incidente = await _context.Incidentes.FindAsync(id);
+                if (incidente == null)
                 {
                     Log.Warning("Incidente con ID {Id} no encontrado para actualización.", id);
-                    return null;
+                    return false;
                 }
 
-                existente.FechaIncidente = incidente.FechaIncidente;
-                existente.Descripcion = incidente.Descripcion;
-                existente.AplicoSeguro = incidente.AplicoSeguro;
-                existente.Id_ContratoRenta = incidente.Id_ContratoRenta;
+                incidente.FechaIncidente = incidenteActualizado.FechaIncidente;
+                incidente.Descripcion = incidenteActualizado.Descripcion;
+                incidente.AplicoSeguro = incidenteActualizado.AplicoSeguro;
+                incidente.Id_ContratoRenta = incidenteActualizado.Id_ContratoRenta;
+                incidente.Id_Vehiculo = incidenteActualizado.Id_Vehiculo;
 
                 await _context.SaveChangesAsync();
                 Log.Information("Incidente con ID {Id} actualizado correctamente.", id);
-                return existente;
+                return true;
             }
             catch (Exception ex)
             {
@@ -101,7 +130,7 @@ namespace BackCar.Infrastructure.Services
             }
         }
 
-        public async Task<bool> EliminarAsync(int id)
+        public async Task<bool> EliminarIncidenteAsync(int id)
         {
             try
             {
@@ -123,5 +152,43 @@ namespace BackCar.Infrastructure.Services
                 throw;
             }
         }
+
+        public async Task<List<IncidenteDto>> ObtenerIncidentesPorVehiculoIdAsync(int vehiculoId)
+        {
+            try
+            {
+                // Verificar si el vehículo existe
+                var vehiculo = await _context.Vehiculos.FindAsync(vehiculoId);
+                if (vehiculo == null)
+                {
+                    Log.Warning("Vehículo con ID {VehiculoId} no encontrado.", vehiculoId);
+                    return null; // O puedes devolver una lista vacía: return new List<IncidenteDto>();
+                }
+
+                // Obtener los incidentes asociados al vehículo
+                var incidentes = await _context.Incidentes
+                                               .Where(i => i.Id_Vehiculo == vehiculoId)
+                                               .Select(i => new IncidenteDto
+                                               {
+                                                   Id_Incidente = i.Id_Incidente,
+                                                   FechaIncidente = i.FechaIncidente,
+                                                   Descripcion = i.Descripcion,
+                                                   AplicoSeguro = i.AplicoSeguro,
+                                                   Id_ContratoRenta = i.Id_ContratoRenta,
+                                                   Id_Vehiculo = i.Id_Vehiculo
+                                               })
+                                               .ToListAsync();
+
+                Log.Information("Incidentes del vehículo con ID {VehiculoId} obtenidos correctamente.", vehiculoId);
+                return incidentes;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Error al obtener incidentes del vehículo con ID {VehiculoId}.", vehiculoId);
+                throw;
+            }
+        }
+
+
     }
 }

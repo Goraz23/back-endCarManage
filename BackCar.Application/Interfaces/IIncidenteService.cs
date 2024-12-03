@@ -1,4 +1,5 @@
 ﻿using BackCar._Domain.Entities;
+using BackCar.Application.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +10,12 @@ namespace BackCar.Application.Interfaces
 {
     public interface IIncidenteService
     {
-        Task<List<Incidente>> ObtenerTodosAsync();
-        Task<Incidente> ObtenerPorIdAsync(int id);
-        Task<Incidente> CrearAsync(Incidente incidente);
-        Task<Incidente> ActualizarAsync(int id, Incidente incidente);
-        Task<bool> EliminarAsync(int id);
+        Task<List<IncidenteMapeoDto>> ObtenerTodosLosIncidentesAsync();
+        Task<IncidenteDto> ObtenerIncidentePorIdAsync(int id);
+        Task CrearIncidenteAsync(IncidenteDto nuevoIncidente);
+        Task<bool> ActualizarIncidenteAsync(int id, IncidenteDto incidenteActualizado);
+        Task<bool> EliminarIncidenteAsync(int id);
+        Task<List<IncidenteDto>> ObtenerIncidentesPorVehiculoIdAsync(int vehiculoId);
+
     }
 }

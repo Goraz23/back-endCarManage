@@ -78,3 +78,23 @@ C:\Users\Alex\Source\Repos\back-endCarManage\BackCar.Infrastructure\obj\Debug\ne
 C:\Users\Alex\Source\Repos\back-endCarManage\BackCar.Infrastructure\obj\Debug\net8.0\BackCar.Infrastructure.pdb
 C:\Users\Alex\Source\Repos\back-endCarManage\BackCar.Infrastructure\obj\Debug\net8.0\BackCar.Infrastructure.genruntimeconfig.cache
 C:\Users\Alex\Source\Repos\back-endCarManage\BackCar.Infrastructure\obj\Debug\net8.0\ref\BackCar.Infrastructure.dll
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\BACKENDCARFIN\BackCar.Infrastructure\bin\Debug\net8.0\BackCar.Infrastructure.deps.json
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\BACKENDCARFIN\BackCar.Infrastructure\bin\Debug\net8.0\BackCar.Infrastructure.runtimeconfig.json
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\BACKENDCARFIN\BackCar.Infrastructure\bin\Debug\net8.0\BackCar.Infrastructure.dll
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\BACKENDCARFIN\BackCar.Infrastructure\bin\Debug\net8.0\BackCar.Infrastructure.pdb
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\BACKENDCARFIN\BackCar.Infrastructure\bin\Debug\net8.0\BackCar. Domain.dll
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\BACKENDCARFIN\BackCar.Infrastructure\bin\Debug\net8.0\BackCar.Application.dll
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\BACKENDCARFIN\BackCar.Infrastructure\bin\Debug\net8.0\BackCar. Domain.pdb
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\BACKENDCARFIN\BackCar.Infrastructure\bin\Debug\net8.0\BackCar.Application.pdb
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\BACKENDCARFIN\BackCar.Infrastructure\obj\Debug\net8.0\BackCar.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\BACKENDCARFIN\BackCar.Infrastructure\obj\Debug\net8.0\BackCar.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\BACKENDCARFIN\BackCar.Infrastructure\obj\Debug\net8.0\BackCar.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\BACKENDCARFIN\BackCar.Infrastructure\obj\Debug\net8.0\BackCar.Infrastructure.AssemblyInfo.cs
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\BACKENDCARFIN\BackCar.Infrastructure\obj\Debug\net8.0\BackCar.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\BACKENDCARFIN\BackCar.Infrastructure\obj\Debug\net8.0\BackCar.Infrastructure.sourcelink.json
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\BACKENDCARFIN\BackCar.Infrastructure\obj\Debug\net8.0\BackCar..CD8B45EC.Up2Date
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\BACKENDCARFIN\BackCar.Infrastructure\obj\Debug\net8.0\BackCar.Infrastructure.dll
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\BACKENDCARFIN\BackCar.Infrastructure\obj\Debug\net8.0\refint\BackCar.Infrastructure.dll
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\BACKENDCARFIN\BackCar.Infrastructure\obj\Debug\net8.0\BackCar.Infrastructure.pdb
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\BACKENDCARFIN\BackCar.Infrastructure\obj\Debug\net8.0\BackCar.Infrastructure.genruntimeconfig.cache
+C:\Users\Diego Aleman\Desktop\Arquitectura de Software\BACKENDCARFIN\BackCar.Infrastructure\obj\Debug\net8.0\ref\BackCar.Infrastructure.dll
