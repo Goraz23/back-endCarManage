@@ -119,5 +119,28 @@ namespace BackCar.Presentation.Controllers
                 return StatusCode(500, "Error interno del servidor.");
             }
         }
+        [HttpGet("usuario/{usuarioId}")]
+        public async Task<IActionResult> ObtenerPorUsuario(int usuarioId)
+        {
+            try
+            {
+                Log.Information("Iniciando solicitud para obtener vehículos del usuario con ID {UsuarioId}.", usuarioId);
+                var vehiculos = await _vehiculoService.ObtenerVehiculosPorUsuarioAsync(usuarioId);
+                if (vehiculos == null || !vehiculos.Any())
+                {
+                    Log.Warning("No se encontraron vehículos para el usuario con ID {UsuarioId}.", usuarioId);
+                    return NotFound("No se encontraron vehículos para el usuario.");
+                }
+
+                Log.Information("Se completó la solicitud para obtener vehículos del usuario con ID {UsuarioId}.", usuarioId);
+                return Ok(vehiculos);
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Error al obtener vehículos del usuario con ID {UsuarioId}.", usuarioId);
+                return StatusCode(500, "Error interno del servidor.");
+            }
+        }
+
     }
 }

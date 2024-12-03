@@ -151,5 +151,38 @@ namespace BackCar.Presentation.Controllers
                 return Unauthorized("Credenciales inválidas");
             }
         }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Usuario>> GetUsuarioPorId(int id)
+        {
+            try
+            {
+                Log.Information("Obteniendo usuario con ID: {UserId}", id);
+
+                var usuario = await _usuarioService.ObtenerUsuarioPorIdAsync(id);
+
+                if (usuario == null)
+                {
+                    Log.Warning("Usuario con ID {UserId} no encontrado", id);
+                    return NotFound($"No se encontró un usuario con ID {id}");
+                }
+
+                Log.Information("Usuario con ID {UserId} obtenido exitosamente", id);
+                return Ok(usuario);
+            }
+            catch (KeyNotFoundException ex)
+            {
+                Log.Warning(ex, "Usuario con ID {UserId} no encontrado", id);
+                return NotFound(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Error al obtener el usuario con ID: {UserId}", id);
+                return StatusCode(500, "Hubo un error al obtener el usuario.");
+            }
+        }
+
+
+
     }
 }
