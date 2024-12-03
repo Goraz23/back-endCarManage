@@ -136,5 +136,20 @@ namespace BackCar.Presentation.Controllers
                 return StatusCode(500, "Hubo un error al eliminar el usuario.");
             }
         }
+
+        [AllowAnonymous]
+        [HttpPost("login")]
+        public async Task<ActionResult<LoginResponseDto>> Login([FromBody] LoginDto loginDto)
+        {
+            try
+            {
+                var loginResponse = await _usuarioService.LoginAsync(loginDto);
+                return Ok(loginResponse);
+            }
+            catch (UnauthorizedAccessException)
+            {
+                return Unauthorized("Credenciales inválidas");
+            }
+        }
     }
 }
