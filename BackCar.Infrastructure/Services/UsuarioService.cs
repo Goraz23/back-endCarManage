@@ -44,10 +44,8 @@ namespace BackCar.Infrastructure.Services
         //Método CREATE para Usuarios
         public async Task<Usuario> CrearUsuarioAsync(Usuario usuario)
         {
-            // Verificar que usuario jale
             if (usuario.Roles_Usuarios_id != 0)
             {
-                //Verifica si usuario existe antes de crear;
                 var rol = await _context.Roles.FirstOrDefaultAsync(r => r.Id_Rol == usuario.Roles_Usuarios_id);
                 if (rol == null)
                 {
@@ -55,10 +53,8 @@ namespace BackCar.Infrastructure.Services
                 }
             }
 
-            // Hashear contraseña antes de guardar
-            usuario.Contrasenia = PasswordHasher.HashPassword(usuario.Contrasenia);
+            usuario.Contrasenia = BCrypt.Net.BCrypt.HashPassword(usuario.Contrasenia);
 
-            // Añadir usuario
             await _context.Usuarios.AddAsync(usuario);
             await _context.SaveChangesAsync();
             return usuario;
@@ -79,9 +75,15 @@ namespace BackCar.Infrastructure.Services
 
                 usuarioExistente.Nombre = usuario.Nombre;
                 usuarioExistente.Correo = usuario.Correo;
-                usuarioExistente.Contrasenia = usuario.Contrasenia;
+
+                if (!string.IsNullOrWhiteSpace(usuario.Contrasenia) &&
+                    !BCrypt.Net.BCrypt.Verify(usuario.Contrasenia, usuarioExistente.Contrasenia))
+                {
+                    usuarioExistente.Contrasenia = BCrypt.Net.BCrypt.HashPassword(usuario.Contrasenia);
+                }
+
                 usuarioExistente.Telefono = usuario.Telefono;
-                usuarioExistente.FechaRegistro = usuario.FechaRegistro;
+
                 usuarioExistente.Roles_Usuarios_id = usuario.Roles_Usuarios_id;
 
                 await _context.SaveChangesAsync();
@@ -123,11 +125,9 @@ namespace BackCar.Infrastructure.Services
 
         public async Task<LoginResponseDto> LoginAsync(LoginDto loginDto)
         {
-            var usuario = await _context.Usuarios
-                .FirstOrDefaultAsync(u => u.Correo == loginDto.Correo);
+            var usuario = await _context.Usuarios.FirstOrDefaultAsync(u => u.Correo == loginDto.Correo);
 
-            if (usuario == null ||
-                !PasswordHasher.VerifyPassword(loginDto.Contrasenia, usuario.Contrasenia))
+            if (usuario == null || !BCrypt.Net.BCrypt.Verify(loginDto.Contrasenia, usuario.Contrasenia))
             {
                 throw new UnauthorizedAccessException("Credenciales inválidas");
             }
@@ -137,7 +137,7 @@ namespace BackCar.Infrastructure.Services
                 Token = _jwtService.GenerateToken(usuario),
                 Nombre = usuario.Nombre,
                 Rol = usuario.Roles_Usuarios_id == 1 ? "Admin" : "Socio",
-                UsuarioId = usuario.Id_Usuario  // Asegúrate de tener acceso al ID
+                UsuarioId = usuario.Id_Usuario
             };
         }
 
