@@ -1,26 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\BACKENDCARFIN\\BackCar.Application\\BackCar.Application.csproj": {}
+    "C:\\Users\\coroj\\Source\\Repos\\back-endCarManage\\BackCar.Application\\BackCar.Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\BACKENDCARFIN\\BackCar. Domain\\BackCar. Domain.csproj": {
+    "C:\\Users\\coroj\\Source\\Repos\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\BACKENDCARFIN\\BackCar. Domain\\BackCar. Domain.csproj",
+        "projectUniqueName": "C:\\Users\\coroj\\Source\\Repos\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj",
         "projectName": "BackCar. Domain",
-        "projectPath": "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\BACKENDCARFIN\\BackCar. Domain\\BackCar. Domain.csproj",
-        "packagesPath": "C:\\Users\\Diego Aleman\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\BACKENDCARFIN\\BackCar. Domain\\obj\\",
+        "projectPath": "C:\\Users\\coroj\\Source\\Repos\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj",
+        "packagesPath": "C:\\Users\\coroj\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\coroj\\Source\\Repos\\back-endCarManage\\BackCar. Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages",
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Diego Aleman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\coroj\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 24.1.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,6 +27,7 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\DevExpress 24.1\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -45,9 +44,8 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+          "auditMode": "direct"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -86,27 +84,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\BACKENDCARFIN\\BackCar.Application\\BackCar.Application.csproj": {
+    "C:\\Users\\coroj\\Source\\Repos\\back-endCarManage\\BackCar.Application\\BackCar.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\BACKENDCARFIN\\BackCar.Application\\BackCar.Application.csproj",
+        "projectUniqueName": "C:\\Users\\coroj\\Source\\Repos\\back-endCarManage\\BackCar.Application\\BackCar.Application.csproj",
         "projectName": "BackCar.Application",
-        "projectPath": "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\BACKENDCARFIN\\BackCar.Application\\BackCar.Application.csproj",
-        "packagesPath": "C:\\Users\\Diego Aleman\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\BACKENDCARFIN\\BackCar.Application\\obj\\",
+        "projectPath": "C:\\Users\\coroj\\Source\\Repos\\back-endCarManage\\BackCar.Application\\BackCar.Application.csproj",
+        "packagesPath": "C:\\Users\\coroj\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\coroj\\Source\\Repos\\back-endCarManage\\BackCar.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages",
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Diego Aleman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\coroj\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 24.1.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -115,14 +111,15 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\DevExpress 24.1\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\BACKENDCARFIN\\BackCar. Domain\\BackCar. Domain.csproj": {
-                "projectPath": "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\BACKENDCARFIN\\BackCar. Domain\\BackCar. Domain.csproj"
+              "C:\\Users\\coroj\\Source\\Repos\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj": {
+                "projectPath": "C:\\Users\\coroj\\Source\\Repos\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj"
               }
             }
           }
@@ -135,9 +132,8 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+          "auditMode": "direct"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -180,7 +176,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

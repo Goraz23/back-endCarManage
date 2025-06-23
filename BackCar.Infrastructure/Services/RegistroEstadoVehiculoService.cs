@@ -23,15 +23,28 @@ namespace BackCar.Infrastructure.Services
         {
             try
             {
-                Log.Information("Obteniendo todos los registros de estado de vehículos.");
-                return await _context.RegistroEstadoVehiculos.Include(r => r.ContratoRenta).ToListAsync();
+                Log.Information("Obteniendo todos los registros de estado de vehículos con sus relaciones completas.");
+
+                var registros = await _context.RegistroEstadoVehiculos
+                    .Include(r => r.ContratoRenta)
+                        .ThenInclude(cr => cr.Cliente)
+                    .Include(r => r.ContratoRenta)
+                        .ThenInclude(cr => cr.Vehiculo)
+                            .ThenInclude(v => v.Usuario)
+                                .ThenInclude(u => u.Rol)
+                    .Include(r => r.ContratoRenta)
+                        .ThenInclude(cr => cr.Vehiculo)
+                            .ThenInclude(v => v.Categoria)
+                    .ToListAsync();
+                return registros;
             }
             catch (Exception ex)
             {
-                Log.Error(ex, "Error al obtener todos los registros de estado de vehículos.");
+                Log.Error(ex, "Error al obtener todos los registros de estado de vehículos con sus relaciones.");
                 throw;
             }
         }
+
 
         public async Task<RegistroEstadoVehiculo> CrearAsync(RegistroEstadoVehiculo registro)
         {

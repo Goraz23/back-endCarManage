@@ -23,7 +23,7 @@ namespace BackCar._Domain.Entities
         // Relaciones
         [ForeignKey("Cliente")]
         public int Clientes_id { get; set; }
-        public Usuario Cliente { get; set; }
+        public Cliente Cliente { get; set; }
 
         [ForeignKey("Vehiculo")]
         public int Vehiculos_id { get; set; }

@@ -4677,27 +4677,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Diego Aleman\\.nuget\\packages\\": {},
-    "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\coroj\\.nuget\\packages\\": {},
+    "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\BACKENDCARFIN\\BackCar.Infrastructure\\BackCar.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\coroj\\Source\\Repos\\back-endCarManage\\BackCar.Infrastructure\\BackCar.Infrastructure.csproj",
       "projectName": "BackCar.Infrastructure",
-      "projectPath": "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\BACKENDCARFIN\\BackCar.Infrastructure\\BackCar.Infrastructure.csproj",
-      "packagesPath": "C:\\Users\\Diego Aleman\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\BACKENDCARFIN\\BackCar.Infrastructure\\obj\\",
+      "projectPath": "C:\\Users\\coroj\\Source\\Repos\\back-endCarManage\\BackCar.Infrastructure\\BackCar.Infrastructure.csproj",
+      "packagesPath": "C:\\Users\\coroj\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\coroj\\Source\\Repos\\back-endCarManage\\BackCar.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages",
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Diego Aleman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\coroj\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 24.1.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4706,17 +4703,18 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files\\DevExpress 24.1\\Components\\System\\Components\\Packages": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\BACKENDCARFIN\\BackCar. Domain\\BackCar. Domain.csproj": {
-              "projectPath": "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\BACKENDCARFIN\\BackCar. Domain\\BackCar. Domain.csproj"
+            "C:\\Users\\coroj\\Source\\Repos\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj": {
+              "projectPath": "C:\\Users\\coroj\\Source\\Repos\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj"
             },
-            "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\BACKENDCARFIN\\BackCar.Application\\BackCar.Application.csproj": {
-              "projectPath": "C:\\Users\\Diego Aleman\\Desktop\\Arquitectura de Software\\BACKENDCARFIN\\BackCar.Application\\BackCar.Application.csproj"
+            "C:\\Users\\coroj\\Source\\Repos\\back-endCarManage\\BackCar.Application\\BackCar.Application.csproj": {
+              "projectPath": "C:\\Users\\coroj\\Source\\Repos\\back-endCarManage\\BackCar.Application\\BackCar.Application.csproj"
             }
           }
         }
@@ -4729,9 +4727,8 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "all"
-      },
-      "SdkAnalysisLevel": "9.0.100"
+        "auditMode": "direct"
+      }
     },
     "frameworks": {
       "net8.0": {
@@ -4792,71 +4789,11 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   },
   "logs": [
-    {
-      "code": "NU1902",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "El paquete \"Azure.Identity\" 1.10.3 tiene una vulnerabilidad de gravedad moderada conocida, https://github.com/advisories/GHSA-m5vv-6r4h-3vj9",
-      "libraryId": "Azure.Identity",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
-    {
-      "code": "NU1902",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "El paquete \"Azure.Identity\" 1.10.3 tiene una vulnerabilidad de gravedad moderada conocida, https://github.com/advisories/GHSA-wvxc-855f-jvrv",
-      "libraryId": "Azure.Identity",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
-    {
-      "code": "NU1902",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "El paquete \"Microsoft.Identity.Client\" 4.56.0 tiene una vulnerabilidad de gravedad moderada conocida, https://github.com/advisories/GHSA-m5vv-6r4h-3vj9",
-      "libraryId": "Microsoft.Identity.Client",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
-    {
-      "code": "NU1901",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "El paquete \"Microsoft.Identity.Client\" 4.56.0 tiene una vulnerabilidad de gravedad baja conocida, https://github.com/advisories/GHSA-x674-v45j-fwxw",
-      "libraryId": "Microsoft.Identity.Client",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
-    {
-      "code": "NU1902",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "El paquete \"Microsoft.IdentityModel.JsonWebTokens\" 7.0.3 tiene una vulnerabilidad de gravedad moderada conocida, https://github.com/advisories/GHSA-59j7-ghrg-fj52",
-      "libraryId": "Microsoft.IdentityModel.JsonWebTokens",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "El paquete \"System.Formats.Asn1\" 5.0.0 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-447r-wph3-92pm",
-      "libraryId": "System.Formats.Asn1",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
     {
       "code": "NU1902",
       "level": "Warning",

@@ -1,12 +1,11 @@
 {
   "Version": 1,
-  "Hash": "/PsXhM5gMcsdwk3MF9mBn2Jaf95OHurRIaEYE10aGYk=",
+  "Hash": "qkZPtKlKyPwaHWv4JmIkXycsi1R81h0XVvxEq7VYadM=",
   "Source": "BackCar.Presentation",
   "BasePath": "_content/BackCar.Presentation",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "Assets": []
 }
