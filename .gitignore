@@ -63,3 +63,14 @@ Migrations/
 *.dbschema
 *.jfm
 *.vshost.*
+
+
+# Carpetas de compilación
+bin/
+obj/
+
+# Archivos de configuración y cache
+*.nuget.cache
+*.assets.cache
+project.assets.json
+*.AssemblyInfo.cs
