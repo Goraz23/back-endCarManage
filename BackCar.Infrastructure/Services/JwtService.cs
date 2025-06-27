@@ -24,13 +24,21 @@ namespace BackCar.Infrastructure.Services
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_secretKey));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
+            // Determinar el rol como texto
+            string rol = usuario.Roles_Usuarios_id switch
+            {
+                1 => "Admin",
+                2 => "Socio",
+                3 => "Cliente"
+            };
+
             var claims = new[]
             {
-                new Claim(ClaimTypes.NameIdentifier, usuario.Id_Usuario.ToString()),
-                new Claim(ClaimTypes.Name, usuario.Nombre),
-                new Claim(ClaimTypes.Email, usuario.Correo),
-                new Claim(ClaimTypes.Role, usuario.Roles_Usuarios_id == 1 ? "Admin" : "Socio")
-            };
+        new Claim(ClaimTypes.NameIdentifier, usuario.Id_Usuario.ToString()),
+        new Claim(ClaimTypes.Name, usuario.Nombre),
+        new Claim(ClaimTypes.Email, usuario.Correo),
+        new Claim(ClaimTypes.Role, rol)
+    };
 
             var token = new JwtSecurityToken(
                 issuer: "BackCarApp",
@@ -43,4 +51,5 @@ namespace BackCar.Infrastructure.Services
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
     }
-}
+
+    }

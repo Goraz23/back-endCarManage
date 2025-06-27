@@ -1,4 +1,0 @@
-2024-11-28 22:44:52.961 -05:00 [INF] Solicitud para obtener todas las categorías.
-2024-11-28 22:44:53.003 -05:00 [INF] Obteniendo todas las categorías.
-2024-11-28 22:44:54.978 -05:00 [INF] Se obtuvieron 4 categorías.
-2024-11-28 22:44:54.983 -05:00 [INF] Se retornaron 4 categorías.
