@@ -1262,11 +1262,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\coroj\\Source\\Repos\\back-endCarManage\\BackCar.Application\\BackCar.Application.csproj",
+      "projectUniqueName": "C:\\Users\\coroj\\source\\repos\\back-endCarManage\\BackCar.Application\\BackCar.Application.csproj",
       "projectName": "BackCar.Application",
-      "projectPath": "C:\\Users\\coroj\\Source\\Repos\\back-endCarManage\\BackCar.Application\\BackCar.Application.csproj",
+      "projectPath": "C:\\Users\\coroj\\source\\repos\\back-endCarManage\\BackCar.Application\\BackCar.Application.csproj",
       "packagesPath": "C:\\Users\\coroj\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\coroj\\Source\\Repos\\back-endCarManage\\BackCar.Application\\obj\\",
+      "outputPath": "C:\\Users\\coroj\\source\\repos\\back-endCarManage\\BackCar.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages"
@@ -1289,8 +1289,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\coroj\\Source\\Repos\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj": {
-              "projectPath": "C:\\Users\\coroj\\Source\\Repos\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj"
+            "C:\\Users\\coroj\\source\\repos\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj": {
+              "projectPath": "C:\\Users\\coroj\\source\\repos\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj"
             }
           }
         }

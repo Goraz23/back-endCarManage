@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pfHwBMrnTXA=",
+  "dgSpecHash": "ZaKxgkWehbI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\coroj\\Source\\Repos\\back-endCarManage\\BackCar.Presentation\\BackCar.Presentation.csproj",
+  "projectFilePath": "C:\\Users\\coroj\\source\\repos\\back-endCarManage\\BackCar.Presentation\\BackCar.Presentation.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\coroj\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\coroj\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",

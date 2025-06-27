@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VrKYX5KtUP0=",
+  "dgSpecHash": "VuIZ00dd1So=",
   "success": true,
-  "projectFilePath": "C:\\Users\\coroj\\Source\\Repos\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj",
+  "projectFilePath": "C:\\Users\\coroj\\source\\repos\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\coroj\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\coroj\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.0\\microsoft.aspnetcore.authentication.jwtbearer.8.0.0.nupkg.sha512",

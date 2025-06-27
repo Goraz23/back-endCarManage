@@ -29,8 +29,9 @@ namespace BackCar.Infrastructure // Usa el espacio de nombres adecuado
 
             // 1. Roles
             modelBuilder.Entity<Rol>().HasData(
-                new Rol { Id_Rol = 1, Nombre = "Administrador" },
-                new Rol { Id_Rol = 2, Nombre = "Usuario" }
+                new Rol { Id_Rol = 1, Nombre = "Admin" },
+                new Rol { Id_Rol = 2, Nombre = "Socio" },
+                new Rol { Id_Rol = 3, Nombre = "Cliente" }
             );
 
             // 2. Usuarios (depende de Rol)
@@ -40,9 +41,9 @@ namespace BackCar.Infrastructure // Usa el espacio de nombres adecuado
                     Id_Usuario = 1,
                     Nombre = "Admin Principal",
                     Correo = "admin@carmanage.com",
-                    Contrasenia = "hashedpassword",  // Cambia esto por un hash real
+                    Contrasenia = "$2a$11$XYUho6pOYcNENkWQvKZ59e9iQG2LSjGUxUJZ5PKGkRwAxr8ZL1QDy", //admin123
                     Telefono = "5551234567",
-                    FechaRegistro = DateTime.Now,
+                    FechaRegistro = new DateTime(2025, 6, 26),
                     Roles_Usuarios_id = 1
                 },
                 new Usuario
@@ -50,9 +51,9 @@ namespace BackCar.Infrastructure // Usa el espacio de nombres adecuado
                     Id_Usuario = 2,
                     Nombre = "Usuario General",
                     Correo = "usuario@carmanage.com",
-                    Contrasenia = "hashedpassword",
+                    Contrasenia = "$2a$11$5aFkFhJkOqgCdeu9k1qMEeSnqz/pDe3PRLGzB3bl2GK9/HcZjCZ9e", //usuario123
                     Telefono = "5559876543",
-                    FechaRegistro = DateTime.Now,
+                    FechaRegistro = new DateTime(2025, 6, 26),
                     Roles_Usuarios_id = 2
                 }
             );
@@ -61,7 +62,8 @@ namespace BackCar.Infrastructure // Usa el espacio de nombres adecuado
             modelBuilder.Entity<Categoria>().HasData(
                 new Categoria { Id_Categoria = 1, Nombre = "SUV" },
                 new Categoria { Id_Categoria = 2, Nombre = "Sedán" },
-                new Categoria { Id_Categoria = 3, Nombre = "Camioneta" }
+                new Categoria { Id_Categoria = 3, Nombre = "Camioneta" },
+                new Categoria { Id_Categoria = 4, Nombre = "Deportivo" }
             );
 
             // 4. Clientes
@@ -141,7 +143,8 @@ namespace BackCar.Infrastructure // Usa el espacio de nombres adecuado
                     Clientes_id = 1,
                     FechaInicio = new DateTime(2025, 6, 1),
                     FechaDevolucion = new DateTime(2025, 6, 8),
-                    CostoTotal = 350.00m
+                    CostoTotal = 350.00m,
+                    CostoSubTotal = 300.00m,
                 },
                 new ContratoRenta
                 {
@@ -150,7 +153,8 @@ namespace BackCar.Infrastructure // Usa el espacio de nombres adecuado
                     Clientes_id = 2,
                     FechaInicio = new DateTime(2025, 6, 10),
                     FechaDevolucion = new DateTime(2025, 6, 17),
-                    CostoTotal = 200.00m
+                    CostoTotal = 200.00m,
+                    CostoSubTotal = 180.00m,
                 }
             );
 

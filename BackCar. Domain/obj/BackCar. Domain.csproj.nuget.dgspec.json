@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\coroj\\Source\\Repos\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj": {}
+    "C:\\Users\\coroj\\source\\repos\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\coroj\\Source\\Repos\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj": {
+    "C:\\Users\\coroj\\source\\repos\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\coroj\\Source\\Repos\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj",
+        "projectUniqueName": "C:\\Users\\coroj\\source\\repos\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj",
         "projectName": "BackCar. Domain",
-        "projectPath": "C:\\Users\\coroj\\Source\\Repos\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj",
+        "projectPath": "C:\\Users\\coroj\\source\\repos\\back-endCarManage\\BackCar. Domain\\BackCar. Domain.csproj",
         "packagesPath": "C:\\Users\\coroj\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\coroj\\Source\\Repos\\back-endCarManage\\BackCar. Domain\\obj\\",
+        "outputPath": "C:\\Users\\coroj\\source\\repos\\back-endCarManage\\BackCar. Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages"

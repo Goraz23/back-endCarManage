@@ -73,16 +73,28 @@ namespace BackCar.Infrastructure.Services
                     return null;
                 }
 
-                usuarioExistente.Nombre = usuario.Nombre;
-                usuarioExistente.Correo = usuario.Correo;
-
-                if (!string.IsNullOrWhiteSpace(usuario.Contrasenia) &&
-                    !BCrypt.Net.BCrypt.Verify(usuario.Contrasenia, usuarioExistente.Contrasenia))
+                // Verifica si el rol existe si se intenta cambiar
+                if (usuario.Roles_Usuarios_id != usuarioExistente.Roles_Usuarios_id && usuario.Roles_Usuarios_id != 0)
                 {
-                    usuarioExistente.Contrasenia = BCrypt.Net.BCrypt.HashPassword(usuario.Contrasenia);
+                    var rol = await _context.Roles.FirstOrDefaultAsync(r => r.Id_Rol == usuario.Roles_Usuarios_id);
+                    if (rol == null)
+                    {
+                        throw new ArgumentException("El nuevo rol no existe.");
+                    }
                 }
 
+                usuarioExistente.Nombre = usuario.Nombre;
+                usuarioExistente.Correo = usuario.Correo;
                 usuarioExistente.Telefono = usuario.Telefono;
+
+                // Si hay una nueva contraseña, y es diferente a la actual
+                if (!string.IsNullOrWhiteSpace(usuario.Contrasenia))
+                {
+                    if (!BCrypt.Net.BCrypt.Verify(usuario.Contrasenia, usuarioExistente.Contrasenia))
+                    {
+                        usuarioExistente.Contrasenia = BCrypt.Net.BCrypt.HashPassword(usuario.Contrasenia);
+                    }
+                }
 
                 usuarioExistente.Roles_Usuarios_id = usuario.Roles_Usuarios_id;
 
@@ -97,6 +109,7 @@ namespace BackCar.Infrastructure.Services
                 throw new Exception($"Hubo un error al actualizar el usuario con ID {id}.");
             }
         }
+
 
         public async Task<bool> DeleteUsuarioAsync(int id)
         {

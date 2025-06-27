@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BackCar.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250623034558_AddSeedData")]
-    partial class AddSeedData
+    [Migration("20250627001338_AddSeedDataTry")]
+    partial class AddSeedDataTry
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -40,6 +40,28 @@ namespace BackCar.Infrastructure.Migrations
                     b.HasKey("Id_Categoria");
 
                     b.ToTable("Categorias");
+
+                    b.HasData(
+                        new
+                        {
+                            Id_Categoria = 1,
+                            Nombre = "SUV"
+                        },
+                        new
+                        {
+                            Id_Categoria = 2,
+                            Nombre = "Sedán"
+                        },
+                        new
+                        {
+                            Id_Categoria = 3,
+                            Nombre = "Camioneta"
+                        },
+                        new
+                        {
+                            Id_Categoria = 4,
+                            Nombre = "Deportivo"
+                        });
                 });
 
             modelBuilder.Entity("BackCar._Domain.Entities.Cliente", b =>
@@ -65,6 +87,22 @@ namespace BackCar.Infrastructure.Migrations
                     b.HasKey("Id_Cliente");
 
                     b.ToTable("Clientes");
+
+                    b.HasData(
+                        new
+                        {
+                            Id_Cliente = 1,
+                            Correo = "cliente1@gmail.com",
+                            NombreCliente = "Juan Perez",
+                            Telefono = "1234567890"
+                        },
+                        new
+                        {
+                            Id_Cliente = 2,
+                            Correo = "cliente2@gmail.com",
+                            NombreCliente = "Diego Aleman",
+                            Telefono = "1234567890"
+                        });
                 });
 
             modelBuilder.Entity("BackCar._Domain.Entities.ContratoRenta", b =>
@@ -103,6 +141,30 @@ namespace BackCar.Infrastructure.Migrations
                     b.HasIndex("Vehiculos_id");
 
                     b.ToTable("ContratosRenta");
+
+                    b.HasData(
+                        new
+                        {
+                            Id_ContratoRenta = 1,
+                            Clientes_id = 1,
+                            CostoSubTotal = 300.00m,
+                            CostoTotal = 350.00m,
+                            FechaCreacion = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FechaDevolucion = new DateTime(2025, 6, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FechaInicio = new DateTime(2025, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Vehiculos_id = 1
+                        },
+                        new
+                        {
+                            Id_ContratoRenta = 2,
+                            Clientes_id = 2,
+                            CostoSubTotal = 180.00m,
+                            CostoTotal = 200.00m,
+                            FechaCreacion = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FechaDevolucion = new DateTime(2025, 6, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FechaInicio = new DateTime(2025, 6, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Vehiculos_id = 2
+                        });
                 });
 
             modelBuilder.Entity("BackCar._Domain.Entities.Incidente", b =>
@@ -136,6 +198,26 @@ namespace BackCar.Infrastructure.Migrations
                     b.HasIndex("Id_Vehiculo");
 
                     b.ToTable("Incidentes");
+
+                    b.HasData(
+                        new
+                        {
+                            Id_Incidente = 1,
+                            AplicoSeguro = false,
+                            Descripcion = "Rasguño en la puerta",
+                            FechaIncidente = new DateTime(2025, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id_ContratoRenta = 1,
+                            Id_Vehiculo = 1
+                        },
+                        new
+                        {
+                            Id_Incidente = 2,
+                            AplicoSeguro = false,
+                            Descripcion = "Vidrio roto y puertas rayadas",
+                            FechaIncidente = new DateTime(2025, 6, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id_ContratoRenta = 2,
+                            Id_Vehiculo = 2
+                        });
                 });
 
             modelBuilder.Entity("BackCar._Domain.Entities.Mantenimiento", b =>
@@ -168,6 +250,26 @@ namespace BackCar.Infrastructure.Migrations
                     b.HasIndex("Vehiculo_id");
 
                     b.ToTable("Mantenimientos");
+
+                    b.HasData(
+                        new
+                        {
+                            Id_Mantenimiento = 1,
+                            Costo = 50.00m,
+                            Detalles = "Cambio de aceite",
+                            Fecha = new DateTime(2025, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Tipo = "mecánico",
+                            Vehiculo_id = 1
+                        },
+                        new
+                        {
+                            Id_Mantenimiento = 2,
+                            Costo = 75.00m,
+                            Detalles = "Revisión de frenos",
+                            Fecha = new DateTime(2025, 5, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Tipo = "mecánico",
+                            Vehiculo_id = 2
+                        });
                 });
 
             modelBuilder.Entity("BackCar._Domain.Entities.RegistroEstadoVehiculo", b =>
@@ -199,6 +301,26 @@ namespace BackCar.Infrastructure.Migrations
                     b.HasIndex("Id_ContratoRenta");
 
                     b.ToTable("RegistroEstadoVehiculo");
+
+                    b.HasData(
+                        new
+                        {
+                            Id_RegistroEstadoVehiculo = 1,
+                            AplicanCargos = false,
+                            DetallesRetorno = "Todo en orden",
+                            Id_ContratoRenta = 1,
+                            KilometrajeFinal = 10500,
+                            KilometrajeInicial = 10000
+                        },
+                        new
+                        {
+                            Id_RegistroEstadoVehiculo = 2,
+                            AplicanCargos = true,
+                            DetallesRetorno = "Kilometraje menor al esperado",
+                            Id_ContratoRenta = 2,
+                            KilometrajeFinal = 19800,
+                            KilometrajeInicial = 20000
+                        });
                 });
 
             modelBuilder.Entity("BackCar._Domain.Entities.Rol", b =>
@@ -216,6 +338,23 @@ namespace BackCar.Infrastructure.Migrations
                     b.HasKey("Id_Rol");
 
                     b.ToTable("Roles_Usuario");
+
+                    b.HasData(
+                        new
+                        {
+                            Id_Rol = 1,
+                            Nombre = "Admin"
+                        },
+                        new
+                        {
+                            Id_Rol = 2,
+                            Nombre = "Socio"
+                        },
+                        new
+                        {
+                            Id_Rol = 3,
+                            Nombre = "Cliente"
+                        });
                 });
 
             modelBuilder.Entity("BackCar._Domain.Entities.Seguro", b =>
@@ -246,6 +385,26 @@ namespace BackCar.Infrastructure.Migrations
                     b.HasKey("Id_Seguro");
 
                     b.ToTable("Seguros");
+
+                    b.HasData(
+                        new
+                        {
+                            Id_Seguro = 1,
+                            AutorContratado = "Autor 1",
+                            FechaInicio = new DateTime(2025, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FechaVencimiento = new DateTime(2025, 6, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Monto = 50.00m,
+                            TipoSeguro = "Seguro Básico"
+                        },
+                        new
+                        {
+                            Id_Seguro = 2,
+                            AutorContratado = "Autor 2",
+                            FechaInicio = new DateTime(2025, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FechaVencimiento = new DateTime(2025, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Monto = 100.00m,
+                            TipoSeguro = "Seguro Completo"
+                        });
                 });
 
             modelBuilder.Entity("BackCar._Domain.Entities.Usuario", b =>
@@ -283,6 +442,28 @@ namespace BackCar.Infrastructure.Migrations
                     b.HasIndex("Roles_Usuarios_id");
 
                     b.ToTable("Usuarios");
+
+                    b.HasData(
+                        new
+                        {
+                            Id_Usuario = 1,
+                            Contrasenia = "$2a$11$XYUho6pOYcNENkWQvKZ59e9iQG2LSjGUxUJZ5PKGkRwAxr8ZL1QDy",
+                            Correo = "admin@carmanage.com",
+                            FechaRegistro = new DateTime(2025, 6, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Nombre = "Admin Principal",
+                            Roles_Usuarios_id = 1,
+                            Telefono = "5551234567"
+                        },
+                        new
+                        {
+                            Id_Usuario = 2,
+                            Contrasenia = "$2a$11$5aFkFhJkOqgCdeu9k1qMEeSnqz/pDe3PRLGzB3bl2GK9/HcZjCZ9e",
+                            Correo = "usuario@carmanage.com",
+                            FechaRegistro = new DateTime(2025, 6, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Nombre = "Usuario General",
+                            Roles_Usuarios_id = 2,
+                            Telefono = "5559876543"
+                        });
                 });
 
             modelBuilder.Entity("BackCar._Domain.Entities.Vehiculo", b =>
@@ -349,6 +530,44 @@ namespace BackCar.Infrastructure.Migrations
                     b.HasIndex("Usuarios_id");
 
                     b.ToTable("Vehiculos");
+
+                    b.HasData(
+                        new
+                        {
+                            Id_Vehiculo = 1,
+                            Anio = 2020,
+                            Categoria_Id = 1,
+                            CostoTemporadaAlta = 1500.00m,
+                            CostoTemporadaBaja = 1000.00m,
+                            Descripcion = "SUV familiar",
+                            FechaRegistro = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsAutomatico = true,
+                            IsMantenimiento = false,
+                            IsRentado = false,
+                            Kilometraje = 10000,
+                            Marca = "Toyota",
+                            Modelo = "RAV4",
+                            Placa = "ABC123",
+                            Usuarios_id = 1
+                        },
+                        new
+                        {
+                            Id_Vehiculo = 2,
+                            Anio = 2019,
+                            Categoria_Id = 2,
+                            CostoTemporadaAlta = 1200.00m,
+                            CostoTemporadaBaja = 900.00m,
+                            Descripcion = "Sedán compacto",
+                            FechaRegistro = new DateTime(2025, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsAutomatico = false,
+                            IsMantenimiento = false,
+                            IsRentado = false,
+                            Kilometraje = 20000,
+                            Marca = "Honda",
+                            Modelo = "Civic",
+                            Placa = "XYZ456",
+                            Usuarios_id = 2
+                        });
                 });
 
             modelBuilder.Entity("BackCar._Domain.Entities.VehiculoSeguro", b =>
@@ -372,11 +591,25 @@ namespace BackCar.Infrastructure.Migrations
                     b.HasIndex("Vehiculos_id");
 
                     b.ToTable("Vehiculos_Seguros");
+
+                    b.HasData(
+                        new
+                        {
+                            Id_VehiculoSeguro = 1,
+                            Seguros_id = 1,
+                            Vehiculos_id = 1
+                        },
+                        new
+                        {
+                            Id_VehiculoSeguro = 2,
+                            Seguros_id = 2,
+                            Vehiculos_id = 2
+                        });
                 });
 
             modelBuilder.Entity("BackCar._Domain.Entities.ContratoRenta", b =>
                 {
-                    b.HasOne("BackCar._Domain.Entities.Usuario", "Cliente")
+                    b.HasOne("BackCar._Domain.Entities.Cliente", "Cliente")
                         .WithMany()
                         .HasForeignKey("Clientes_id")
                         .OnDelete(DeleteBehavior.Cascade)
